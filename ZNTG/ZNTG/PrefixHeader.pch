@@ -16,9 +16,15 @@
 #import "Constants.h"
 
 
+#pragma mark - 第三方框架
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD.h"
+#import "SDWebImageManager.h"
+
 //调试宏的设置
 //调试模式DEBUGMODE = 1 输出调试日志
-#define  DEBUGMODE 0
+#define  DEBUGMODE 1
 
 #if DEBUGMODE
 #ifndef DebugLog
