@@ -55,14 +55,14 @@
     UIView *whiteBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 15, screenB.size.width, 250)];
     whiteBackground.backgroundColor = [UIColor whiteColor];
     
-    UIView *fengexian1 = [[UIView alloc] initWithFrame:CGRectMake(60, 50, screenB.size.width - 100, 0.5)];
-    UIView *fengexian2 = [[UIView alloc] initWithFrame:CGRectMake(60, 100, screenB.size.width - 100, 0.5)];
-    UIView *fengexian3 = [[UIView alloc] initWithFrame:CGRectMake(60, 150, screenB.size.width - 100, 0.5)];
-    UIView *fengexian4 = [[UIView alloc] initWithFrame:CGRectMake(60, 200, screenB.size.width - 100, 0.5)];
-    fengexian1.backgroundColor = color(239, 240, 240, 1);
-    fengexian2.backgroundColor = color(239, 240, 240, 1);
-    fengexian3.backgroundColor = color(239, 240, 240, 1);
-    fengexian4.backgroundColor = color(239, 240, 240, 1);
+    UIView *fengexian1 = [[UIView alloc] initWithFrame:CGRectMake(60, 50, screenB.size.width - 85, 0.5)];
+    UIView *fengexian2 = [[UIView alloc] initWithFrame:CGRectMake(60, 100, screenB.size.width - 85, 0.5)];
+    UIView *fengexian3 = [[UIView alloc] initWithFrame:CGRectMake(60, 150, screenB.size.width - 85, 0.5)];
+    UIView *fengexian4 = [[UIView alloc] initWithFrame:CGRectMake(60, 200, screenB.size.width - 85, 0.5)];
+    fengexian1.backgroundColor = color(200, 200, 200, 1);
+    fengexian2.backgroundColor = color(200, 200, 200, 1);
+    fengexian3.backgroundColor = color(200, 200, 200, 1);
+    fengexian4.backgroundColor = color(200, 200, 200, 1);
     
     UIImageView *userImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 113.5, 20, 23)];
     UIImageView *shoujiImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 13.5, 20, 23)];
@@ -73,7 +73,12 @@
     //    switcher.tintColor = color(241, 74, 25, 1);
     obeyLicense.onTintColor = color(239, 78, 81, 1);
     [obeyLicense.layer setValue:@(0.4) forKey:@"transform.scale"];
-    obeyLicense.frame = CGRectMake(100, 200, 60, 60);
+    obeyLicense.frame = CGRectMake(60, 240, 60, 60);
+    
+    UIButton *xieYi = [UIButton buttonWithType:UIButtonTypeSystem];
+    [xieYi setTitle:@"《用户服务协议》" forState:UIControlStateNormal];
+    xieYi.tintColor = color(55, 152, 263, 1);
+    xieYi.frame = CGRectMake(100, 240, 140, 30);
     
     userImage.image = [UIImage imageNamed:@"DLusername"];
     passwordImage.image = [UIImage imageNamed:@"DLpassword"];
@@ -87,8 +92,8 @@
     MSTextField *yanzhengmaT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 55, screenB.size.width - 30 - 160, 40)];
     passwordT.secureTextEntry = YES;
     JKCountDownButton *fasong = [JKCountDownButton buttonWithType:UIButtonTypeSystem];
-    fasong.frame = CGRectMake(screenB.size.width - 120, 60, 100, 30);
-    [fasong setTitle:@"获取验证码" forState:UIControlStateNormal];
+    fasong.frame = CGRectMake(screenB.size.width - 148, 60, 128, 30);
+    [fasong setTitle:@"获取语音验证码" forState:UIControlStateNormal];
     [fasong setTintColor:color(239, 24, 24, 1)];
     fasong.layer.borderWidth = 1;
     fasong.layer.borderColor = color(239, 24, 24, 1).CGColor;
@@ -116,7 +121,7 @@
     [zhuceB setTitle:@"注册" forState:UIControlStateNormal];
     zhuceB.titleLabel.font = [UIFont systemFontOfSize:18];
     [zhuceB setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    zhuceB.frame = CGRectMake(40, 315, screenB.size.width - 80, 44);
+    zhuceB.frame = CGRectMake(40, 290, screenB.size.width - 80, 44);
     zhuceB.layer.cornerRadius = 5;
     [zhuceB addTarget:self action:@selector(onClickRegisterBtn:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -140,6 +145,7 @@
     [self.view addSubview:whiteBackground];
     [self.view addSubview:zhuceB];
     [self.view addSubview:obeyLicense];
+    [self.view addSubview:xieYi];
     
     _nickNameField = userT;
     _phoneField = phoneT;

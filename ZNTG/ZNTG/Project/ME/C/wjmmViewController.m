@@ -30,8 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
-    self.view.backgroundColor =  color(239, 249, 241, 1);
-    self.title = @"找回密码";
+    self.view.backgroundColor =  [UIColor whiteColor];
+    self.title = @"修改密码";
     
     [self setzhmmView];
     [self.leftBotton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
@@ -53,20 +53,21 @@
     UIView *fengexian1 = [[UIView alloc] initWithFrame:CGRectMake(60, 50, screenB.size.width - 80, 0.5)];
     UIView *fengexian2 = [[UIView alloc] initWithFrame:CGRectMake(60, 100, screenB.size.width - 80, 0.5)];
     UIView *fengexian3 = [[UIView alloc] initWithFrame:CGRectMake(60, 150, screenB.size.width - 80, 0.5)];
-    fengexian1.backgroundColor = color(239, 240, 240, 1);
-    fengexian2.backgroundColor = color(239, 240, 240, 1);
-    fengexian3.backgroundColor = color(239, 240, 240, 1);
-    
+    UIView *fengexian4 = [[UIView alloc] initWithFrame:CGRectMake(60, 200, screenB.size.width - 80, 0.5)];
+    fengexian1.backgroundColor = color(200, 200, 200, 1);
+    fengexian2.backgroundColor = color(200, 200, 200, 1);
+    fengexian3.backgroundColor = color(200, 200, 200, 1);
+    fengexian4.backgroundColor = color(200, 200, 200, 1);
     
     UIImageView *userImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 13.5, 20, 23)];
     UIImageView *passwordImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(20, 113.5, 20, 23)];
     UIImageView *passwordImage2 = [[UIImageView alloc] initWithFrame:CGRectMake(20, 163.5, 20, 23)];
     UIImageView *yanzhengma = [[UIImageView alloc] initWithFrame:CGRectMake(20, 63.5, 20, 23)];
     
-    userImage.image = [UIImage imageNamed:@"dlyhm"];
-    passwordImage1.image = [UIImage imageNamed:@"dlsuo"];
-    passwordImage2.image = [UIImage imageNamed:@"dlsuo"];
-    yanzhengma.image = [UIImage imageNamed:@"dlmima"];
+    userImage.image = [UIImage imageNamed:@"DLPhone"];
+    passwordImage1.image = [UIImage imageNamed:@"DLpassword"];
+    passwordImage2.image = [UIImage imageNamed:@"DLpassword"];
+    yanzhengma.image = [UIImage imageNamed:@"DLyzm"];
     
     
     MSTextField *userT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 5, screenB.size.width - 30 - 60, 40)];
@@ -80,11 +81,11 @@
     JKCountDownButton *fasong = [JKCountDownButton buttonWithType:UIButtonTypeSystem];
     setpasswordT.secureTextEntry = YES;
     makesurepasswordT.secureTextEntry = YES;
-    fasong.frame = CGRectMake(screenB.size.width - 120, 60, 100, 30);
-    [fasong setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [fasong setTintColor:color(19, 122, 194, 1)];
+    fasong.frame = CGRectMake(screenB.size.width - 148, 60, 128, 30);
+    [fasong setTitle:@"获取语音验证码" forState:UIControlStateNormal];
+    [fasong setTintColor:color(239, 73, 75, 1)];
     fasong.layer.borderWidth = 1;
-    fasong.layer.borderColor = color(19, 122, 194, 1).CGColor;
+    fasong.layer.borderColor = color(239, 73, 75, 1).CGColor;
     fasong.layer.cornerRadius = 15;
     [fasong addTarget:self action:@selector(onClickVerifyCodeBtn:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -93,7 +94,7 @@
     makesurepasswordT.tintColor = color(241, 74, 25, 1);
     yanzhengmaT.tintColor = color(241, 74, 25, 1);
     
-    userT.placeholder = @"手机号";
+    userT.placeholder = @"请输入手机号";
     setpasswordT.placeholder = @"设置您的密码";
     makesurepasswordT.placeholder = @"确认您的密码";
     yanzhengmaT.placeholder =@"您的手机验证码";
@@ -116,6 +117,7 @@
     [whiteBackground addSubview:fengexian1];
     [whiteBackground addSubview:fengexian2];
     [whiteBackground addSubview:fengexian3];
+    [whiteBackground addSubview:fengexian4];
     [whiteBackground addSubview:userImage];
     [whiteBackground addSubview:passwordImage1];
     [whiteBackground addSubview:passwordImage2];
