@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  ZNTG
+//
+//  Created by Peter on 7/28/16.
+//  Copyright © 2016 Peter. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#pragma mark -- 常数以及调试宏文件
+#import "Constants.h"
+#import "DebugHeader.h"
+
+
+#endif /* PrefixHeader_pch */
