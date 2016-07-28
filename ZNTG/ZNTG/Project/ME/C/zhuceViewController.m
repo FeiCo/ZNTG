@@ -28,7 +28,7 @@
 @property (nonatomic,strong) MSTextField *phoneField;//手机号
 @property (nonatomic,strong) MSTextField *verifyCodeField;//验证码
 @property (nonatomic,strong) MSTextField *passWordField;//密码
-@property (nonatomic,strong) MSTextField *againPWDField;//再一次确认密码
+@property (nonatomic,weak) UISwitch *obeyLisences;//密码
 
 @end
 
@@ -37,8 +37,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
-    self.view.backgroundColor =  color(239, 249, 241, 1);
-    self.title = @"注册";
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"账号注册";
     [self.leftBotton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];    // Do any additional setup after loading the view.
     [self setZhuCeView];
 }
@@ -64,32 +64,34 @@
     fengexian3.backgroundColor = color(239, 240, 240, 1);
     fengexian4.backgroundColor = color(239, 240, 240, 1);
     
-    UIImageView *userImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 13.5, 20, 23)];
-    UIImageView *shoujiImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 63.5, 20, 23)];
-    UIImageView *passwordImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 113.5, 20, 23)];
-    UIImageView *againpasswordImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 163.5, 20, 23)];
-    UIImageView *yanzhengma = [[UIImageView alloc] initWithFrame:CGRectMake(20, 213.5, 20, 23)];
+    UIImageView *userImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 113.5, 20, 23)];
+    UIImageView *shoujiImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 13.5, 20, 23)];
+    UIImageView *passwordImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 163.5, 20, 23)];
+    UIImageView *yanzhengma = [[UIImageView alloc] initWithFrame:CGRectMake(20, 63.5, 20, 23)];
     
-    userImage.image = [UIImage imageNamed:@"dlyhm"];
-    passwordImage.image = [UIImage imageNamed:@"dlsuo"];
-    yanzhengma.image = [UIImage imageNamed:@"dlmima"];
-    againpasswordImage.image = [UIImage imageNamed:@"dlsuo"];
-    shoujiImage.image = [UIImage imageNamed:@"dlshouji"];
+    UISwitch *obeyLicense = [[UISwitch alloc] init];
+    //    switcher.tintColor = color(241, 74, 25, 1);
+    obeyLicense.onTintColor = color(239, 78, 81, 1);
+    [obeyLicense.layer setValue:@(0.4) forKey:@"transform.scale"];
+    obeyLicense.frame = CGRectMake(100, 200, 60, 60);
+    
+    userImage.image = [UIImage imageNamed:@"DLusername"];
+    passwordImage.image = [UIImage imageNamed:@"DLpassword"];
+    yanzhengma.image = [UIImage imageNamed:@"DLyzm"];
+    shoujiImage.image = [UIImage imageNamed:@"DLPhone"];
     
     
-    MSTextField *userT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 5, screenB.size.width - 30 - 60, 40)];
-    MSTextField *phoneT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 55, screenB.size.width - 30 - 60, 40)];
-    MSTextField *passwordT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 105, screenB.size.width - 30 - 60, 40)];
-    MSTextField *againpasswordT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 155, screenB.size.width - 30 - 60, 40)];
-    MSTextField *yanzhengmaT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 205, screenB.size.width - 30 - 160, 40)];
+    MSTextField *userT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 105, screenB.size.width - 30 - 60, 40)];
+    MSTextField *phoneT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 5, screenB.size.width - 30 - 60, 40)];
+    MSTextField *passwordT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 155, screenB.size.width - 30 - 60, 40)];
+    MSTextField *yanzhengmaT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 55, screenB.size.width - 30 - 160, 40)];
     passwordT.secureTextEntry = YES;
-    againpasswordT.secureTextEntry = YES;
     JKCountDownButton *fasong = [JKCountDownButton buttonWithType:UIButtonTypeSystem];
-    fasong.frame = CGRectMake(screenB.size.width - 120, 210, 100, 30);
+    fasong.frame = CGRectMake(screenB.size.width - 120, 60, 100, 30);
     [fasong setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [fasong setTintColor:color(19, 122, 194, 1)];
+    [fasong setTintColor:color(239, 24, 24, 1)];
     fasong.layer.borderWidth = 1;
-    fasong.layer.borderColor = color(19, 122, 194, 1).CGColor;
+    fasong.layer.borderColor = color(239, 24, 24, 1).CGColor;
     fasong.layer.cornerRadius = 15;
     [fasong addTarget:self action:@selector(onClickVerifyCodeBtn:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -97,23 +99,20 @@
     userT.tintColor = color(241, 74, 25, 1);
     passwordT.tintColor = color(241, 74, 25, 1);
     yanzhengmaT.tintColor = color(241, 74, 25, 1);
-    againpasswordT.tintColor = color(241, 74, 25, 1);
     
-    userT.placeholder = @"用户名";
-    phoneT.placeholder =@"手机号";
-    passwordT.placeholder = @"输入您的密码";
-    againpasswordT.placeholder = @"再次输入密码";
-    yanzhengmaT.placeholder =@"您的手机验证码";
+    userT.placeholder = @"请输入昵称";
+    phoneT.placeholder =@"请输入手机号";
+    passwordT.placeholder = @"请输入密码";
+    yanzhengmaT.placeholder =@"请输入验证码";
     
     userT.clearButtonMode = YES;
     passwordT.clearButtonMode = YES;
     phoneT.clearButtonMode = YES;
-    againpasswordT.clearButtonMode = YES;
     yanzhengmaT.clearButtonMode = YES;
     
     
     UIButton *zhuceB = [UIButton buttonWithType:UIButtonTypeSystem];
-    zhuceB.backgroundColor = color(241, 74, 25, 1);
+    zhuceB.backgroundColor = color(239, 78, 81, 1);
     [zhuceB setTitle:@"注册" forState:UIControlStateNormal];
     zhuceB.titleLabel.font = [UIFont systemFontOfSize:18];
     [zhuceB setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -128,7 +127,6 @@
     [whiteBackground addSubview:userImage];
     [whiteBackground addSubview:passwordImage];
     [whiteBackground addSubview:shoujiImage];
-    [whiteBackground addSubview:againpasswordImage];
     [whiteBackground addSubview:yanzhengma];
     
     [whiteBackground addSubview:userT];
@@ -136,18 +134,19 @@
     [whiteBackground addSubview:passwordT];
     [whiteBackground addSubview:yanzhengmaT];
     [whiteBackground addSubview:phoneT];
-    [whiteBackground addSubview:againpasswordT];
     [whiteBackground addSubview:fasong];
     
     
     [self.view addSubview:whiteBackground];
     [self.view addSubview:zhuceB];
+    [self.view addSubview:obeyLicense];
     
     _nickNameField = userT;
     _phoneField = phoneT;
     _verifyCodeField = yanzhengmaT;
     _passWordField = passwordT;
-    _againPWDField = againpasswordT;
+    _obeyLisences = obeyLicense;
+    
     
 }
 
@@ -211,7 +210,7 @@
     NSString *phoneString = [_phoneField.text stringByTrimingWhitespace];
     NSString *verifyCodeString = [_verifyCodeField.text stringByTrimingWhitespace];
     NSString *passWordString = [_passWordField.text stringByTrimingWhitespace];
-    NSString *againPWDString = [_againPWDField.text stringByTrimingWhitespace];
+
     
     BOOL isPhoneNumber = [phoneString verifyIsPhoneNumber];
     
@@ -228,12 +227,9 @@
     }else if ([passWordString length] <= 0){
         [self showHUDWithStr:@"请输入密码"];
         [_passWordField showShakeAnimation];
-    }else if (againPWDString != passWordString){
-        [self showHUDWithStr:@"请再次确认密码"];
-        [_againPWDField showShakeAnimation];
     }else{
         
-        NSDictionary *dictionary = @{@"phone":phoneString,@"password":againPWDString,@"code":verifyCodeString};
+        NSDictionary *dictionary = @{@"phone":phoneString,@"password":passWordString,@"code":verifyCodeString};
         
             
         [MSNetRequest requestMethodsWithPOST:dictionary url:kGetRegister successBlock:^(id responseObject) {

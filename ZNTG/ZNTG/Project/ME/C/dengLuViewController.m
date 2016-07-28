@@ -67,7 +67,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
     
     [self setDengLuView];
     // Do any additional setup after loading the view.
@@ -196,8 +196,12 @@
     
     UIButton *dismissb = [UIButton buttonWithType:UIButtonTypeCustom];
     dismissb.frame = CGRectMake(20, 30, 30, 30);
-    [dismissb setImage:[UIImage imageNamed:@"KejianX"] forState:UIControlStateNormal];
+    [dismissb setImage:[UIImage imageNamed:@"dismissX"] forState:UIControlStateNormal];
     [dismissb addTarget:self action:@selector(dismissBClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake((screenB.size.width - 60) /2, 30, 60, 30)];
+    title.text = @"登录";
+    title.font = [UIFont systemFontOfSize:20];
     
     
 //    UILabel  *title = [[UILabel alloc] initWithFrame:CGRectMake((screenB.size.width - 60) / 2, 25, 60, 40)];
@@ -205,8 +209,8 @@
 //    title.font = [UIFont boldSystemFontOfSize:22];
 //    title.text = @"登录";
     
-    UIImageView *icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dlicon"]];
-    UIImageView *iconbg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dliconbg"]];
+//    UIImageView *icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dlicon"]];
+//    UIImageView *iconbg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dliconbg"]];
     
     
     //for denglu
@@ -217,17 +221,17 @@
     
     UIImageView *userImage =[[UIImageView alloc] init];
     UIImageView *passwordImage = [[UIImageView alloc] init];
-    userImage.image = [UIImage imageNamed:@"dlyhm"];
-    passwordImage.image = [UIImage imageNamed:@"dlsuo"];
+    userImage.image = [UIImage imageNamed:@"DLPhone"];
+    passwordImage.image = [UIImage imageNamed:@"DLpassword"];
     
     
     MSTextField *userT = [[MSTextField alloc] init];
     MSTextField *passwordT = [[MSTextField alloc] init];
-    userT.tintColor = color(241, 74, 25, 1);
-    passwordT.tintColor = color(241, 74, 25, 1);
+    userT.tintColor = color(239, 78, 81, 1);
+    passwordT.tintColor = color(239, 78, 81, 1);
     passwordT.secureTextEntry = YES;
-    userT.placeholder = @"用户名/手机号";
-    passwordT.placeholder = @"输入您的密码";
+    userT.placeholder = @"请输入用户名";
+    passwordT.placeholder = @"请输入密码";
     userT.clearButtonMode = YES;
     passwordT.clearButtonMode = YES;
     userT.borderStyle = UITextBorderStyleNone;
@@ -238,7 +242,7 @@
     
     
     UIButton *denglu = [UIButton buttonWithType:UIButtonTypeSystem];
-    denglu.backgroundColor = color(241, 74, 25, 1);
+    denglu.backgroundColor = color(239, 78, 81, 1);
     [denglu setTitle:@"登录" forState:UIControlStateNormal];
     denglu.titleLabel.font = [UIFont systemFontOfSize:18];
     [denglu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -321,157 +325,188 @@
     
     UISwitch *switcher = [[UISwitch alloc] init];
 //    switcher.tintColor = color(241, 74, 25, 1);
-    switcher.onTintColor = color(241, 74, 25, 1);
+    switcher.onTintColor = color(239, 78, 81, 1);
     [switcher.layer setValue:@(0.6) forKey:@"transform.scale"];
 //    [switcher addTarget:self action:@selector(switcherStateChange:) forControlEvents:UIControlEventValueChanged];
     _remenberPassword = switcher;
     
+  
     
     
-//FRAME SETTING
+    CGFloat dsfPadding = (screenB.size.width - 120) / 6;
     
+//    icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
+//    iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
     
-    switch ([UIDevice getScreenType]) {
-        case ScreenType320x480:
-        {
-            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
-            
-            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 50, 80, 80);
-            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 50, 130, 130);
-            
-            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 80 - 40, 0.5);
-            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 80 - 40, 0.5);
-            userImage.frame = CGRectMake(40, 13.5, 20, 23);
-            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
-            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
-            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
-            blackbackground.frame = CGRectMake(0, 150, screenB.size.width, 100);
-            
-            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 247,80, 44);
-            switcher.frame = CGRectMake(screenB.size.width - 90, 250, 80, 44);
-            
-            denglu.frame = CGRectMake(40, 290, screenB.size.width - 80, 44);
-            forgetPass.frame = CGRectMake(30, 340, 100, 20);
-            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 340, 80, 20);
-            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 340, 100, 20);
-            
-            fengeV3.frame = CGRectMake(40, screenB.size.height - 95, screenB.size.width - 80, 0.5);
-            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 105, 120, 20);
-            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
-            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
-            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
-            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
-            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
-            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
-            
-            break;
-        }
-
-        case ScreenType320x568:
-        {
-            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
-            
-            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
-            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
-            
-            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
-            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
-            userImage.frame = CGRectMake(40, 13.5, 20, 23);
-            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
-            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
-            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
-            blackbackground.frame = CGRectMake(0, 195, screenB.size.width, 100);
-            
-            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 300,80, 44);
-            switcher.frame = CGRectMake(screenB.size.width - 90, 305, 80, 44);
-            
-            denglu.frame = CGRectMake(40, 350, screenB.size.width - 80, 44);
-            forgetPass.frame = CGRectMake(30, 400, 100, 20);
-            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 400, 80, 20);
-            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 400, 100, 20);
-            
-            fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
-            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
-            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
-            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
-            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
-            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
-            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
-            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
-            
-            break;
-        }
-
-        case ScreenType375x667:
-        {
-            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
-            
-            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
-            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
-            
-            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
-            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
-            userImage.frame = CGRectMake(40, 13.5, 20, 23);
-            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
-            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
-            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
-            blackbackground.frame = CGRectMake(0, 210, screenB.size.width, 100);
-            
-            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 315,80, 44);
-            switcher.frame = CGRectMake(screenB.size.width - 90, 320, 80, 44);
-            
-            denglu.frame = CGRectMake(40, 370, screenB.size.width - 80, 44);
-            forgetPass.frame = CGRectMake(30, 455, 100, 20);
-            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 455, 80, 20);
-            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 455, 100, 20);
-            
-            fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
-            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
-            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
-            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
-            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
-            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
-            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
-            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
-            
-            break;
-        }
-        default:
-        {
-            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
-            
-            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
-            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
-            
-            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
-            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
-            userImage.frame = CGRectMake(40, 13.5, 20, 23);
-            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
-            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
-            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
-            blackbackground.frame = CGRectMake(0, 210, screenB.size.width, 100);
-            
-            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 315,80, 44);
-            switcher.frame = CGRectMake(screenB.size.width - 90, 320, 80, 44);
-            
-            denglu.frame = CGRectMake(40, 370, screenB.size.width - 80, 44);
-            forgetPass.frame = CGRectMake(30, 455, 100, 20);
-            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 455, 80, 20);
-            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 455, 100, 20);
-            
-            fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
-            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
-            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
-            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
-            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
-            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
-            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
-            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
-            
-            break;
-        }
-
-    }
+    fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
+    fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
+    userImage.frame = CGRectMake(40, 13.5, 20, 23);
+    passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
+    userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
+    passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
+    blackbackground.frame = CGRectMake(0, 130, screenB.size.width, 100);
+    
+    jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 235,80, 44);
+    switcher.frame = CGRectMake(screenB.size.width - 90, 240, 80, 44);
+    
+    denglu.frame = CGRectMake(40, 290, screenB.size.width - 80, 44);
+    forgetPass.frame = CGRectMake(30, 375, 100, 20);
+    hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 375, 80, 20);
+    registe.frame = CGRectMake(screenB.size.width - 30 - 100, 375, 100, 20);
+    
+    fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
+    yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
+    qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
+    qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
+    wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
+    wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
+    wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
+    wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
+    
+////FRAME SETTING
+//    
+//    
+//    switch ([UIDevice getScreenType]) {
+//        case ScreenType320x480:
+//        {
+//            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
+//            
+//            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 50, 80, 80);
+//            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 50, 130, 130);
+//            
+//            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 80 - 40, 0.5);
+//            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 80 - 40, 0.5);
+//            userImage.frame = CGRectMake(40, 13.5, 20, 23);
+//            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
+//            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
+//            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
+//            blackbackground.frame = CGRectMake(0, 150, screenB.size.width, 100);
+//            
+//            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 247,80, 44);
+//            switcher.frame = CGRectMake(screenB.size.width - 90, 250, 80, 44);
+//            
+//            denglu.frame = CGRectMake(40, 290, screenB.size.width - 80, 44);
+//            forgetPass.frame = CGRectMake(30, 340, 100, 20);
+//            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 340, 80, 20);
+//            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 340, 100, 20);
+//            
+//            fengeV3.frame = CGRectMake(40, screenB.size.height - 95, screenB.size.width - 80, 0.5);
+//            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 105, 120, 20);
+//            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
+//            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
+//            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
+//            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
+//            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
+//            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
+//            
+//            break;
+//        }
+//
+//        case ScreenType320x568:
+//        {
+//            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
+//            
+//            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
+//            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
+//            
+//            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
+//            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
+//            userImage.frame = CGRectMake(40, 13.5, 20, 23);
+//            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
+//            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
+//            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
+//            blackbackground.frame = CGRectMake(0, 195, screenB.size.width, 100);
+//            
+//            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 300,80, 44);
+//            switcher.frame = CGRectMake(screenB.size.width - 90, 305, 80, 44);
+//            
+//            denglu.frame = CGRectMake(40, 350, screenB.size.width - 80, 44);
+//            forgetPass.frame = CGRectMake(30, 400, 100, 20);
+//            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 400, 80, 20);
+//            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 400, 100, 20);
+//            
+//            fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
+//            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
+//            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
+//            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
+//            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
+//            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
+//            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
+//            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
+//            
+//            break;
+//        }
+//
+//        case ScreenType375x667:
+//        {
+//            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
+//            
+//            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
+//            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
+//            
+//            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
+//            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
+//            userImage.frame = CGRectMake(40, 13.5, 20, 23);
+//            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
+//            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
+//            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
+//            blackbackground.frame = CGRectMake(0, 210, screenB.size.width, 100);
+//            
+//            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 315,80, 44);
+//            switcher.frame = CGRectMake(screenB.size.width - 90, 320, 80, 44);
+//            
+//            denglu.frame = CGRectMake(40, 370, screenB.size.width - 80, 44);
+//            forgetPass.frame = CGRectMake(30, 455, 100, 20);
+//            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 455, 80, 20);
+//            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 455, 100, 20);
+//            
+//            fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
+//            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
+//            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
+//            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
+//            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
+//            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
+//            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
+//            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
+//            
+//            break;
+//        }
+//        default:
+//        {
+//            CGFloat dsfPadding = (screenB.size.width - 120) / 6;
+//            
+//            icon.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 80, 80);
+//            iconbg.frame = CGRectMake((screenB.size.width - 80) / 2, 80, 130, 130);
+//            
+//            fengeV1.frame = CGRectMake(80, 40, screenB.size.width - 120, 0.5);
+//            fengeV2.frame = CGRectMake(80, 90, screenB.size.width - 120, 0.5);
+//            userImage.frame = CGRectMake(40, 13.5, 20, 23);
+//            passwordImage.frame = CGRectMake(40, 63.5, 20, 23);
+//            userT.frame = CGRectMake(80, 5, screenB.size.width - 30 - 80, 40);
+//            passwordT.frame = CGRectMake(80, 55, screenB.size.width - 30 - 80, 40);
+//            blackbackground.frame = CGRectMake(0, 210, screenB.size.width, 100);
+//            
+//            jiZhuMiMA.frame = CGRectMake(screenB.size.width - 157, 315,80, 44);
+//            switcher.frame = CGRectMake(screenB.size.width - 90, 320, 80, 44);
+//            
+//            denglu.frame = CGRectMake(40, 370, screenB.size.width - 80, 44);
+//            forgetPass.frame = CGRectMake(30, 455, 100, 20);
+//            hmyzh.frame = CGRectMake(screenB.size.width - 80 - 100, 455, 80, 20);
+//            registe.frame = CGRectMake(screenB.size.width - 30 - 100, 455, 100, 20);
+//            
+//            fengeV3.frame = CGRectMake(40, screenB.size.height - 107, screenB.size.width - 80, 0.5);
+//            yyzhdl.frame = CGRectMake((screenB.size.width - 120) / 2, screenB.size.height - 117, 120, 20);
+//            qqbtn.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 80, 40,40);
+//            qqtitle.frame = CGRectMake(4 * dsfPadding + 80, screenB.size.height - 33, 40, 20);
+//            wxbtn.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 80, 40,40);
+//            wbbtn.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 80, 40,40);
+//            wxtitle.frame = CGRectMake(2 * dsfPadding, screenB.size.height - 33, 40, 20);
+//            wbtitle.frame = CGRectMake(3 * dsfPadding + 40, screenB.size.height - 33, 40, 20);
+//            
+//            break;
+//        }
+//
+//    }
     
     [blackbackground addSubview:fengeV1];
     [blackbackground addSubview:fengeV2];
@@ -484,9 +519,10 @@
     [self.view addSubview:switcher];
     
 //    [self.view addSubview:title];
-    [self.view addSubview:iconbg];
-    [self.view addSubview:icon];
+//    [self.view addSubview:iconbg];
+//    [self.view addSubview:icon];
     [self.view addSubview:dismissb];
+    [self.view addSubview:title];
     
     [self.view addSubview:blackbackground];
     [self.view addSubview:denglu];

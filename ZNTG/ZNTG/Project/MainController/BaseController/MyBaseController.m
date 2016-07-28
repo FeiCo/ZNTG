@@ -8,6 +8,7 @@
 
 #import "MyBaseController.h"
 #import "MBProgressHUD.h"
+#import "UIImage+PHTintColor.h"
 
 @interface MyBaseController (){
     UIButton *_leftBotton;
@@ -22,7 +23,8 @@
         _leftBotton = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftBotton.backgroundColor = [UIColor clearColor];
         _leftBotton.frame = CGRectMake(0, 0, kNavigationBarHeight, kNavigationBarHeight);
-        [_leftBotton setImage:[UIImage imageNamed:@"Back"] forState:UIControlStateNormal];
+        UIImage *image = [UIImage imageNamed:@"NaviBack"];
+        [_leftBotton setImage:[image imageWithTintColor:[UIColor blackColor]] forState:UIControlStateNormal];
         [_leftBotton addTarget:self action:@selector(onClickLeftBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _leftBotton;
@@ -67,8 +69,8 @@
     self.navigationItem.hidesBackButton = YES;
     
     UINavigationBar *navigationBar = [UINavigationBar appearance];
-    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    navigationBar.barTintColor = kThemeColor;
+    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+//    navigationBar.barTintColor = kThemeColor;
 
     
     UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc]initWithCustomView:self.leftBotton];
