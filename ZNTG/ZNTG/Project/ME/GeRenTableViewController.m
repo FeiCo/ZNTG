@@ -81,12 +81,12 @@
     
     if(NO){
        
-        _txImageV.image = [UIImage imageNamed:@"defaulticon"];
+        _txImageV.image = [UIImage imageNamed:@"Default_Avatar"];
     }
     else
     {
         _nameL.text = @"何燕华";
-        _txImageV.image = [UIImage imageNamed:@"defaulticon"];
+        _txImageV.image = [UIImage imageNamed:@"Default_Avatar"];
     }
 
 }
@@ -96,7 +96,7 @@
     
     UIImageView *backgroundview = [[UIImageView alloc]initWithFrame: CGRectMake(0, - 170, screenB.size.width, 170)];
     
-    backgroundview.image = [UIImage imageNamed:@"MEBACKGROUND"];
+    backgroundview.image = [UIImage imageNamed:@"MEbackground"];
     backgroundview.contentMode = UIViewContentModeScaleAspectFill;
     backgroundview.backgroundColor = color(242, 80, 43, 1);
     
@@ -230,7 +230,7 @@
         case 0:
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.imageView.image = [UIImage imageNamed:@"tempt"];
+            cell.imageView.image = [UIImage imageNamed:@"MEgeren"];
             cell.textLabel.text = @"个人资料";
             cell.textLabel.font = [UIFont systemFontOfSize:15];
             return cell;
@@ -238,28 +238,28 @@
         case 1:
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.imageView.image = [UIImage imageNamed:@"tempt"];
+            cell.imageView.image = [UIImage imageNamed:@"MEanquan"];
             cell.textLabel.text = @"账户与安全";
             return cell;
         }
         case 2:
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.imageView.image = [UIImage imageNamed:@"tempt"];
+            cell.imageView.image = [UIImage imageNamed:@"MEjiaoyi"];
             cell.textLabel.text = @"交易记录";
             return cell;
         }
         case 3:
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.imageView.image = [UIImage imageNamed:@"tempt"];
+            cell.imageView.image = [UIImage imageNamed:@"MEgmfw"];
             cell.textLabel.text = @"购买服务";
             return cell;
         }
         case 4:
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.imageView.image = [UIImage imageNamed:@"tempt"];
+            cell.imageView.image = [UIImage imageNamed:@"MExiaoxi"];
             cell.textLabel.text = @"我的消息";
             UIView *reddot = [[UIView alloc]initWithFrame:CGRectMake(screenB.size.width - 45,18 , 8, 8)];
             reddot.layer.cornerRadius = 4;
