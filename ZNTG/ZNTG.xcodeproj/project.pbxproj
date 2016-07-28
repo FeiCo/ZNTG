@@ -19,6 +19,7 @@
 		D0628AC21D48C4C0006B7853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC11D48C4C0006B7853 /* main.m */; };
 		D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACC1D48C4C0006B7853 /* Assets.xcassets */; };
 		D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */; };
+		D0CA6CDA1D49D14D001E203E /* UIImage+PHTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */; };
 		E890F3491D49BD7800A59D36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */; };
 		E890F34A1D49BD7800A59D36 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D91D49BD7800A59D36 /* AFNetworkReachabilityManager.m */; };
 		E890F34B1D49BD7800A59D36 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2DB1D49BD7800A59D36 /* AFSecurityPolicy.m */; };
@@ -104,6 +105,8 @@
 		D0628ACC1D48C4C0006B7853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0628ACF1D48C4C0006B7853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0628AD11D48C4C0006B7853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CA6CD81D49D14D001E203E /* UIImage+PHTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PHTintColor.h"; sourceTree = "<group>"; };
+		D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PHTintColor.m"; sourceTree = "<group>"; };
 		E890F2D51D49BD7800A59D36 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E890F2D71D49BD7800A59D36 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -453,9 +456,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D0CA6CD71D49D0EA001E203E /* UTILITIES */ = {
+			isa = PBXGroup;
+			children = (
+				D0CA6CD81D49D14D001E203E /* UIImage+PHTintColor.h */,
+				D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */,
+			);
+			path = UTILITIES;
+			sourceTree = "<group>";
+		};
 		E890F2D21D49BD7800A59D36 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				D0CA6CD71D49D0EA001E203E /* UTILITIES */,
 				E890F2D31D49BD7800A59D36 /* AFNetworking */,
 				E890F2F71D49BD7800A59D36 /* MBProgressHUD */,
 				E890F2FA1D49BD7800A59D36 /* MJRefresh */,
@@ -816,6 +829,7 @@
 				E890F3541D49BD7800A59D36 /* UIImageView+AFNetworking.m in Sources */,
 				E890F36B1D49BD7800A59D36 /* UIScrollView+MJRefresh.m in Sources */,
 				E890F3721D49BD7800A59D36 /* SDWebImageDownloaderOperation.m in Sources */,
+				D0CA6CDA1D49D14D001E203E /* UIImage+PHTintColor.m in Sources */,
 				E890F35E1D49BD7800A59D36 /* MJRefreshAutoGifFooter.m in Sources */,
 				E890F3711D49BD7800A59D36 /* SDWebImageDownloader.m in Sources */,
 				E890F37A1D49BD7800A59D36 /* UIView+WebCacheOperation.m in Sources */,

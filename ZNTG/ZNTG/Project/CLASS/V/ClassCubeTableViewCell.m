@@ -7,6 +7,7 @@
 //
 
 #import "ClassCubeTableViewCell.h"
+#import "UIImage+PHTintColor.h"
 
 
 #define screenB [UIScreen mainScreen].bounds
@@ -23,6 +24,9 @@
 
 @property(nonatomic,weak) UILabel *title1;
 @property(nonatomic,weak) UILabel *title2;
+
+@property(nonatomic,weak) UILabel *yueDuLiang1;
+@property(nonatomic,weak) UILabel *yueDuLiang2;
 
 
 @end
@@ -65,6 +69,22 @@
         UILabel *title2 =[[UILabel alloc]init];
         UIView *kaung1 =[[UIView alloc]init];
         UIView *kaung2 =[[UIView alloc]init];
+        UILabel *yueDuLiang1 =[[UILabel alloc]initWithFrame:CGRectMake((screenB.size.width - 20 - 10) / 2 - 30, 85, 30, 10)];
+        UILabel *yueDuLiang2 =[[UILabel alloc]initWithFrame:CGRectMake((screenB.size.width - 20 - 10) / 2 - 30, 85, 30, 10)];
+        yueDuLiang1.text = @"23232";
+        yueDuLiang2.text = @"232";
+        yueDuLiang1.textColor = [UIColor whiteColor];
+        yueDuLiang2.textColor = [UIColor whiteColor];
+        yueDuLiang1.font = [UIFont systemFontOfSize:8];
+        yueDuLiang2.font = [UIFont systemFontOfSize:8];
+        
+        UIImageView *kanicon1 = [[UIImageView alloc]initWithFrame:CGRectMake((screenB.size.width - 20 - 10) / 2 - 40, 86, 8, 8)];
+        UIImageView *kanicon2 = [[UIImageView alloc]initWithFrame:CGRectMake((screenB.size.width - 20 - 10) / 2 - 40, 86, 8, 8)];
+        UIImage *image1 = [UIImage imageNamed:@"KeJianKan"];
+        
+        kanicon1.image = [image1 imageWithTintColor:[UIColor whiteColor]];
+        kanicon2.image = [image1 imageWithTintColor:[UIColor whiteColor]];
+        
         
         UIView *xvXian1 =[[UIView alloc]initWithFrame:CGRectMake(0, 139, (screenB.size.width - 20 - 10) / 2, 1)];
         UIView *xvXian2 =[[UIView alloc]initWithFrame:CGRectMake(0, 139, (screenB.size.width - 20 - 10) / 2, 1)];
@@ -89,6 +109,8 @@
         _title1 = title1;
         _title2 = title2;
         
+        _yueDuLiang1 = yueDuLiang1;
+        _yueDuLiang2 = yueDuLiang2;
         _imageV1.tag = 1;
         _imageV2.tag = 2;
 
@@ -105,9 +127,13 @@
         
         [self.kuang1 addSubview:xvXian1];
         [self.kuang2 addSubview:xvXian2];
-        
         [self.kuang1 addSubview:imageV1];
         [self.kuang2 addSubview:imageV2];
+        [self.kuang1 addSubview:kanicon1];
+        [self.kuang2 addSubview:kanicon2];
+        [self.kuang1 addSubview:yueDuLiang1];
+        [self.kuang2 addSubview:yueDuLiang2];
+
         [self.kuang1 addSubview:title1];
         [self.kuang2 addSubview:title2];
 
@@ -190,7 +216,7 @@
 
     _imageV1.frame = CGRectMake(0, 0, kuangW, 100);
     
-    UIImageView *play1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"playPic"]];
+    UIImageView *play1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeJianplay"]];
 
     play1.bounds = CGRectMake(0, 0, 30, 30);
     play1.center = CGPointMake(kuangW / 2, 50);
@@ -234,7 +260,7 @@
     
     _imageV2.frame = CGRectMake(0, 0, kuangW, 100);
     
-    UIImageView *play2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"playPic"]];
+    UIImageView *play2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeJianplay"]];
     play2.bounds = CGRectMake(0, 0, 30, 30);
     play2.center = CGPointMake(kuangW / 2, 50);
     [_imageV2 addSubview:play2];
