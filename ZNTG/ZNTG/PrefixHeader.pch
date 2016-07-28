@@ -14,7 +14,27 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #pragma mark -- 常数以及调试宏文件
 #import "Constants.h"
-#import "DebugHeader.h"
+
+
+//调试宏的设置
+//调试模式DEBUGMODE = 1 输出调试日志
+#define  DEBUGMODE 0
+
+#if DEBUGMODE
+#ifndef DebugLog
+#define DebugLog(fmt, ...) NSLog((@"[%s Line %d] \n" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#endif
+
+#else
+
+#ifndef DebugLog
+#define DebugLog(fmt, ...) // NSLog((@"[%s Line %d] \n" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#endif
+
+#define NSLog // NSLog
+
+#endif
+
 
 
 #endif /* PrefixHeader_pch */

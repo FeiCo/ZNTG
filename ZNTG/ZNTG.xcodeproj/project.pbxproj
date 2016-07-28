@@ -25,7 +25,6 @@
 		D033D3041D49A516006AE6D3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D033D3051D49A543006AE6D3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D033D3081D49A645006AE6D3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		D033D3091D49A645006AE6D3 /* DebugHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugHeader.h; sourceTree = "<group>"; };
 		D033D3151D49A645006AE6D3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D033D3161D49A645006AE6D3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D033D31A1D49A645006AE6D3 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
@@ -64,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				D033D3081D49A645006AE6D3 /* Constants.h */,
-				D033D3091D49A645006AE6D3 /* DebugHeader.h */,
 			);
 			path = MyHeaderFileS;
 			sourceTree = "<group>";
