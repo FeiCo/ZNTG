@@ -745,8 +745,8 @@
 		D0628AC01D48C4C0006B7853 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D033D3051D49A543006AE6D3 /* AppDelegate.m */,
 				D033D3041D49A516006AE6D3 /* AppDelegate.h */,
+				D033D3051D49A543006AE6D3 /* AppDelegate.m */,
 				D0628ACC1D48C4C0006B7853 /* Assets.xcassets */,
 				D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */,
 				D0628AD11D48C4C0006B7853 /* Info.plist */,

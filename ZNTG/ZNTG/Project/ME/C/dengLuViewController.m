@@ -196,7 +196,7 @@
     
     UIButton *dismissb = [UIButton buttonWithType:UIButtonTypeCustom];
     dismissb.frame = CGRectMake(20, 30, 30, 30);
-    [dismissb setImage:[UIImage imageNamed:@"dismissX"] forState:UIControlStateNormal];
+    [dismissb setImage:[UIImage imageNamed:@"KejianX"] forState:UIControlStateNormal];
     [dismissb addTarget:self action:@selector(dismissBClick) forControlEvents:UIControlEventTouchUpInside];
     
     

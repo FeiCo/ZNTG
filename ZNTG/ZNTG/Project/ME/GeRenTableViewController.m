@@ -8,7 +8,7 @@
 
 #import "GeRenTableViewController.h"
 //#import "shezhiTableViewController.h"
-//#import "dengLuViewController.h"
+#import "dengLuViewController.h"
 //#import "dengLuViewController.h"
 
 //#import "MSBannerModel.h"
@@ -150,17 +150,14 @@
 
 -(void)iconClick {
     
-    
-    
-    
-//    if(_islogedin == NO){
-//        dengLuViewController *dengluC = [[dengLuViewController alloc] init];
-//        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:dengluC];
-//        
-//        [self presentViewController:navi animated:YES completion:^{
-//            
-//        }];
-//    }
+    if(1){
+        dengLuViewController *dengluC = [[dengLuViewController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:dengluC];
+        
+        [self presentViewController:navi animated:YES completion:^{
+            
+        }];
+    }
 }
 
 
