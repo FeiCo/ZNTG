@@ -7,22 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D033D2FC1D49A497006AE6D3 /* ClassCubeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2DC1D49A497006AE6D3 /* ClassCubeTableViewCell.m */; };
+		D033D2FD1D49A497006AE6D3 /* ClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2DF1D49A497006AE6D3 /* ClassTableViewController.m */; };
+		D033D2FE1D49A497006AE6D3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2E41D49A497006AE6D3 /* HomeViewController.m */; };
+		D033D2FF1D49A497006AE6D3 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2E91D49A497006AE6D3 /* MainTabViewController.m */; };
+		D033D3001D49A497006AE6D3 /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2EB1D49A497006AE6D3 /* NaviViewController.m */; };
+		D033D3011D49A497006AE6D3 /* GeRenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2EF1D49A497006AE6D3 /* GeRenTableViewController.m */; };
+		D033D3021D49A497006AE6D3 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D2F61D49A497006AE6D3 /* TeacherViewController.m */; };
+		D033D3031D49A497006AE6D3 /* tempt.plist in Resources */ = {isa = PBXBuildFile; fileRef = D033D2FA1D49A497006AE6D3 /* tempt.plist */; };
+		D033D3061D49A543006AE6D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3051D49A543006AE6D3 /* AppDelegate.m */; };
 		D0628AC21D48C4C0006B7853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC11D48C4C0006B7853 /* main.m */; };
-		D0628AC51D48C4C0006B7853 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC41D48C4C0006B7853 /* AppDelegate.m */; };
-		D0628AC81D48C4C0006B7853 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC71D48C4C0006B7853 /* ViewController.m */; };
-		D0628ACB1D48C4C0006B7853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628AC91D48C4C0006B7853 /* Main.storyboard */; };
 		D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACC1D48C4C0006B7853 /* Assets.xcassets */; };
 		D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D033D2D71D49A497006AE6D3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D033D2D81D49A497006AE6D3 /* DebugHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugHeader.h; sourceTree = "<group>"; };
+		D033D2DB1D49A497006AE6D3 /* ClassCubeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassCubeTableViewCell.h; sourceTree = "<group>"; };
+		D033D2DC1D49A497006AE6D3 /* ClassCubeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassCubeTableViewCell.m; sourceTree = "<group>"; };
+		D033D2DE1D49A497006AE6D3 /* ClassTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewController.h; sourceTree = "<group>"; };
+		D033D2DF1D49A497006AE6D3 /* ClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewController.m; sourceTree = "<group>"; };
+		D033D2E31D49A497006AE6D3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D033D2E41D49A497006AE6D3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D033D2E81D49A497006AE6D3 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
+		D033D2E91D49A497006AE6D3 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
+		D033D2EA1D49A497006AE6D3 /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
+		D033D2EB1D49A497006AE6D3 /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
+		D033D2EE1D49A497006AE6D3 /* GeRenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenTableViewController.h; sourceTree = "<group>"; };
+		D033D2EF1D49A497006AE6D3 /* GeRenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRenTableViewController.m; sourceTree = "<group>"; };
+		D033D2F51D49A497006AE6D3 /* TeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherViewController.h; sourceTree = "<group>"; };
+		D033D2F61D49A497006AE6D3 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
+		D033D2FA1D49A497006AE6D3 /* tempt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tempt.plist; sourceTree = "<group>"; };
+		D033D3041D49A516006AE6D3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D033D3051D49A543006AE6D3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0628ABD1D48C4C0006B7853 /* ZNTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNTG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0628AC11D48C4C0006B7853 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0628AC31D48C4C0006B7853 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D0628AC41D48C4C0006B7853 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0628AC61D48C4C0006B7853 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0628AC71D48C4C0006B7853 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D0628ACA1D48C4C0006B7853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0628ACC1D48C4C0006B7853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0628ACF1D48C4C0006B7853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0628AD11D48C4C0006B7853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +59,183 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D033D2D91D49A497006AE6D3 /* MyHeaderFileS */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2D71D49A497006AE6D3 /* Constants.h */,
+				D033D2D81D49A497006AE6D3 /* DebugHeader.h */,
+			);
+			name = MyHeaderFileS;
+			path = ../../../../Documents/ChInTG12/ZNTG/ZNTG/MyHeaderFileS;
+			sourceTree = "<group>";
+		};
+		D033D2DA1D49A497006AE6D3 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D033D2DD1D49A497006AE6D3 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D033D2E01D49A497006AE6D3 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2DE1D49A497006AE6D3 /* ClassTableViewController.h */,
+				D033D2DF1D49A497006AE6D3 /* ClassTableViewController.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D033D2E11D49A497006AE6D3 /* CLASS */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2DA1D49A497006AE6D3 /* C */,
+				D033D2DB1D49A497006AE6D3 /* ClassCubeTableViewCell.h */,
+				D033D2DC1D49A497006AE6D3 /* ClassCubeTableViewCell.m */,
+				D033D2DD1D49A497006AE6D3 /* M */,
+				D033D2E01D49A497006AE6D3 /* V */,
+			);
+			path = CLASS;
+			sourceTree = "<group>";
+		};
+		D033D2E21D49A497006AE6D3 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D033D2E51D49A497006AE6D3 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D033D2E61D49A497006AE6D3 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D033D2E71D49A497006AE6D3 /* HOME */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2E21D49A497006AE6D3 /* C */,
+				D033D2E31D49A497006AE6D3 /* HomeViewController.h */,
+				D033D2E41D49A497006AE6D3 /* HomeViewController.m */,
+				D033D2E51D49A497006AE6D3 /* M */,
+				D033D2E61D49A497006AE6D3 /* V */,
+			);
+			path = HOME;
+			sourceTree = "<group>";
+		};
+		D033D2EC1D49A497006AE6D3 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2E81D49A497006AE6D3 /* MainTabViewController.h */,
+				D033D2E91D49A497006AE6D3 /* MainTabViewController.m */,
+				D033D2EA1D49A497006AE6D3 /* NaviViewController.h */,
+				D033D2EB1D49A497006AE6D3 /* NaviViewController.m */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		D033D2ED1D49A497006AE6D3 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D033D2F01D49A497006AE6D3 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D033D2F11D49A497006AE6D3 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D033D2F21D49A497006AE6D3 /* ME */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2ED1D49A497006AE6D3 /* C */,
+				D033D2EE1D49A497006AE6D3 /* GeRenTableViewController.h */,
+				D033D2EF1D49A497006AE6D3 /* GeRenTableViewController.m */,
+				D033D2F01D49A497006AE6D3 /* M */,
+				D033D2F11D49A497006AE6D3 /* V */,
+			);
+			path = ME;
+			sourceTree = "<group>";
+		};
+		D033D2F31D49A497006AE6D3 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D033D2F41D49A497006AE6D3 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D033D2F71D49A497006AE6D3 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D033D2F81D49A497006AE6D3 /* TEACHER */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2F31D49A497006AE6D3 /* C */,
+				D033D2F41D49A497006AE6D3 /* M */,
+				D033D2F51D49A497006AE6D3 /* TeacherViewController.h */,
+				D033D2F61D49A497006AE6D3 /* TeacherViewController.m */,
+				D033D2F71D49A497006AE6D3 /* V */,
+			);
+			path = TEACHER;
+			sourceTree = "<group>";
+		};
+		D033D2F91D49A497006AE6D3 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2E11D49A497006AE6D3 /* CLASS */,
+				D033D2E71D49A497006AE6D3 /* HOME */,
+				D033D2EC1D49A497006AE6D3 /* MainController */,
+				D033D2F21D49A497006AE6D3 /* ME */,
+				D033D2F81D49A497006AE6D3 /* TEACHER */,
+			);
+			name = Project;
+			path = ../../../../Documents/ChInTG12/ZNTG/ZNTG/Project;
+			sourceTree = "<group>";
+		};
+		D033D2FB1D49A497006AE6D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D033D2FA1D49A497006AE6D3 /* tempt.plist */,
+			);
+			name = Resources;
+			path = ../../../../Documents/ChInTG12/ZNTG/ZNTG/Resources;
+			sourceTree = "<group>";
+		};
 		D0628AB41D48C4C0006B7853 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +255,9 @@
 		D0628ABF1D48C4C0006B7853 /* ZNTG */ = {
 			isa = PBXGroup;
 			children = (
-				D0628AC31D48C4C0006B7853 /* AppDelegate.h */,
-				D0628AC41D48C4C0006B7853 /* AppDelegate.m */,
-				D0628AC61D48C4C0006B7853 /* ViewController.h */,
-				D0628AC71D48C4C0006B7853 /* ViewController.m */,
-				D0628AC91D48C4C0006B7853 /* Main.storyboard */,
-				D0628ACC1D48C4C0006B7853 /* Assets.xcassets */,
-				D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */,
-				D0628AD11D48C4C0006B7853 /* Info.plist */,
+				D033D2D91D49A497006AE6D3 /* MyHeaderFileS */,
+				D033D2F91D49A497006AE6D3 /* Project */,
+				D033D2FB1D49A497006AE6D3 /* Resources */,
 				D0628AC01D48C4C0006B7853 /* Supporting Files */,
 			);
 			path = ZNTG;
@@ -74,6 +266,11 @@
 		D0628AC01D48C4C0006B7853 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D033D3051D49A543006AE6D3 /* AppDelegate.m */,
+				D033D3041D49A516006AE6D3 /* AppDelegate.h */,
+				D0628ACC1D48C4C0006B7853 /* Assets.xcassets */,
+				D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */,
+				D0628AD11D48C4C0006B7853 /* Info.plist */,
 				D0628AC11D48C4C0006B7853 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,7 +335,7 @@
 			files = (
 				D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */,
 				D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */,
-				D0628ACB1D48C4C0006B7853 /* Main.storyboard in Resources */,
+				D033D3031D49A497006AE6D3 /* tempt.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,23 +346,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0628AC81D48C4C0006B7853 /* ViewController.m in Sources */,
-				D0628AC51D48C4C0006B7853 /* AppDelegate.m in Sources */,
 				D0628AC21D48C4C0006B7853 /* main.m in Sources */,
+				D033D2FC1D49A497006AE6D3 /* ClassCubeTableViewCell.m in Sources */,
+				D033D3061D49A543006AE6D3 /* AppDelegate.m in Sources */,
+				D033D3001D49A497006AE6D3 /* NaviViewController.m in Sources */,
+				D033D2FD1D49A497006AE6D3 /* ClassTableViewController.m in Sources */,
+				D033D2FE1D49A497006AE6D3 /* HomeViewController.m in Sources */,
+				D033D3011D49A497006AE6D3 /* GeRenTableViewController.m in Sources */,
+				D033D2FF1D49A497006AE6D3 /* MainTabViewController.m in Sources */,
+				D033D3021D49A497006AE6D3 /* TeacherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D0628AC91D48C4C0006B7853 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0628ACA1D48C4C0006B7853 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,6 +497,7 @@
 				D0628AD61D48C4C0006B7853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
