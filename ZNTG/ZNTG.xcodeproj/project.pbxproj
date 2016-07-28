@@ -265,25 +265,11 @@
 			children = (
 				D033D3351D49A95B006AE6D3 /* ClassTableViewController.h */,
 				D033D3361D49A95B006AE6D3 /* ClassTableViewController.m */,
-				D033D30C1D49A645006AE6D3 /* C */,
-				D033D30F1D49A645006AE6D3 /* M */,
+				D0CA6D0E1D49D820001E203E /* C */,
+				D0CA6D0F1D49D820001E203E /* M */,
 				D033D3101D49A645006AE6D3 /* V */,
 			);
 			path = CLASS;
-			sourceTree = "<group>";
-		};
-		D033D30C1D49A645006AE6D3 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		D033D30F1D49A645006AE6D3 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
 			sourceTree = "<group>";
 		};
 		D033D3101D49A645006AE6D3 /* V */ = {
@@ -300,32 +286,11 @@
 			children = (
 				D033D3151D49A645006AE6D3 /* HomeViewController.h */,
 				D033D3161D49A645006AE6D3 /* HomeViewController.m */,
-				D033D3141D49A645006AE6D3 /* C */,
-				D033D3171D49A645006AE6D3 /* M */,
-				D033D3181D49A645006AE6D3 /* V */,
+				D0CA6D081D49D7DF001E203E /* C */,
+				D0CA6D091D49D7DF001E203E /* M */,
+				D0CA6D0A1D49D7DF001E203E /* V */,
 			);
 			path = HOME;
-			sourceTree = "<group>";
-		};
-		D033D3141D49A645006AE6D3 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		D033D3171D49A645006AE6D3 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		D033D3181D49A645006AE6D3 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
 			sourceTree = "<group>";
 		};
 		D033D3191D49A645006AE6D3 /* MainController */ = {
@@ -344,65 +309,23 @@
 			children = (
 				D033D3201D49A645006AE6D3 /* GeRenTableViewController.h */,
 				D033D3211D49A645006AE6D3 /* GeRenTableViewController.m */,
-				D033D31F1D49A645006AE6D3 /* C */,
-				D033D3221D49A645006AE6D3 /* M */,
-				D033D3231D49A645006AE6D3 /* V */,
+				D0CA6D101D49D83D001E203E /* C */,
+				D0CA6D111D49D83D001E203E /* M */,
+				D0CA6D121D49D83D001E203E /* V */,
 			);
 			path = ME;
-			sourceTree = "<group>";
-		};
-		D033D31F1D49A645006AE6D3 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		D033D3221D49A645006AE6D3 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		D033D3231D49A645006AE6D3 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
 			sourceTree = "<group>";
 		};
 		D033D3241D49A645006AE6D3 /* TEACHER */ = {
 			isa = PBXGroup;
 			children = (
+				D0CA6D0B1D49D7F8001E203E /* C */,
+				D0CA6D0C1D49D7F8001E203E /* M */,
+				D0CA6D0D1D49D7F8001E203E /* V */,
 				D033D3271D49A645006AE6D3 /* TeacherViewController.h */,
 				D033D3281D49A645006AE6D3 /* TeacherViewController.m */,
-				D033D3251D49A645006AE6D3 /* C */,
-				D033D3261D49A645006AE6D3 /* M */,
-				D033D3291D49A645006AE6D3 /* V */,
 			);
 			path = TEACHER;
-			sourceTree = "<group>";
-		};
-		D033D3251D49A645006AE6D3 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		D033D3261D49A645006AE6D3 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		D033D3291D49A645006AE6D3 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
 			sourceTree = "<group>";
 		};
 		D033D32A1D49A645006AE6D3 /* Resources */ = {
@@ -463,6 +386,83 @@
 				D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */,
 			);
 			path = UTILITIES;
+			sourceTree = "<group>";
+		};
+		D0CA6D081D49D7DF001E203E /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D0CA6D091D49D7DF001E203E /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D0CA6D0A1D49D7DF001E203E /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D0CA6D0B1D49D7F8001E203E /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D0CA6D0C1D49D7F8001E203E /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D0CA6D0D1D49D7F8001E203E /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D0CA6D0E1D49D820001E203E /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D0CA6D0F1D49D820001E203E /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D0CA6D101D49D83D001E203E /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D0CA6D111D49D83D001E203E /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D0CA6D121D49D83D001E203E /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		E890F2D21D49BD7800A59D36 /* ThirdLib */ = {
