@@ -8,6 +8,8 @@
 
 #import "HomeViewController.h"
 #import "SDCycleScrollView.h"
+#import "PlateView.h"
+#import "HomeCell.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
 
@@ -34,7 +36,7 @@
 }
 
 - (void)initializeDatas {
-    _cycleImages = @[ @"banner" ];
+    _cycleImages = @[ @"banner", @"banner", @"banner" ];
 }
 
 - (void)initializeNavigation {
@@ -46,36 +48,46 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
-//    [self registerNib];
+    [self registerNib];
+}
+
+- (void)registerNib {
+    [_tableView registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
 }
 
 - (void)initializeCycleScrollView {
-    UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), kScreenHeightScale(236))];
-    tableHeaderView.backgroundColor=[UIColor whiteColor];
+    UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), kScreenHeightScale(236) + kScreenHeightScale(20) + kScreenHeightScale(270))];
     
+    // 循环新闻
     _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), kScreenHeightScale(236)) imageURLStringsGroup:_cycleImages];
     _cycleScrollView.placeholderImage = [UIImage imageNamed:@"banner"];
     _cycleScrollView.delegate = self;
     _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
-    _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _cycleScrollView.autoScrollTimeInterval = 5;
     [tableHeaderView addSubview:_cycleScrollView];
+    
+    // 股市行情
+    UIView *marketView = [[UIView alloc] initWithFrame:CGRectMake(0, _cycleScrollView.bottom + kScreenHeightScale(20), CGRectGetWidth(self.view.frame), kScreenHeightScale(270))];
+    marketView.backgroundColor = [UIColor whiteColor];
+    [tableHeaderView addSubview:marketView];
+    
     _tableView.tableHeaderView = tableHeaderView;
 }
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 10;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    cell.textLabel.text = @"1234567";
+    static NSString *cellIdentifier = @"HomeCell";
+    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     return cell;
 }
 
@@ -83,7 +95,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kScreenHeightScale(180);
+    return kScreenHeightScale(520);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -93,6 +105,16 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.00001;
 }
+
+//- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), kScreenHeightScale(200))];
+//    
+//    // -----
+//    PlateView *plateView = [[PlateView alloc] initWithFrame:CGRectMake(0, kScreenHeightScale(20), CGRectGetWidth(self.view.frame), kScreenHeightScale(200) - kScreenHeightScale(20))];
+//    plateView.backgroundColor = [UIColor whiteColor];
+//    [headerView addSubview:plateView];
+//    return headerView;
+//}
 
 #pragma mark - SDCycleScrollViewDelegate
 

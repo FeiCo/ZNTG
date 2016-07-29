@@ -210,6 +210,9 @@
 		E890F3E91D4A002000A59D36 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F3E31D4A002000A59D36 /* TeacherViewController.m */; };
 		E890F3EA1D4A002000A59D36 /* TeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F3E71D4A002000A59D36 /* TeacherCell.m */; };
 		E890F3EB1D4A002000A59D36 /* TeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E890F3E81D4A002000A59D36 /* TeacherCell.xib */; };
+		E890F3EE1D4A122000A59D36 /* PlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F3ED1D4A122000A59D36 /* PlateView.m */; };
+		E890F3F21D4A1DA100A59D36 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F3F01D4A1DA100A59D36 /* HomeCell.m */; };
+		E890F3F31D4A1DA100A59D36 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E890F3F11D4A1DA100A59D36 /* HomeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -608,6 +611,11 @@
 		E890F3E61D4A002000A59D36 /* TeacherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherCell.h; sourceTree = "<group>"; };
 		E890F3E71D4A002000A59D36 /* TeacherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherCell.m; sourceTree = "<group>"; };
 		E890F3E81D4A002000A59D36 /* TeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherCell.xib; sourceTree = "<group>"; };
+		E890F3EC1D4A122000A59D36 /* PlateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateView.h; sourceTree = "<group>"; };
+		E890F3ED1D4A122000A59D36 /* PlateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateView.m; sourceTree = "<group>"; };
+		E890F3EF1D4A1DA100A59D36 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		E890F3F01D4A1DA100A59D36 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		E890F3F11D4A1DA100A59D36 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1528,6 +1536,11 @@
 		E890F3DF1D49FFFC00A59D36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E890F3EC1D4A122000A59D36 /* PlateView.h */,
+				E890F3ED1D4A122000A59D36 /* PlateView.m */,
+				E890F3EF1D4A1DA100A59D36 /* HomeCell.h */,
+				E890F3F01D4A1DA100A59D36 /* HomeCell.m */,
+				E890F3F11D4A1DA100A59D36 /* HomeCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1616,6 +1629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CA6D541D49DC61001E203E /* IQKeyboardManager.bundle in Resources */,
+				E890F3F31D4A1DA100A59D36 /* HomeCell.xib in Resources */,
 				D0CA6D721D49DEDF001E203E /* MSNoNetView.xib in Resources */,
 				D033D3331D49A645006AE6D3 /* tempt.plist in Resources */,
 				D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */,
@@ -1655,6 +1669,7 @@
 				D0CA6E431D49E4F6001E203E /* UIBezierPath+YYAdd.m in Sources */,
 				D0CA6E751D49E4F6001E203E /* YYTextView.m in Sources */,
 				E890F3731D49BD7800A59D36 /* SDWebImageManager.m in Sources */,
+				E890F3F21D4A1DA100A59D36 /* HomeCell.m in Sources */,
 				D0CA6D1E1D49DBD1001E203E /* XiuGaiMiMaController.m in Sources */,
 				D0628AC21D48C4C0006B7853 /* main.m in Sources */,
 				D0CA6E531D49E4F6001E203E /* _YYWebImageSetter.m in Sources */,
@@ -1712,6 +1727,7 @@
 				D0CA6E341D49E4F6001E203E /* NSDate+YYAdd.m in Sources */,
 				E890F34F1D49BD7800A59D36 /* AFAutoPurgingImageCache.m in Sources */,
 				D0CA6E601D49E4F6001E203E /* NSObject+YYModel.m in Sources */,
+				E890F3EE1D4A122000A59D36 /* PlateView.m in Sources */,
 				D0CA6E5B1D49E4F6001E203E /* YYImageCache.m in Sources */,
 				E890F3D61D49FFE000A59D36 /* TADotView.m in Sources */,
 				D0CA6E7E1D49E4F6001E203E /* YYThreadSafeDictionary.m in Sources */,
