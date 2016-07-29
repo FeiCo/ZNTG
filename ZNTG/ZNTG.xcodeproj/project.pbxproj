@@ -140,6 +140,7 @@
 		D0CA6E8D1D49E570001E203E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CA6E8C1D49E570001E203E /* Accelerate.framework */; };
 		D0CA6E8F1D49E57C001E203E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CA6E8E1D49E57C001E203E /* MobileCoreServices.framework */; };
 		D0CA6E911D49E583001E203E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CA6E901D49E583001E203E /* SystemConfiguration.framework */; };
+		E84B92271D4B606200E2A619 /* TermSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B92261D4B606200E2A619 /* TermSheetViewController.m */; };
 		E890F3491D49BD7800A59D36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */; };
 		E890F34A1D49BD7800A59D36 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D91D49BD7800A59D36 /* AFNetworkReachabilityManager.m */; };
 		E890F34B1D49BD7800A59D36 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2DB1D49BD7800A59D36 /* AFSecurityPolicy.m */; };
@@ -476,6 +477,8 @@
 		D0CA6E8C1D49E570001E203E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D0CA6E8E1D49E57C001E203E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D0CA6E901D49E583001E203E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E84B92251D4B606200E2A619 /* TermSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermSheetViewController.h; sourceTree = "<group>"; };
+		E84B92261D4B606200E2A619 /* TermSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermSheetViewController.m; sourceTree = "<group>"; };
 		E890F2D51D49BD7800A59D36 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E890F2D71D49BD7800A59D36 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -1522,6 +1525,8 @@
 			children = (
 				E890F3DC1D49FFFC00A59D36 /* HomeViewController.h */,
 				E890F3DD1D49FFFC00A59D36 /* HomeViewController.m */,
+				E84B92251D4B606200E2A619 /* TermSheetViewController.h */,
+				E84B92261D4B606200E2A619 /* TermSheetViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1723,6 +1728,7 @@
 				E890F3641D49BD7800A59D36 /* MJRefreshGifHeader.m in Sources */,
 				E890F3511D49BD7800A59D36 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D0CA6E641D49E4F6001E203E /* YYTextEffectWindow.m in Sources */,
+				E84B92271D4B606200E2A619 /* TermSheetViewController.m in Sources */,
 				D0CA6E661D49E4F6001E203E /* YYTextKeyboardManager.m in Sources */,
 				D0CA6E341D49E4F6001E203E /* NSDate+YYAdd.m in Sources */,
 				E890F34F1D49BD7800A59D36 /* AFAutoPurgingImageCache.m in Sources */,
