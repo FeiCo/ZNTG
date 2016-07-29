@@ -215,9 +215,9 @@
     
     //for denglu
     UIView *fengeV1 = [[UIView alloc] init];
-    fengeV1.backgroundColor = color(232, 233, 233, 1);
+    fengeV1.backgroundColor = color(200, 200, 200, 1);
     UIView *fengeV2 = [[UIView alloc] init];
-    fengeV2.backgroundColor = color(232, 233, 233, 1);
+    fengeV2.backgroundColor = color(200, 200, 200, 1);
     
     UIImageView *userImage =[[UIImageView alloc] init];
     UIImageView *passwordImage = [[UIImageView alloc] init];
@@ -530,15 +530,15 @@
     [self.view addSubview:registe];
     [self.view addSubview:hmyzh];
     
-    [self.view addSubview:fengeV3];
-    [self.view addSubview:yyzhdl];
-    
-    [self.view addSubview:qqtitle];
-    [self.view addSubview:qqbtn];
-    [self.view addSubview:wxtitle];
-    [self.view addSubview:wxbtn];
-    [self.view addSubview:wbtitle];
-    [self.view addSubview:wbbtn];
+//    [self.view addSubview:fengeV3];
+//    [self.view addSubview:yyzhdl];
+//    
+//    [self.view addSubview:qqtitle];
+//    [self.view addSubview:qqbtn];
+//    [self.view addSubview:wxtitle];
+//    [self.view addSubview:wxbtn];
+//    [self.view addSubview:wbtitle];
+//    [self.view addSubview:wbbtn];
     
     _phoneField = userT;
     _passWordField = passwordT;
