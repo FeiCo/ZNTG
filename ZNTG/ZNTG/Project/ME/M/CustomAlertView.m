@@ -64,8 +64,8 @@
 //    
 //    NSLog(@"gggg%f",contentFrame.size.height);
     
-    UIButton *cancellButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [cancellButton setImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
+    UIButton *cancellButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [cancellButton setImage:[UIImage imageNamed:@"KejianX"] forState:UIControlStateNormal];
     cancellButton.frame = CGRectMake(kAlertWidth - 40, kTitleTopMargin + 5, 30, 30);
     [cancellButton addTarget:popView action:@selector(cancellBtnClick:) forControlEvents:UIControlEventTouchDown];
     [popView addSubview:cancellButton];
@@ -174,13 +174,17 @@
 {
     UIViewController *topVC = [self appRootViewController];
     
-   [ UIView animateWithDuration:1.0 animations:^{
-       self.frame=CGRectMake((CGRectGetWidth(topVC.view.bounds) - kAlertWidth) * 0.5,
-                             -self.frame.origin.y-30,
-                             self.frame.size.width,
-                             self.frame.size.height);
-       NSLog(@"------------------------%f",self.frame.size.height);
-       NSLog(@"------------------------%f",self.frame.origin.y);
+    self.frame=CGRectMake((CGRectGetWidth(topVC.view.bounds) - kAlertWidth) * 0.5,
+                                       100,
+                                       self.frame.size.width,
+                                       self.frame.size.height);
+   [ UIView animateWithDuration:0.8 animations:^{
+//       self.frame=CGRectMake((CGRectGetWidth(topVC.view.bounds) - kAlertWidth) * 0.5,
+//                             -self.frame.origin.y-30,
+//                             self.frame.size.width,
+//                             self.frame.size.height);
+//       NSLog(@"------------------------%f",self.frame.size.height);
+//       NSLog(@"------------------------%f",self.frame.origin.y);
        [topVC.view addSubview:self];
    }];
 
@@ -232,12 +236,14 @@
     if (newSuperview == nil) {
         return;
     }
+    NSLog(@"sssss");
     UIViewController *topVC = [self appRootViewController];
     
     if (!self.backImageView) {
         self.backImageView = [[UIView alloc] initWithFrame:topVC.view.bounds];
         self.backImageView.backgroundColor = [UIColor blackColor];
-        self.backImageView.alpha = 0.8f;
+        self.backImageView.alpha = 0.11f;
+        self.backImageView.alpha = 0.7f;
         self.backImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         
         

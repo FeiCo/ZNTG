@@ -7,8 +7,9 @@
 //
 
 #import "ClassTableViewController.h"
-
 #import "ClassCubeTableViewCell.h"
+
+#import "CustomAlertView.h"
 
 #define color(r,g,b,a)   [UIColor colorWithRed: ( r / 255.0) green:( g / 255.0) blue:( b / 255.0) alpha:( a / 1.0)]
 
@@ -372,6 +373,18 @@
     
     NSLog(@"click event pass title is%@",array);
     
+        UIView *contentv= [[UIView alloc] init];
+        contentv.backgroundColor =[UIColor redColor];
+        UIView *contentv1= [[UIView alloc] init];
+        contentv1.backgroundColor =[UIColor blueColor];
+    
+        [CustomAlertView popViewWithTitle:@"xxxx" contentText:contentv contentFrame:CGRectMake(20, 20, 40, 200) bottomView:contentv1 bottomFrame:CGRectMake(20, 20, 40, 0) leftButtonTitle:@"试看" rightButtonTitle:@"购买" leftBlock:^{
+            NSLog(@"试看");
+        } rightBlock:^{
+            NSLog(@"购买");
+        } dismissBlock:^{
+           NSLog(@"取消");
+        }];
     
 //    YYReachability * rechability = [YYReachability reachability];
 //    bool iswifi = (rechability.status == YYReachabilityStatusWiFi);
