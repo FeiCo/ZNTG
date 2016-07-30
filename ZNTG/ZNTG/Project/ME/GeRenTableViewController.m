@@ -339,7 +339,7 @@
             break;
         }
     }
-
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark - scrollview delegate
