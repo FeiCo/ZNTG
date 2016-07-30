@@ -106,7 +106,7 @@
     
     
     UIButton *queDin = [UIButton buttonWithType:UIButtonTypeSystem];
-    queDin.backgroundColor = color(241, 74, 25, 1);
+    queDin.backgroundColor = color(239, 78, 81, 1);
     [queDin setTitle:@"确定" forState:UIControlStateNormal];
     queDin.titleLabel.font = [UIFont systemFontOfSize:18];
     [queDin setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>shijan</key>
+		<string>服务器123123123</string>
+		<key>yanhuang</key>
+		<string>yanhuang32323232</string>
+		<key>name</key>
+		<string>候波</string>
+		<key>tagGround</key>
+		<string>pre-sale</string>
+		<key>backGround</key>
+		<string>sheng_bg</string>
+	</dict>
+	<dict>
+		<key>shijan</key>
+		<string>服务器123123123</string>
+		<key>yanhuang</key>
+		<string>yanhu23232</string>
+		<key>name</key>
+		<string>候波</string>
+		<key>tagGround</key>
+		<string>pre-sale0</string>
+		<key>backGround</key>
+		<string>zhi_bg</string>
+	</dict>
+	<dict>
+		<key>shijan</key>
+		<string>服务器123123123</string>
+		<key>yanhuang</key>
+		<string>yanhuang32323232</string>
+		<key>name</key>
+		<string>王霞霞</string>
+		<key>tagGround</key>
+		<string>pre-sale</string>
+		<key>backGround</key>
+		<string>sheng_bg</string>
+	</dict>
+	<dict>
+		<key>shijan</key>
+		<string>服务器123123123</string>
+		<key>yanhuang</key>
+		<string>yanhuang32323232</string>
+		<key>name</key>
+		<string>候波</string>
+		<key>tagGround</key>
+		<string>pre-sale0</string>
+		<key>backGround</key>
+		<string>zhi_bg</string>
+	</dict>
+</array>
+</plist>

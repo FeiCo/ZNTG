@@ -14,6 +14,13 @@
 //#import "MSBannerModel.h"
 //#import "MSBannerController.h"
 
+
+#import "GeRenZiLiaoTableViewController.h"
+#import "ZhangHuAnQuanTableViewController.h"
+#import "JiaoYiJiLuTableViewController.h"
+#import "GouMaiFWTableViewController.h"
+#import "MeXiaoXiController.h"
+
 #define screenB [UIScreen mainScreen].bounds
 #define color(r,g,b,a)   [UIColor colorWithRed: ( r / 255.0) green:( g / 255.0) blue:( b / 255.0) alpha:( a / 1.0)]
 
@@ -41,7 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"购买服务";
 //    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 //    _link1 = [NSString new];
 //    _link2 = [NSString new];
@@ -55,8 +62,6 @@
     
     self.tableView.backgroundColor = color(241, 242, 243, 1);
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-    
-    
     self.tableView.contentInset = UIEdgeInsetsMake(170, 0, 0, 0);
     
     [self setHeaderView];
@@ -293,44 +298,49 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    if (indexPath.section < 2) {
-        NSString *link = indexPath.section == 0 ? _link1 :_link2;
-        NSString *urlstring = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&uin=%@&version=1&src_type=web",link];
-        UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-        NSURL *url = [NSURL URLWithString:urlstring];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        //    webView.delegate = self;
-        [webView loadRequest:request];
-        [self.view addSubview:webView];
-        NSLog(@"NUMBERIS/n %@",link);
+     self.hidesBottomBarWhenPushed = YES;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            GeRenZiLiaoTableViewController *geRenZiLiao = [[GeRenZiLiaoTableViewController alloc]init];
+            [self.navigationController setNavigationBarHidden:NO];
+            [self.navigationController pushViewController:geRenZiLiao animated:YES];
+            break;
+        }
+        case 1:
+        {
+            ZhangHuAnQuanTableViewController *zhangHuAnQuan =[[ZhangHuAnQuanTableViewController alloc]init];
+            [self.navigationController setNavigationBarHidden:NO];
+            [self.navigationController pushViewController:zhangHuAnQuan animated:YES];
+            break;
+        }
+        case 2:
+        {
+            JiaoYiJiLuTableViewController *jiaoYiJL = [[JiaoYiJiLuTableViewController alloc]init];
+            [self.navigationController setNavigationBarHidden:NO];
+            [self.navigationController pushViewController:jiaoYiJL animated:YES];
+            break;
+        }
+        case 3:
+        {
+            GouMaiFWTableViewController *gouMaiFW = [[GouMaiFWTableViewController alloc]init];
+            [self.navigationController setNavigationBarHidden:NO];
+            [self.navigationController pushViewController:gouMaiFW animated:YES];
+            break;
+        }
+        default:
+        {
+            MeXiaoXiController *meXiaoXi = [[MeXiaoXiController alloc]init];
+            [self.navigationController setNavigationBarHidden:NO];
+            [self.navigationController pushViewController:meXiaoXi animated:YES];
+            break;
+        }
     }
-    else
-    {
-        NSString *link = indexPath.section == 2 ? _link3 :_link4;
-        NSString *title = indexPath.section == 2 ? @"合作套餐":@"关于我们";
-//        MSBannerModel *bannerModel = [[MSBannerModel alloc] init];
-//        bannerModel.bannerSrc = link;
-//        bannerModel.bannerPic =@"";
-//        bannerModel.bannerTitle = title;
-//
-//        MSBannerController *bannerCon = [[MSBannerController alloc]init];
-//        bannerCon.bannerModel = [bannerModel copy];
-//        bannerCon.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:bannerCon animated:YES];
-        
-//    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-//    NSURL *url = [NSURL URLWithString:@"mqq://im/chat?chat_type=wpa&uin=2853502361&version=1&src_type=web"];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-////    webView.delegate = self;
-//    [webView loadRequest:request];
-//    [self.view addSubview:webView];
-//    
 
-    }
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 #pragma mark - scrollview delegate
 
