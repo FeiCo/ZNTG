@@ -67,6 +67,7 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.hidesBottomBarWhenPushed = YES;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

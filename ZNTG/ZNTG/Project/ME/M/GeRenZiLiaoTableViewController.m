@@ -219,7 +219,7 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   
+    self.hidesBottomBarWhenPushed = YES;
     __weak typeof (self) weakself = self;
     if (indexPath.section == 0) {
 

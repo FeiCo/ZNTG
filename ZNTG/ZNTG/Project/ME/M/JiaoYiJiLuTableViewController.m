@@ -51,6 +51,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.hidesBottomBarWhenPushed = YES;
     JiaoYiJiLuDetailTableViewController *jiaoYiDetail =[[JiaoYiJiLuDetailTableViewController alloc]init];
     [self.navigationController pushViewController:jiaoYiDetail animated:YES];
 }
