@@ -8,6 +8,7 @@
 
 #import "TeacherViewController.h"
 #import "TeacherCell.h"
+#import "GeRenZYTableViewController.h"
 
 @interface TeacherViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -69,6 +70,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GeRenZYTableViewController *geren = [[GeRenZYTableViewController alloc] init];
+    [self presentViewController:geren animated:YES completion:^{
+        
+    }];
     NSLog(@"111111");
 }
 

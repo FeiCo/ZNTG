@@ -17,6 +17,10 @@
 		D0628AC21D48C4C0006B7853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC11D48C4C0006B7853 /* main.m */; };
 		D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACC1D48C4C0006B7853 /* Assets.xcassets */; };
 		D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */; };
+		D0C2BDD41D4F5CCE00D5DBA3 /* GeRHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C2BDD11D4F5CCE00D5DBA3 /* GeRHeader.xib */; };
+		D0C2BDD51D4F5CCE00D5DBA3 /* GeRHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C2BDD31D4F5CCE00D5DBA3 /* GeRHeader.m */; };
+		D0C2BDD81D4F5CE700D5DBA3 /* GeRenZYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C2BDD71D4F5CE700D5DBA3 /* GeRenZYTableViewController.m */; };
+		D0C2BDDB1D4F5D7700D5DBA3 /* YFViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C2BDDA1D4F5D7700D5DBA3 /* YFViewPager.m */; };
 		D0CA6CDA1D49D14D001E203E /* UIImage+PHTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */; };
 		D0CA6D1B1D49DBD1001E203E /* dengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D141D49DBD1001E203E /* dengLuViewController.m */; };
 		D0CA6D1C1D49DBD1001E203E /* wjmmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D161D49DBD1001E203E /* wjmmViewController.m */; };
@@ -261,6 +265,13 @@
 		D0628ACC1D48C4C0006B7853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0628ACF1D48C4C0006B7853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0628AD11D48C4C0006B7853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C2BDD11D4F5CCE00D5DBA3 /* GeRHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeRHeader.xib; sourceTree = "<group>"; };
+		D0C2BDD21D4F5CCE00D5DBA3 /* GeRHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRHeader.h; sourceTree = "<group>"; };
+		D0C2BDD31D4F5CCE00D5DBA3 /* GeRHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRHeader.m; sourceTree = "<group>"; };
+		D0C2BDD61D4F5CE700D5DBA3 /* GeRenZYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenZYTableViewController.h; sourceTree = "<group>"; };
+		D0C2BDD71D4F5CE700D5DBA3 /* GeRenZYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRenZYTableViewController.m; sourceTree = "<group>"; };
+		D0C2BDD91D4F5D7700D5DBA3 /* YFViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFViewPager.h; sourceTree = "<group>"; };
+		D0C2BDDA1D4F5D7700D5DBA3 /* YFViewPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFViewPager.m; sourceTree = "<group>"; };
 		D0CA6CD81D49D14D001E203E /* UIImage+PHTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PHTintColor.h"; sourceTree = "<group>"; };
 		D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PHTintColor.m"; sourceTree = "<group>"; };
 		D0CA6D131D49DBD1001E203E /* dengLuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dengLuViewController.h; sourceTree = "<group>"; };
@@ -1665,6 +1676,8 @@
 		E890F3E11D4A002000A59D36 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0C2BDD61D4F5CE700D5DBA3 /* GeRenZYTableViewController.h */,
+				D0C2BDD71D4F5CE700D5DBA3 /* GeRenZYTableViewController.m */,
 				E890F3E21D4A002000A59D36 /* TeacherViewController.h */,
 				E890F3E31D4A002000A59D36 /* TeacherViewController.m */,
 			);
@@ -1681,6 +1694,11 @@
 		E890F3E51D4A002000A59D36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D0C2BDD91D4F5D7700D5DBA3 /* YFViewPager.h */,
+				D0C2BDDA1D4F5D7700D5DBA3 /* YFViewPager.m */,
+				D0C2BDD11D4F5CCE00D5DBA3 /* GeRHeader.xib */,
+				D0C2BDD21D4F5CCE00D5DBA3 /* GeRHeader.h */,
+				D0C2BDD31D4F5CCE00D5DBA3 /* GeRHeader.m */,
 				E890F3E61D4A002000A59D36 /* TeacherCell.h */,
 				E890F3E71D4A002000A59D36 /* TeacherCell.m */,
 				E890F3E81D4A002000A59D36 /* TeacherCell.xib */,
@@ -1758,6 +1776,7 @@
 				D0CA6D731D49DEDF001E203E /* NoNetImage.png in Resources */,
 				DB3735C81D4C8CBE00527DF9 /* xiaoxihuifu.plist in Resources */,
 				D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */,
+				D0C2BDD41D4F5CCE00D5DBA3 /* GeRHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1880,6 +1899,7 @@
 				E890F3681D49BD7800A59D36 /* MJRefreshConst.m in Sources */,
 				DB3735B31D4C8C8E00527DF9 /* JiaoYiJiLuTableCell.m in Sources */,
 				D0CA6D4C1D49DC61001E203E /* IQUIWindow+Hierarchy.m in Sources */,
+				D0C2BDDB1D4F5D7700D5DBA3 /* YFViewPager.m in Sources */,
 				E890F3791D49BD7800A59D36 /* UIImageView+WebCache.m in Sources */,
 				E890F36E1D49BD7800A59D36 /* SDImageCache.m in Sources */,
 				D0CA6D511D49DC61001E203E /* IQTitleBarButtonItem.m in Sources */,
@@ -1938,6 +1958,7 @@
 				E890F3E91D4A002000A59D36 /* TeacherViewController.m in Sources */,
 				E890F3D81D49FFE000A59D36 /* SDCollectionViewCell.m in Sources */,
 				E890F3691D49BD7800A59D36 /* NSBundle+MJRefresh.m in Sources */,
+				D0C2BDD81D4F5CE700D5DBA3 /* GeRenZYTableViewController.m in Sources */,
 				D0CA6E3C1D49E4F6001E203E /* NSString+YYAdd.m in Sources */,
 				D0CA6E351D49E4F6001E203E /* NSDictionary+YYAdd.m in Sources */,
 				D0CA6D491D49DC61001E203E /* IQUITextFieldView+Additions.m in Sources */,
@@ -1967,6 +1988,7 @@
 				E890F37A1D49BD7800A59D36 /* UIView+WebCacheOperation.m in Sources */,
 				D0CA6D4F1D49DC61001E203E /* IQTextView.m in Sources */,
 				D0CA6E401D49E4F6001E203E /* YYCGUtilities.m in Sources */,
+				D0C2BDD51D4F5CCE00D5DBA3 /* GeRHeader.m in Sources */,
 				D0CA6E521D49E4F6001E203E /* YYMemoryCache.m in Sources */,
 				D0CA6D7F1D49DF37001E203E /* DTProgressStatus.m in Sources */,
 				D0CA6E6F1D49E4F6001E203E /* YYTextAttribute.m in Sources */,
