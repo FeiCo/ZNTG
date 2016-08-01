@@ -22,6 +22,23 @@
 
 @implementation HomeCell
 
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        UIImageView *triAngle = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width / 4 - 18) / 2, 99, 18, 11)];
+        triAngle.image = [UIImage imageNamed:@"Home_Triangle"];
+        UIView *stickV = [[UIView alloc] initWithFrame:CGRectMake(0, 88, [UIScreen mainScreen].bounds.size.width / 4, 2)];
+        stickV.backgroundColor = [UIColor redColor];
+        [self.contentView addSubview:triAngle];
+        [self.contentView addSubview:stickV];
+        _stickV = stickV;
+        _triAngle = triAngle;
+    }
+    return self;
+}
+
+
 - (void)handleHomeCellWithName:(NSString *)name
                      buyAmount:(NSString *)buyAmount
                          price:(NSString *)price
@@ -29,14 +46,7 @@
     self.nameLabel.text = name;
     self.contents = contents;
     [self setupBuyTipsWithPrice:price buyAmount:buyAmount];
-    UIImageView *triAngle = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width / 4 - 18) / 2, 99, 18, 11)];
-    triAngle.image = [UIImage imageNamed:@"Home_Triangle"];
-    UIView *stickV = [[UIView alloc] initWithFrame:CGRectMake(0, 88, [UIScreen mainScreen].bounds.size.width / 4, 2)];
-    stickV.backgroundColor = [UIColor redColor];
-    [self.contentView addSubview:triAngle];
-    [self.contentView addSubview:stickV];
-    _stickV = stickV;
-    _triAngle = triAngle;
+
 }
 
 - (IBAction)changePlates:(UIButton *)sender {
