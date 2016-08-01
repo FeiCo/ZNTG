@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -179,12 +179,6 @@
                             <constraint firstAttribute="trailing" secondItem="POa-d8-MmO" secondAttribute="trailing" constant="10" id="zRQ-0c-Gw6"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="UVM-Fs-siu">
-                        <rect key="frame" x="31" y="98" width="18" height="11"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transverse" translatesAutoresizingMaskIntoConstraints="NO" id="Ukg-eQ-Vog">
-                        <rect key="frame" x="0.0" y="88" width="80" height="2"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tips" translatesAutoresizingMaskIntoConstraints="NO" id="ybt-Cj-djs">
                         <rect key="frame" x="265" y="0.0" width="55" height="22"/>
                     </imageView>
@@ -196,9 +190,6 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="PAj-Ds-xHS" firstAttribute="top" secondItem="UVM-Fs-siu" secondAttribute="bottom" id="25o-PF-crS"/>
-                    <constraint firstItem="0nu-vi-LOy" firstAttribute="bottom" secondItem="Ukg-eQ-Vog" secondAttribute="bottom" id="2vC-Tw-7wN"/>
-                    <constraint firstItem="Ukg-eQ-Vog" firstAttribute="width" secondItem="0nu-vi-LOy" secondAttribute="width" id="4YT-Jl-tdK"/>
                     <constraint firstItem="0nu-vi-LOy" firstAttribute="centerY" secondItem="13f-ni-LSU" secondAttribute="centerY" id="9v6-94-peN"/>
                     <constraint firstItem="0nu-vi-LOy" firstAttribute="centerY" secondItem="bRK-ZT-wEW" secondAttribute="centerY" id="BCC-9X-Hdj"/>
                     <constraint firstItem="yvl-rR-RLi" firstAttribute="leading" secondItem="cY0-CX-2gH" secondAttribute="trailing" id="Boj-Jx-OF5"/>
@@ -207,7 +198,6 @@
                     <constraint firstItem="bRK-ZT-wEW" firstAttribute="width" secondItem="0nu-vi-LOy" secondAttribute="width" id="DJX-5z-Yfp"/>
                     <constraint firstItem="yvl-rR-RLi" firstAttribute="centerY" secondItem="iRP-sC-cx2" secondAttribute="centerY" id="DqT-de-oKw"/>
                     <constraint firstItem="cY0-CX-2gH" firstAttribute="centerX" secondItem="aNR-bN-ScS" secondAttribute="centerX" id="HeP-5N-yue"/>
-                    <constraint firstItem="0nu-vi-LOy" firstAttribute="centerX" secondItem="UVM-Fs-siu" secondAttribute="centerX" id="IKu-Uy-LVz"/>
                     <constraint firstItem="13f-ni-LSU" firstAttribute="leading" secondItem="0nu-vi-LOy" secondAttribute="trailing" id="Oan-ne-jNP"/>
                     <constraint firstItem="0nu-vi-LOy" firstAttribute="centerX" secondItem="RcZ-d0-T10" secondAttribute="centerX" id="PFf-6B-9RT"/>
                     <constraint firstItem="PAj-Ds-xHS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Q2a-Bk-Jyb"/>
@@ -228,7 +218,6 @@
                     <constraint firstItem="bRK-ZT-wEW" firstAttribute="bottom" secondItem="Tce-K2-vdO" secondAttribute="bottom" constant="5" id="hOf-PF-LPe"/>
                     <constraint firstItem="cY0-CX-2gH" firstAttribute="width" secondItem="0nu-vi-LOy" secondAttribute="width" id="ikq-3V-fPQ"/>
                     <constraint firstItem="bRK-ZT-wEW" firstAttribute="height" secondItem="0nu-vi-LOy" secondAttribute="height" id="jWz-M6-jTI"/>
-                    <constraint firstItem="0nu-vi-LOy" firstAttribute="leading" secondItem="Ukg-eQ-Vog" secondAttribute="leading" id="jp9-fW-5q2"/>
                     <constraint firstItem="iRP-sC-cx2" firstAttribute="leading" secondItem="bRK-ZT-wEW" secondAttribute="leading" id="nMl-eI-ynx"/>
                     <constraint firstItem="yvl-rR-RLi" firstAttribute="width" secondItem="0nu-vi-LOy" secondAttribute="width" id="qsS-yl-wHW"/>
                     <constraint firstItem="ybt-Cj-djs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sjB-TN-6us"/>
@@ -250,8 +239,6 @@
                 <outlet property="srdzLabel" destination="Tce-K2-vdO" id="vCs-yf-3Og"/>
                 <outlet property="syLabel" destination="RcZ-d0-T10" id="4Nt-CU-5b2"/>
                 <outlet property="telButton" destination="TTD-hA-17F" id="dRj-uO-O4x"/>
-                <outlet property="transverseImgView" destination="Ukg-eQ-Vog" id="Udb-Fg-z83"/>
-                <outlet property="triangleImgView" destination="UVM-Fs-siu" id="zDC-Ez-h9W"/>
                 <outlet property="zyLabel" destination="aNR-bN-ScS" id="jkO-Gi-Kkc"/>
             </connections>
             <point key="canvasLocation" x="306" y="448"/>
@@ -259,13 +246,11 @@
     </objects>
     <resources>
         <image name="Home_BuyButton" width="90" height="36"/>
-        <image name="Home_Triangle" width="18" height="11"/>
         <image name="hui" width="50" height="50"/>
         <image name="kefu_ico" width="18" height="21"/>
         <image name="sheng" width="50" height="50"/>
         <image name="srdz" width="50" height="50"/>
         <image name="tips" width="55" height="22"/>
-        <image name="transverse" width="93" height="2"/>
         <image name="zhi" width="50" height="50"/>
     </resources>
 </document>

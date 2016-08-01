@@ -17,6 +17,7 @@
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.tableView.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 30, 10)];
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
     
 }

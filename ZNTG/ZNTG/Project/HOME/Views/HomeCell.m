@@ -9,13 +9,13 @@
 #import "HomeCell.h"
 
 @interface HomeCell()
-@property (weak, nonatomic) IBOutlet UIImageView *transverseImgView;
-@property (weak, nonatomic) IBOutlet UIImageView *triangleImgView;
 @property (weak, nonatomic) IBOutlet UILabel *syLabel;
 @property (weak, nonatomic) IBOutlet UILabel *zyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *srdzLabel;
 @property (weak, nonatomic) IBOutlet UIButton *telButton;
+@property(nonatomic,strong) UIImageView *triAngle;
+@property(nonatomic,weak) UIView *stickV;
 
 @property (nonatomic, strong) NSArray *contents;
 @end
@@ -29,6 +29,14 @@
     self.nameLabel.text = name;
     self.contents = contents;
     [self setupBuyTipsWithPrice:price buyAmount:buyAmount];
+    UIImageView *triAngle = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width / 4 - 18) / 2, 99, 18, 11)];
+    triAngle.image = [UIImage imageNamed:@"Home_Triangle"];
+    UIView *stickV = [[UIView alloc] initWithFrame:CGRectMake(0, 88, [UIScreen mainScreen].bounds.size.width / 4, 2)];
+    stickV.backgroundColor = [UIColor redColor];
+    [self.contentView addSubview:triAngle];
+    [self.contentView addSubview:stickV];
+    _stickV = stickV;
+    _triAngle = triAngle;
 }
 
 - (IBAction)changePlates:(UIButton *)sender {
@@ -65,13 +73,14 @@
 }
 
 - (void)moveMarkerOfCurrentButton:(UIButton *)sender {
-    CGRect triangleFrame = self.triangleImgView.frame;
-    CGRect transverseFrame = self.transverseImgView.frame;
     
-    [UIView animateWithDuration:0.2 animations:^{
-        self.transverseImgView.frame = CGRectMake(sender.left, transverseFrame.origin.y, transverseFrame.size.width, transverseFrame.size.height);
-    }];
-    self.triangleImgView.frame = CGRectMake((sender.centerX - (triangleFrame.size.width / 2)), triangleFrame.origin.y, triangleFrame.size.width, triangleFrame.size.height);
+        CGRect triangleFrame = self.triAngle.frame;
+        CGRect transverseFrame = self.stickV.frame;
+        [UIView animateWithDuration:0.2 animations:^{
+            self.stickV.frame = CGRectMake(sender.left, transverseFrame.origin.y, transverseFrame.size.width, transverseFrame.size.height);
+        }];
+    
+        self.triAngle.frame = CGRectMake((sender.centerX - (triangleFrame.size.width / 2)), triangleFrame.origin.y, triangleFrame.size.width, triangleFrame.size.height);
     
     if (sender.tag == 3) {
         _telButton.hidden = NO;
@@ -82,7 +91,6 @@
         _buyTipsLabel.hidden = NO;
         _buyButton.hidden = NO;
     }
-    
     self.contentLabel.text = [_contents objectAtIndex:sender.tag];
 }
 
@@ -94,5 +102,7 @@
     [attributedString addAttribute:NSForegroundColorAttributeName value:kCustomColor(243, 144, 19, 1) range:NSMakeRange(price.length + 1 + 2, buyAmount.length)];
     self.buyTipsLabel.attributedText = attributedString;
 }
+
+
 
 @end
