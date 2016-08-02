@@ -7,7 +7,7 @@
 //
 
 #import "TeacherCell.h"
-#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
 
 @implementation TeacherCell
 
@@ -20,6 +20,8 @@
     self.nameLabel.text = name;
     self.levelLabel.text = level;
     self.introduceLabel.text = descriptions;
+    NSURL *urlString = [NSURL URLWithString:url];
+    [self.iconImageView sd_setImageWithURL:urlString placeholderImage:[UIImage imageNamed:@""]];
 }
 
 

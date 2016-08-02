@@ -57,7 +57,7 @@
     [cell handleTeacherCellWithIcon:teacherList.photoLocation
                                name:teacherList.name
                          levelImage:nil
-                         levelLabel:teacherList.certificateNo
+                         levelLabel:teacherList.position
                           introduce:teacherList.descriptions];
     return cell;
 }
@@ -66,7 +66,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kScreenHeightScale(152);
+    return kScreenHeightScale(160);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

@@ -8,6 +8,7 @@
 
 #import "ClassTableViewController.h"
 #import "ClassCubeTableViewCell.h"
+#import "MediaPlayerViewController.h"
 
 #import "CustomAlertView.h"
 
@@ -380,6 +381,11 @@
     
         [CustomAlertView popViewWithTitle:@"xxxx" contentText:contentv contentFrame:CGRectMake(20, 20, 40, 200) bottomView:contentv1 bottomFrame:CGRectMake(20, 20, 40, 0) leftButtonTitle:@"试看" rightButtonTitle:@"购买" leftBlock:^{
             NSLog(@"试看");
+            MediaPlayerViewController *mediaPlayer = [MediaPlayerViewController new];
+            mediaPlayer.hidesBottomBarWhenPushed = YES;
+            NSURL *usl = [NSURL URLWithString:@"http://baobab.wdjcdn.com/14564977406580.mp4"];
+            mediaPlayer.videoURL = usl;
+            [self.navigationController pushViewController:mediaPlayer animated:YES];
         } rightBlock:^{
             NSLog(@"购买");
         } dismissBlock:^{
