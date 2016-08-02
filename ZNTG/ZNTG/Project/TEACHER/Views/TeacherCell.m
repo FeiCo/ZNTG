@@ -7,18 +7,20 @@
 //
 
 #import "TeacherCell.h"
+#import "SDWebImageManager.h"
 
 @implementation TeacherCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)handleTeacherCellWithIcon:(NSString *)url
+                             name:(NSString *)name
+                       levelImage:(NSURL *)levelUrl
+                       levelLabel:(NSString *)level
+                        introduce:(NSString *)descriptions {
+
+    self.nameLabel.text = name;
+    self.levelLabel.text = level;
+    self.introduceLabel.text = descriptions;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

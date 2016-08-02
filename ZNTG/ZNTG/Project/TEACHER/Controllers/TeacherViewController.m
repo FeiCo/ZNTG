@@ -8,11 +8,12 @@
 
 #import "TeacherViewController.h"
 #import "TeacherCell.h"
-#import "GeRenZYTableViewController.h"
+#import "TeacherList.h"
 
 @interface TeacherViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataList;
 @end
 
 @implementation TeacherViewController
@@ -23,6 +24,7 @@
     [super viewDidLoad];
     self.title = @"名师";
     [self initializeTableView];
+    [self requestsTeacherList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,12 +47,18 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"TeacherCell";
     TeacherCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    TeacherList *teacherList = [_dataList objectAtIndex:indexPath.row];
+    [cell handleTeacherCellWithIcon:teacherList.photoLocation
+                               name:teacherList.name
+                         levelImage:nil
+                         levelLabel:teacherList.certificateNo
+                          introduce:teacherList.descriptions];
     return cell;
 }
 
@@ -70,11 +78,29 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    GeRenZYTableViewController *geren = [[GeRenZYTableViewController alloc] init];
-    [self presentViewController:geren animated:YES completion:^{
-        
-    }];
     NSLog(@"111111");
 }
+
+#pragma mark - Network Requests
+
+- (void)requestsTeacherList {
+    NSString *urlString = @"http://192.168.0.135:8080/ws/rest/teacher/getTeacherList/*";
+    [MSNetRequest requestMethodsWithPOST:nil url:urlString successBlock:^(id responseObject) {
+        
+        NSDictionary *jsonDictionary = [responseObject jsonValueDecoded];
+        NSDictionary *resultData = [jsonDictionary objectForKey:@"resultData"];
+        NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:resultData.count];
+        NSLog(@"resultData:%@",resultData);
+        for (NSDictionary *dict in resultData) {
+            [tempArray addObject:[TeacherList teacherListFromDictionry:dict]];
+        }
+        _dataList = [NSArray arrayWithArray:tempArray];
+        [_tableView reloadData];
+        
+    } failureBlock:^(NSString *err) {
+        NSLog(@"err:%@",err);
+    }];
+}
+
 
 @end

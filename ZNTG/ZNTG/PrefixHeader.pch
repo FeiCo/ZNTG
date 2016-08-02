@@ -22,6 +22,7 @@
 #import "MBProgressHUD.h"
 #import "SDWebImageManager.h"
 #import "YYKit.h"
+#import "MSNetRequest.h"
 
 //调试宏的设置
 //调试模式DEBUGMODE = 1 输出调试日志

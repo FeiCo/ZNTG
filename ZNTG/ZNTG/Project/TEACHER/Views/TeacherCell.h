@@ -16,4 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *introduceLabel;
 
+- (void)handleTeacherCellWithIcon:(NSString *)url
+                             name:(NSString *)name
+                       levelImage:(NSURL *)levelUrl
+                       levelLabel:(NSString *)level
+                        introduce:(NSString *)descriptions;
+
 @end
