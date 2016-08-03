@@ -183,6 +183,10 @@
 		E8479AA41D509857008AF897 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8479AA31D509857008AF897 /* MediaPlayer.framework */; };
 		E8479AA91D509AFD008AF897 /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8479AA81D509AFD008AF897 /* MediaPlayerViewController.m */; };
 		E8479AAB1D509D30008AF897 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8479AAA1D509D30008AF897 /* AVFoundation.framework */; };
+		E84B45FC1D5191E800DAF34D /* VideoInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B45FB1D5191E800DAF34D /* VideoInfoView.m */; };
+		E84B46021D51BD4F00DAF34D /* UILabel+WidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B46011D51BD4F00DAF34D /* UILabel+WidthAndHeight.m */; };
+		E84B46061D51F2DA00DAF34D /* RelatedVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B46041D51F2DA00DAF34D /* RelatedVideoCell.m */; };
+		E84B46071D51F2DA00DAF34D /* RelatedVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84B46051D51F2DA00DAF34D /* RelatedVideoCell.xib */; };
 		E890F3491D49BD7800A59D36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */; };
 		E890F34A1D49BD7800A59D36 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D91D49BD7800A59D36 /* AFNetworkReachabilityManager.m */; };
 		E890F34B1D49BD7800A59D36 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2DB1D49BD7800A59D36 /* AFSecurityPolicy.m */; };
@@ -613,6 +617,13 @@
 		E8479AA71D509AFD008AF897 /* MediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
 		E8479AA81D509AFD008AF897 /* MediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; };
 		E8479AAA1D509D30008AF897 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E84B45FA1D5191E800DAF34D /* VideoInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoInfoView.h; sourceTree = "<group>"; };
+		E84B45FB1D5191E800DAF34D /* VideoInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoInfoView.m; sourceTree = "<group>"; };
+		E84B46001D51BD4F00DAF34D /* UILabel+WidthAndHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WidthAndHeight.h"; sourceTree = "<group>"; };
+		E84B46011D51BD4F00DAF34D /* UILabel+WidthAndHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WidthAndHeight.m"; sourceTree = "<group>"; };
+		E84B46031D51F2DA00DAF34D /* RelatedVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedVideoCell.h; sourceTree = "<group>"; };
+		E84B46041D51F2DA00DAF34D /* RelatedVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedVideoCell.m; sourceTree = "<group>"; };
+		E84B46051D51F2DA00DAF34D /* RelatedVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelatedVideoCell.xib; sourceTree = "<group>"; };
 		E890F2D51D49BD7800A59D36 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E890F2D71D49BD7800A59D36 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -838,6 +849,11 @@
 			children = (
 				D033D3381D49A965006AE6D3 /* ClassCubeTableViewCell.h */,
 				D033D3391D49A965006AE6D3 /* ClassCubeTableViewCell.m */,
+				E84B45FA1D5191E800DAF34D /* VideoInfoView.h */,
+				E84B45FB1D5191E800DAF34D /* VideoInfoView.m */,
+				E84B46031D51F2DA00DAF34D /* RelatedVideoCell.h */,
+				E84B46041D51F2DA00DAF34D /* RelatedVideoCell.m */,
+				E84B46051D51F2DA00DAF34D /* RelatedVideoCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -919,6 +935,7 @@
 				D033D3071D49A645006AE6D3 /* MyHeaderFileS */,
 				D033D30A1D49A645006AE6D3 /* Project */,
 				D033D32A1D49A645006AE6D3 /* Resources */,
+				E84B45FF1D51BCE500DAF34D /* Category */,
 				E890F2D21D49BD7800A59D36 /* ThirdLib */,
 				E890F37B1D49BD8B00A59D36 /* Framework */,
 				D0628AC01D48C4C0006B7853 /* Supporting Files */,
@@ -1510,6 +1527,15 @@
 			path = M;
 			sourceTree = "<group>";
 		};
+		E84B45FF1D51BCE500DAF34D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E84B46001D51BD4F00DAF34D /* UILabel+WidthAndHeight.h */,
+				E84B46011D51BD4F00DAF34D /* UILabel+WidthAndHeight.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		E890F2D21D49BD7800A59D36 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1939,6 +1965,7 @@
 				D0CA6D731D49DEDF001E203E /* NoNetImage.png in Resources */,
 				DB3735C81D4C8CBE00527DF9 /* xiaoxihuifu.plist in Resources */,
 				E89BF5C31D502D2A003D124F /* HomeCell.xib in Resources */,
+				E84B46071D51F2DA00DAF34D /* RelatedVideoCell.xib in Resources */,
 				D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */,
 				E89BF5DD1D502EDE003D124F /* GeRHeader.xib in Resources */,
 			);
@@ -1951,6 +1978,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84B45FC1D5191E800DAF34D /* VideoInfoView.m in Sources */,
 				E89BF5C41D502D2A003D124F /* MarketView.m in Sources */,
 				D0CA6E551D49E4F6001E203E /* MKAnnotationView+YYWebImage.m in Sources */,
 				D0CA6E7C1D49E4F6001E203E /* YYSentinel.m in Sources */,
@@ -2031,6 +2059,7 @@
 				D0CA6E3F1D49E4F6001E203E /* CALayer+YYAdd.m in Sources */,
 				D0CA6E471D49E4F6001E203E /* UIFont+YYAdd.m in Sources */,
 				E8479A941D509800008AF897 /* MASConstraint.m in Sources */,
+				E84B46061D51F2DA00DAF34D /* RelatedVideoCell.m in Sources */,
 				E890F35F1D49BD7800A59D36 /* MJRefreshAutoNormalFooter.m in Sources */,
 				E890F3621D49BD7800A59D36 /* MJRefreshBackNormalFooter.m in Sources */,
 				D0CA6E701D49E4F6001E203E /* YYTextParser.m in Sources */,
@@ -2075,6 +2104,7 @@
 				E890F34C1D49BD7800A59D36 /* AFURLRequestSerialization.m in Sources */,
 				E890F3681D49BD7800A59D36 /* MJRefreshConst.m in Sources */,
 				DB3735B31D4C8C8E00527DF9 /* JiaoYiJiLuTableCell.m in Sources */,
+				E84B46021D51BD4F00DAF34D /* UILabel+WidthAndHeight.m in Sources */,
 				D0CA6D4C1D49DC61001E203E /* IQUIWindow+Hierarchy.m in Sources */,
 				E89BF5C21D502D2A003D124F /* HomeCell.m in Sources */,
 				E890F3791D49BD7800A59D36 /* UIImageView+WebCache.m in Sources */,

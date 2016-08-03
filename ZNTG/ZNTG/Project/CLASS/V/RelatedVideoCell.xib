@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RelatedVideoCell" id="gTV-IL-0wX" customClass="RelatedVideoCell">
+            <rect key="frame" x="0.0" y="0.0" width="172" height="127"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="172" height="127"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-Wq-k5m">
+                        <rect key="frame" x="0.0" y="0.0" width="172" height="97"/>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="0VT-Wq-k5m" secondAttribute="height" multiplier="16:9" id="nYp-NS-pUc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="屈长江：紧跟超级主力资" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6as-33-zSm">
+                        <rect key="frame" x="8" y="103" width="156" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeJianplay" translatesAutoresizingMaskIntoConstraints="NO" id="nya-JZ-ZwB">
+                        <rect key="frame" x="71" y="35" width="30" height="28"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeJianKan" translatesAutoresizingMaskIntoConstraints="NO" id="Jp7-zK-Mzv">
+                        <rect key="frame" x="114" y="81" width="12" height="10"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14256" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpA-ED-bbI">
+                        <rect key="frame" x="128" y="78" width="36" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="dpA-ED-bbI" firstAttribute="leading" secondItem="Jp7-zK-Mzv" secondAttribute="trailing" constant="2" id="4er-DW-7Ml"/>
+                <constraint firstAttribute="trailing" secondItem="0VT-Wq-k5m" secondAttribute="trailing" id="Q4g-sI-Qy3"/>
+                <constraint firstItem="6as-33-zSm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Z7t-ds-Aq1"/>
+                <constraint firstItem="6as-33-zSm" firstAttribute="top" secondItem="0VT-Wq-k5m" secondAttribute="bottom" constant="6" id="ZqG-ZQ-dOb"/>
+                <constraint firstItem="0VT-Wq-k5m" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a7i-Zs-TxP"/>
+                <constraint firstItem="0VT-Wq-k5m" firstAttribute="centerX" secondItem="nya-JZ-ZwB" secondAttribute="centerX" id="f9n-0h-4XS"/>
+                <constraint firstItem="0VT-Wq-k5m" firstAttribute="centerY" secondItem="nya-JZ-ZwB" secondAttribute="centerY" id="j7r-aI-UGX"/>
+                <constraint firstAttribute="trailing" secondItem="6as-33-zSm" secondAttribute="trailing" constant="8" id="jRp-Xq-r4Y"/>
+                <constraint firstItem="0VT-Wq-k5m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sfK-BE-Qd6"/>
+                <constraint firstAttribute="trailing" secondItem="dpA-ED-bbI" secondAttribute="trailing" constant="8" id="v09-6Y-H2T"/>
+                <constraint firstItem="dpA-ED-bbI" firstAttribute="bottom" secondItem="0VT-Wq-k5m" secondAttribute="bottom" constant="-4" id="we3-dC-QjY"/>
+                <constraint firstItem="Jp7-zK-Mzv" firstAttribute="centerY" secondItem="dpA-ED-bbI" secondAttribute="centerY" id="wg0-nW-6it"/>
+            </constraints>
+            <size key="customSize" width="172" height="127"/>
+            <point key="canvasLocation" x="305" y="284.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="KeJianKan" width="12" height="10"/>
+        <image name="KeJianplay" width="30" height="28"/>
+    </resources>
+</document>
