@@ -13,6 +13,11 @@
 		D033D3331D49A645006AE6D3 /* tempt.plist in Resources */ = {isa = PBXBuildFile; fileRef = D033D32B1D49A645006AE6D3 /* tempt.plist */; };
 		D033D3371D49A95B006AE6D3 /* ClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3361D49A95B006AE6D3 /* ClassTableViewController.m */; };
 		D033D33A1D49A965006AE6D3 /* ClassCubeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3391D49A965006AE6D3 /* ClassCubeTableViewCell.m */; };
+		D0408B1C1D5480EC00626645 /* GeRenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B1B1D5480EC00626645 /* GeRenTableViewController.m */; };
+		D0408B1F1D5480F900626645 /* GeRenZiLiaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B1E1D5480F900626645 /* GeRenZiLiaoTableViewController.m */; };
+		D0408B261D54810A00626645 /* dengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B211D54810A00626645 /* dengLuViewController.m */; };
+		D0408B271D54810A00626645 /* wjmmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B231D54810A00626645 /* wjmmViewController.m */; };
+		D0408B281D54810A00626645 /* zhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B251D54810A00626645 /* zhuceViewController.m */; };
 		D0628AC21D48C4C0006B7853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC11D48C4C0006B7853 /* main.m */; };
 		D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACC1D48C4C0006B7853 /* Assets.xcassets */; };
 		D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */; };
@@ -280,6 +285,16 @@
 		D033D3361D49A95B006AE6D3 /* ClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewController.m; sourceTree = "<group>"; };
 		D033D3381D49A965006AE6D3 /* ClassCubeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassCubeTableViewCell.h; sourceTree = "<group>"; };
 		D033D3391D49A965006AE6D3 /* ClassCubeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassCubeTableViewCell.m; sourceTree = "<group>"; };
+		D0408B1A1D5480EC00626645 /* GeRenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenTableViewController.h; sourceTree = "<group>"; };
+		D0408B1B1D5480EC00626645 /* GeRenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRenTableViewController.m; sourceTree = "<group>"; };
+		D0408B1D1D5480F900626645 /* GeRenZiLiaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenZiLiaoTableViewController.h; sourceTree = "<group>"; };
+		D0408B1E1D5480F900626645 /* GeRenZiLiaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRenZiLiaoTableViewController.m; sourceTree = "<group>"; };
+		D0408B201D54810A00626645 /* dengLuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dengLuViewController.h; sourceTree = "<group>"; };
+		D0408B211D54810A00626645 /* dengLuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dengLuViewController.m; sourceTree = "<group>"; };
+		D0408B221D54810A00626645 /* wjmmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjmmViewController.h; sourceTree = "<group>"; };
+		D0408B231D54810A00626645 /* wjmmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjmmViewController.m; sourceTree = "<group>"; };
+		D0408B241D54810A00626645 /* zhuceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhuceViewController.h; sourceTree = "<group>"; };
+		D0408B251D54810A00626645 /* zhuceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhuceViewController.m; sourceTree = "<group>"; };
 		D0628ABD1D48C4C0006B7853 /* ZNTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNTG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0628AC11D48C4C0006B7853 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0628ACC1D48C4C0006B7853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -870,6 +885,8 @@
 		D033D31E1D49A645006AE6D3 /* ME */ = {
 			isa = PBXGroup;
 			children = (
+				D0408B1A1D5480EC00626645 /* GeRenTableViewController.h */,
+				D0408B1B1D5480EC00626645 /* GeRenTableViewController.m */,
 				D0CA6D101D49D83D001E203E /* C */,
 				D0CA6D111D49D83D001E203E /* M */,
 				D0CA6D121D49D83D001E203E /* V */,
@@ -968,6 +985,14 @@
 		D0CA6D101D49D83D001E203E /* C */ = {
 			isa = PBXGroup;
 			children = (
+				D0408B201D54810A00626645 /* dengLuViewController.h */,
+				D0408B211D54810A00626645 /* dengLuViewController.m */,
+				D0408B221D54810A00626645 /* wjmmViewController.h */,
+				D0408B231D54810A00626645 /* wjmmViewController.m */,
+				D0408B241D54810A00626645 /* zhuceViewController.h */,
+				D0408B251D54810A00626645 /* zhuceViewController.m */,
+				D0408B1D1D5480F900626645 /* GeRenZiLiaoTableViewController.h */,
+				D0408B1E1D5480F900626645 /* GeRenZiLiaoTableViewController.m */,
 				DB37358C1D4C8C8E00527DF9 /* JiaoYiJiLuTableViewController.h */,
 				DB37358D1D4C8C8E00527DF9 /* JiaoYiJiLuTableViewController.m */,
 				DB3735901D4C8C8E00527DF9 /* JiaoYiJiLuDetailTableViewController.h */,
@@ -1966,6 +1991,7 @@
 				DB3735C01D4C8C8E00527DF9 /* TextFieldTableViewController.m in Sources */,
 				D0CA6D481D49DC61001E203E /* IQUIScrollView+Additions.m in Sources */,
 				D0CA6E581D49E4F6001E203E /* YYAnimatedImageView.m in Sources */,
+				D0408B1C1D5480EC00626645 /* GeRenTableViewController.m in Sources */,
 				E890F3561D49BD7800A59D36 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D0CA6D531D49DC61001E203E /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				E890F3611D49BD7800A59D36 /* MJRefreshBackGifFooter.m in Sources */,
@@ -1989,11 +2015,13 @@
 				E890F3661D49BD7800A59D36 /* MJRefreshStateHeader.m in Sources */,
 				D0CA6E6A1D49E4F6001E203E /* YYTextSelectionView.m in Sources */,
 				E890F3551D49BD7800A59D36 /* UIProgressView+AFNetworking.m in Sources */,
+				D0408B1F1D5480F900626645 /* GeRenZiLiaoTableViewController.m in Sources */,
 				E8479AA11D509800008AF897 /* ZFSessionModel.m in Sources */,
 				D0CA6E691D49E4F6001E203E /* YYTextMagnifier.m in Sources */,
 				D0CA6E6E1D49E4F6001E203E /* YYTextArchiver.m in Sources */,
 				E890F35B1D49BD7800A59D36 /* MJRefreshComponent.m in Sources */,
 				D0CA6D4A1D49DC61001E203E /* IQUIView+Hierarchy.m in Sources */,
+				D0408B261D54810A00626645 /* dengLuViewController.m in Sources */,
 				E8479A971D509800008AF897 /* MASViewAttribute.m in Sources */,
 				D033D32F1D49A645006AE6D3 /* MainTabViewController.m in Sources */,
 				D0CA6D5A1D49DE2E001E203E /* MSTextField.m in Sources */,
@@ -2100,6 +2128,7 @@
 				D0CA6D6E1D49DEDF001E203E /* NSString+HandleString.m in Sources */,
 				E890F3771D49BD7800A59D36 /* UIImage+MultiFormat.m in Sources */,
 				D0CA6D591D49DE2E001E203E /* JKCountDownButton.m in Sources */,
+				D0408B281D54810A00626645 /* zhuceViewController.m in Sources */,
 				E890F3701D49BD7800A59D36 /* SDWebImageDecoder.m in Sources */,
 				D0CA6E631D49E4F6001E203E /* YYTextDebugOption.m in Sources */,
 				D0CA6E541D49E4F6001E203E /* CALayer+YYWebImage.m in Sources */,
@@ -2170,6 +2199,7 @@
 				E890F37A1D49BD7800A59D36 /* UIView+WebCacheOperation.m in Sources */,
 				D0CA6D4F1D49DC61001E203E /* IQTextView.m in Sources */,
 				E8479A9C1D509800008AF897 /* ViewController+MASAdditions.m in Sources */,
+				D0408B271D54810A00626645 /* wjmmViewController.m in Sources */,
 				D0CA6E401D49E4F6001E203E /* YYCGUtilities.m in Sources */,
 				D0CA6E521D49E4F6001E203E /* YYMemoryCache.m in Sources */,
 				E8479A991D509800008AF897 /* NSArray+MASAdditions.m in Sources */,
