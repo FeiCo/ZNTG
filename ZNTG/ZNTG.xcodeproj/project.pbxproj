@@ -10,7 +10,6 @@
 		D033D3061D49A543006AE6D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3051D49A543006AE6D3 /* AppDelegate.m */; };
 		D033D32F1D49A645006AE6D3 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D31B1D49A645006AE6D3 /* MainTabViewController.m */; };
 		D033D3301D49A645006AE6D3 /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D31D1D49A645006AE6D3 /* NaviViewController.m */; };
-		D033D3311D49A645006AE6D3 /* GeRenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3211D49A645006AE6D3 /* GeRenTableViewController.m */; };
 		D033D3331D49A645006AE6D3 /* tempt.plist in Resources */ = {isa = PBXBuildFile; fileRef = D033D32B1D49A645006AE6D3 /* tempt.plist */; };
 		D033D3371D49A95B006AE6D3 /* ClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3361D49A95B006AE6D3 /* ClassTableViewController.m */; };
 		D033D33A1D49A965006AE6D3 /* ClassCubeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3391D49A965006AE6D3 /* ClassCubeTableViewCell.m */; };
@@ -18,9 +17,6 @@
 		D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACC1D48C4C0006B7853 /* Assets.xcassets */; };
 		D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */; };
 		D0CA6CDA1D49D14D001E203E /* UIImage+PHTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */; };
-		D0CA6D1B1D49DBD1001E203E /* dengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D141D49DBD1001E203E /* dengLuViewController.m */; };
-		D0CA6D1C1D49DBD1001E203E /* wjmmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D161D49DBD1001E203E /* wjmmViewController.m */; };
-		D0CA6D1D1D49DBD1001E203E /* zhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D181D49DBD1001E203E /* zhuceViewController.m */; };
 		D0CA6D1E1D49DBD1001E203E /* XiuGaiMiMaController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D1A1D49DBD1001E203E /* XiuGaiMiMaController.m */; };
 		D0CA6D221D49DC40001E203E /* MyBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D211D49DC40001E203E /* MyBaseController.m */; };
 		D0CA6D471D49DC61001E203E /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA6D261D49DC61001E203E /* IQNSArray+Sort.m */; };
@@ -153,7 +149,6 @@
 		DB3735BA1D4C8C8E00527DF9 /* XiaoXiHuiFudata.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37359D1D4C8C8E00527DF9 /* XiaoXiHuiFudata.m */; };
 		DB3735BB1D4C8C8E00527DF9 /* XiaoXiHuiFu.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37359F1D4C8C8E00527DF9 /* XiaoXiHuiFu.m */; };
 		DB3735BC1D4C8C8E00527DF9 /* MeXiaoXiController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3735A11D4C8C8E00527DF9 /* MeXiaoXiController.m */; };
-		DB3735BD1D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3735A31D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.m */; };
 		DB3735BE1D4C8C8E00527DF9 /* UIImage+SuoFang.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3735A51D4C8C8E00527DF9 /* UIImage+SuoFang.m */; };
 		DB3735BF1D4C8C8E00527DF9 /* GenderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3735A71D4C8C8E00527DF9 /* GenderTableViewController.m */; };
 		DB3735C01D4C8C8E00527DF9 /* TextFieldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3735A91D4C8C8E00527DF9 /* TextFieldTableViewController.m */; };
@@ -279,8 +274,6 @@
 		D033D31B1D49A645006AE6D3 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
 		D033D31C1D49A645006AE6D3 /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
 		D033D31D1D49A645006AE6D3 /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
-		D033D3201D49A645006AE6D3 /* GeRenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenTableViewController.h; sourceTree = "<group>"; };
-		D033D3211D49A645006AE6D3 /* GeRenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRenTableViewController.m; sourceTree = "<group>"; };
 		D033D32B1D49A645006AE6D3 /* tempt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tempt.plist; sourceTree = "<group>"; };
 		D033D3341D49A701006AE6D3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D033D3351D49A95B006AE6D3 /* ClassTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewController.h; sourceTree = "<group>"; };
@@ -294,12 +287,6 @@
 		D0628AD11D48C4C0006B7853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0CA6CD81D49D14D001E203E /* UIImage+PHTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PHTintColor.h"; sourceTree = "<group>"; };
 		D0CA6CD91D49D14D001E203E /* UIImage+PHTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PHTintColor.m"; sourceTree = "<group>"; };
-		D0CA6D131D49DBD1001E203E /* dengLuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dengLuViewController.h; sourceTree = "<group>"; };
-		D0CA6D141D49DBD1001E203E /* dengLuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dengLuViewController.m; sourceTree = "<group>"; };
-		D0CA6D151D49DBD1001E203E /* wjmmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wjmmViewController.h; sourceTree = "<group>"; };
-		D0CA6D161D49DBD1001E203E /* wjmmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjmmViewController.m; sourceTree = "<group>"; };
-		D0CA6D171D49DBD1001E203E /* zhuceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhuceViewController.h; sourceTree = "<group>"; };
-		D0CA6D181D49DBD1001E203E /* zhuceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhuceViewController.m; sourceTree = "<group>"; };
 		D0CA6D191D49DBD1001E203E /* XiuGaiMiMaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiuGaiMiMaController.h; sourceTree = "<group>"; };
 		D0CA6D1A1D49DBD1001E203E /* XiuGaiMiMaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiuGaiMiMaController.m; sourceTree = "<group>"; };
 		D0CA6D201D49DC40001E203E /* MyBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseController.h; sourceTree = "<group>"; };
@@ -558,8 +545,6 @@
 		DB37359F1D4C8C8E00527DF9 /* XiaoXiHuiFu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiaoXiHuiFu.m; sourceTree = "<group>"; };
 		DB3735A01D4C8C8E00527DF9 /* MeXiaoXiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeXiaoXiController.h; path = ../M/MeXiaoXiController.h; sourceTree = "<group>"; };
 		DB3735A11D4C8C8E00527DF9 /* MeXiaoXiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeXiaoXiController.m; path = ../M/MeXiaoXiController.m; sourceTree = "<group>"; };
-		DB3735A21D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeRenZiLiaoTableViewController.h; path = ../M/GeRenZiLiaoTableViewController.h; sourceTree = "<group>"; };
-		DB3735A31D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeRenZiLiaoTableViewController.m; path = ../M/GeRenZiLiaoTableViewController.m; sourceTree = "<group>"; };
 		DB3735A41D4C8C8E00527DF9 /* UIImage+SuoFang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+SuoFang.h"; path = "../M/UIImage+SuoFang.h"; sourceTree = "<group>"; };
 		DB3735A51D4C8C8E00527DF9 /* UIImage+SuoFang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SuoFang.m"; path = "../M/UIImage+SuoFang.m"; sourceTree = "<group>"; };
 		DB3735A61D4C8C8E00527DF9 /* GenderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenderTableViewController.h; path = ../M/GenderTableViewController.h; sourceTree = "<group>"; };
@@ -885,8 +870,6 @@
 		D033D31E1D49A645006AE6D3 /* ME */ = {
 			isa = PBXGroup;
 			children = (
-				D033D3201D49A645006AE6D3 /* GeRenTableViewController.h */,
-				D033D3211D49A645006AE6D3 /* GeRenTableViewController.m */,
 				D0CA6D101D49D83D001E203E /* C */,
 				D0CA6D111D49D83D001E203E /* M */,
 				D0CA6D121D49D83D001E203E /* V */,
@@ -991,8 +974,6 @@
 				DB3735911D4C8C8E00527DF9 /* JiaoYiJiLuDetailTableViewController.m */,
 				DB3735A01D4C8C8E00527DF9 /* MeXiaoXiController.h */,
 				DB3735A11D4C8C8E00527DF9 /* MeXiaoXiController.m */,
-				DB3735A21D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.h */,
-				DB3735A31D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.m */,
 				DB3735A61D4C8C8E00527DF9 /* GenderTableViewController.h */,
 				DB3735A71D4C8C8E00527DF9 /* GenderTableViewController.m */,
 				DB3735A81D4C8C8E00527DF9 /* TextFieldTableViewController.h */,
@@ -1001,12 +982,6 @@
 				DB3735AB1D4C8C8E00527DF9 /* GouMaiFWTableViewController.m */,
 				DB3735AF1D4C8C8E00527DF9 /* ZhangHuAnQuanTableViewController.h */,
 				DB3735B01D4C8C8E00527DF9 /* ZhangHuAnQuanTableViewController.m */,
-				D0CA6D131D49DBD1001E203E /* dengLuViewController.h */,
-				D0CA6D141D49DBD1001E203E /* dengLuViewController.m */,
-				D0CA6D151D49DBD1001E203E /* wjmmViewController.h */,
-				D0CA6D161D49DBD1001E203E /* wjmmViewController.m */,
-				D0CA6D171D49DBD1001E203E /* zhuceViewController.h */,
-				D0CA6D181D49DBD1001E203E /* zhuceViewController.m */,
 				D0CA6D191D49DBD1001E203E /* XiuGaiMiMaController.h */,
 				D0CA6D1A1D49DBD1001E203E /* XiuGaiMiMaController.m */,
 			);
@@ -2017,13 +1992,11 @@
 				E8479AA11D509800008AF897 /* ZFSessionModel.m in Sources */,
 				D0CA6E691D49E4F6001E203E /* YYTextMagnifier.m in Sources */,
 				D0CA6E6E1D49E4F6001E203E /* YYTextArchiver.m in Sources */,
-				D0CA6D1D1D49DBD1001E203E /* zhuceViewController.m in Sources */,
 				E890F35B1D49BD7800A59D36 /* MJRefreshComponent.m in Sources */,
 				D0CA6D4A1D49DC61001E203E /* IQUIView+Hierarchy.m in Sources */,
 				E8479A971D509800008AF897 /* MASViewAttribute.m in Sources */,
 				D033D32F1D49A645006AE6D3 /* MainTabViewController.m in Sources */,
 				D0CA6D5A1D49DE2E001E203E /* MSTextField.m in Sources */,
-				D0CA6D1C1D49DBD1001E203E /* wjmmViewController.m in Sources */,
 				D0CA6E651D49E4F6001E203E /* YYTextInput.m in Sources */,
 				E890F3501D49BD7800A59D36 /* AFImageDownloader.m in Sources */,
 				D0CA6E781D49E4F6001E203E /* YYFileHash.m in Sources */,
@@ -2037,7 +2010,6 @@
 				D033D3371D49A95B006AE6D3 /* ClassTableViewController.m in Sources */,
 				D033D3061D49A543006AE6D3 /* AppDelegate.m in Sources */,
 				E89BF5C01D502D2A003D124F /* TeacherModels.m in Sources */,
-				D0CA6D1B1D49DBD1001E203E /* dengLuViewController.m in Sources */,
 				D0CA6E621D49E4F6001E203E /* YYTextContainerView.m in Sources */,
 				E890F3531D49BD7800A59D36 /* UIButton+AFNetworking.m in Sources */,
 				D0CA6E4D1D49E4F6001E203E /* UITextField+YYAdd.m in Sources */,
@@ -2147,9 +2119,7 @@
 				D0CA6E461D49E4F6001E203E /* UIDevice+YYAdd.m in Sources */,
 				D0CA6D711D49DEDF001E203E /* MSNoNetView.m in Sources */,
 				D0CA6D501D49DC61001E203E /* IQBarButtonItem.m in Sources */,
-				DB3735BD1D4C8C8E00527DF9 /* GeRenZiLiaoTableViewController.m in Sources */,
 				D0CA6E441D49E4F6001E203E /* UIColor+YYAdd.m in Sources */,
-				D033D3311D49A645006AE6D3 /* GeRenTableViewController.m in Sources */,
 				D0CA6E801D49E4F6001E203E /* YYTransaction.m in Sources */,
 				D0CA6D521D49DC61001E203E /* IQToolbar.m in Sources */,
 				D0CA6D4E1D49DC61001E203E /* IQKeyboardReturnKeyHandler.m in Sources */,

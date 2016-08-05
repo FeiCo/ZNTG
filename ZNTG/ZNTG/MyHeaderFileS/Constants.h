@@ -132,12 +132,10 @@
 
 
 
-//财经日历的URL
-#define kWebAddressURL @"http://aliba.china167.com/android.php"
 
-#define kChatAddress @"ws://tv1.bdcgw.cn:18280"//聊天服务器地址
 
-#define kHostAddress @"http://139.129.26.192/huijin/user/"//登录地址
+#define kHostAddress @"http://192.168.0.123:8081/appserver/user/"//登录地址
+#define KUpLoadIconHost  @"http://192.168.0.123:8081/file/upload"
 
 #define kHostAddressURL [NSURL URLWithString:kHostAddress]
 
@@ -148,11 +146,39 @@
 #define kGetInfo kRelativeToAddress(@"Php/GetInfo.php")
 
 
-//me add
-#define kGetLogin kRelativeToAddress(@"login")
-#define kGetRegister kRelativeToAddress(@"registUser")
-#define kGetSMSValidate kRelativeToAddress(@"sendValidate")
-#define kGetChangePSW kRelativeToAddress(@"updatePassWord")
+//PH add
+
+//登录
+#define kGetLogin kRelativeToAddress(@"appLogin")
+
+//注册
+#define kGetRegister kRelativeToAddress(@"appRegister")
+#define kGetRegistTelCode kRelativeToAddress(@"getTelRegistreCode")
+
+//用户页面编辑
+#define kGetUserEdit kRelativeToAddress(@"appUserEdit")
+
+//邮箱绑定
+#define kSendEmailCode kRelativeToAddress(@"appSendEmailVerificationCode")
+#define kConfirmEmailCode kRelativeToAddress(@"appReconfirmEmailVerificationCode")
+
+
+//手机绑定
+#define kPhoneBindCode kRelativeToAddress(@"appSendTelephoneVerificationCode")
+#define kConfirmPhoneCode kRelativeToAddress(@"appReconfirmEmailVerificationCode")
+
+//修改密码
+#define kModufyPSW kRelativeToAddress(@"appTelephoneModifyPassword")
+
+//忘记密码
+#define kForgetPSWOne kRelativeToAddress(@"appForgetPasswordOne")
+#define kForgetPSWTwo kRelativeToAddress(@"appForgetPasswordTwo")
+
+//退出登录
+#define kLogOut kRelativeToAddress(@"appLogout")
+
+//上传用户头像
+#define kUpLoadIcon [NSURL URLWithString:KUpLoadIconHost];
 
 
 
