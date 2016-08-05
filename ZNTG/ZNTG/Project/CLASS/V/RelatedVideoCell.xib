@@ -14,9 +14,8 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="172" height="127"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-Wq-k5m">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-Wq-k5m">
                         <rect key="frame" x="0.0" y="0.0" width="172" height="97"/>
-                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="0VT-Wq-k5m" secondAttribute="height" multiplier="16:9" id="nYp-NS-pUc"/>
                         </constraints>
@@ -64,5 +63,6 @@
     <resources>
         <image name="KeJianKan" width="12" height="10"/>
         <image name="KeJianplay" width="30" height="28"/>
+        <image name="default" width="173" height="146"/>
     </resources>
 </document>

@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"名师";
+    [self initializeNavigation];
     [self initializeTableView];
     [self requestsTeacherList];
 }
@@ -30,6 +30,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initializeNavigation {
+    self.title = @"名师";
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)initializeTableView {

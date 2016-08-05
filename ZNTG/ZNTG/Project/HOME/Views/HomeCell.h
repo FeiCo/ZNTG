@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 @interface HomeCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-@property (weak, nonatomic) IBOutlet UILabel *buyTipsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UIButton *buyButton;
-
-- (void)handleHomeCellFromTeachers:(NSArray *)teachers;
+- (void)handleHomeCellWithPhotoURL:(NSURL *)url
+                              name:(NSString *)name
+                             price:(NSString *)price
+                            buyNum:(NSString *)buyNum;
 @end

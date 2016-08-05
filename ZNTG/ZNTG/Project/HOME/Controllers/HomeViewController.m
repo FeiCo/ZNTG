@@ -13,15 +13,17 @@
 #import "HomeCell.h"
 #import "MarketView.h"
 #import "TeacherModels.h"
-#import "Teachers.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic, strong) NSArray *cycleImages;
-@property (nonatomic, strong) NSArray *dataList;
 @property (nonatomic, strong) NSArray *marketDatas;
+@property (nonatomic, strong) NSArray *victoryWinList; // 胜赢
+@property (nonatomic, strong) NSArray *brightWinList; // 智赢
+@property (nonatomic, strong) NSArray *wiseWinList;  // 慧赢
+@property (nonatomic, strong) NSArray *topWinList;  // 私人订制
 @end
 
 @implementation HomeViewController
@@ -82,10 +84,12 @@
 
 - (void)initializeNavigation {
     self.title = @"首页";
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)initializeTableView {
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - kNavigationBarHeight - kStateBarHeight - kTabBarHeight) style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
@@ -154,23 +158,21 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return _dataList.count;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return _victoryWinList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"HomeCell";
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    TeacherModels *teacherModels = [_dataList objectAtIndex:indexPath.section];
-    [cell handleHomeCellFromTeachers:teacherModels.roomPhoneList];
-
-    [cell.buyButton addTarget:self action:@selector(buyNowButton:) forControlEvents:UIControlEventTouchUpInside];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    TeacherModels *teacherModels = [_victoryWinList objectAtIndex:indexPath.row];
+    
+    [cell handleHomeCellWithPhotoURL:[NSURL URLWithString:teacherModels.photoLocation]
+                                name:teacherModels.teacherName
+                               price:teacherModels.roomPrice
+                              buyNum:teacherModels.userNumber];
     return cell;
 }
 
@@ -184,15 +186,25 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 260;
+    return kScreenHeightScale(184);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return kScreenHeightScale(20);
+    return kScreenHeightScale(230);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.00001;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectZero];
+//    headerView.backgroundColor = kCustomColor(238, 238, 244, 1);
+    
+    PlateView *plateView = [[PlateView alloc] initWithFrame:CGRectMake(0, kScreenHeightScale(20), self.view.width, kScreenHeightScale(180))];
+    plateView.backgroundColor = [UIColor whiteColor];
+    [headerView addSubview:plateView];
+    return headerView;
 }
 
 #pragma mark - SDCycleScrollViewDelegate
@@ -204,16 +216,39 @@
 #pragma mark - Network Requests
 
 - (void)requestsTeacher {
-    NSString *urlString = @"http://192.168.0.135:8080/ws/rest/teacher/getIndexHome/*";
+    NSString *urlString = @"http://192.168.0.135:8080/ws/rest/teacher/getIndexHome/*/*/*";
     [MSNetRequest requestMethodsWithPOST:nil url:urlString successBlock:^(id responseObject) {
-
+        
         NSDictionary *jsonDictionary = [responseObject jsonValueDecoded];
         NSDictionary *resultData = [jsonDictionary objectForKey:@"resultData"];
-        NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:resultData.count];
-        for (NSDictionary *dict in resultData) {
-            [tempArray addObject:[TeacherModels teacherModelsFromDictionary:dict]];
+        
+        NSArray *brightWinLit = [resultData objectForKey:@"brightWinLit"];
+        NSArray *topWinLit = [resultData objectForKey:@"topWinLit"];
+        NSArray *victoryWinLit = [resultData objectForKey:@"victoryWinLit"];
+        NSArray *wiseWinLit = [resultData objectForKey:@"wiseWinLit"];
+        
+        NSMutableArray *tempArray01 = [NSMutableArray arrayWithCapacity:brightWinLit.count];
+        NSMutableArray *tempArray02 = [NSMutableArray arrayWithCapacity:topWinLit.count];
+        NSMutableArray *tempArray03 = [NSMutableArray arrayWithCapacity:victoryWinLit.count];
+        NSMutableArray *tempArray04 = [NSMutableArray arrayWithCapacity:wiseWinLit.count];
+        
+        for (NSDictionary *dict in brightWinLit) {
+            [tempArray01 addObject:[TeacherModels teacherModelsFromDictionary:dict]];
         }
-        _dataList = [NSArray arrayWithArray:tempArray];
+        for (NSDictionary *dict in topWinLit) {
+            [tempArray02 addObject:[TeacherModels teacherModelsFromDictionary:dict]];
+        }
+        for (NSDictionary *dict in victoryWinLit) {
+            [tempArray03 addObject:[TeacherModels teacherModelsFromDictionary:dict]];
+        }
+        for (NSDictionary *dict in wiseWinLit) {
+            [tempArray04 addObject:[TeacherModels teacherModelsFromDictionary:dict]];
+        }
+        _brightWinList  = [NSArray arrayWithArray:tempArray01];
+        _topWinList     = [NSArray arrayWithArray:tempArray02];
+        _victoryWinList = [NSArray arrayWithArray:tempArray03];
+        _wiseWinList    = [NSArray arrayWithArray:tempArray04];
+        
         [_tableView reloadData];
         
     } failureBlock:^(NSString *err) {

@@ -7,20 +7,21 @@
 //
 
 #import "TeacherModels.h"
-#import "Teachers.h"
 
 @implementation TeacherModels
-
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        self.identifier = [[dictionary objectForKey:@"id"] integerValue];
-        self.userId = [[dictionary objectForKey:@"userId"] integerValue];
-        NSMutableArray *tempArray = [dictionary objectForKey:@"roomPhoneList"];
-        self.roomPhoneList = [NSMutableArray array];
-        for (NSDictionary *dict in tempArray) {
-           [self.roomPhoneList addObject:[Teachers teachersFromDictionry:dict]];
-        }
+        self.descriptions = [dictionary objectForKey:@"description"];
+        self.identifier = [dictionary objectForKey:@"id"];
+        self.mobilePhone = [dictionary objectForKey:@"mobilePhone"];
+        self.photoLocation = [dictionary objectForKey:@"photoLocation"];
+        self.roomPrice = [dictionary objectForKey:@"roomPrice"];
+        self.teacherId = [dictionary objectForKey:@"teacherId"];
+        self.teacherName = [dictionary objectForKey:@"teacherName"];
+        self.type = [dictionary objectForKey:@"type"];
+        NSString *num = [dictionary objectForKey:@"userNumber"];
+        self.userNumber = num == nil ? @"0" : num;
     }
     return self;
 }

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TeacherViewController : UIViewController
+@interface TeacherViewController : MyBaseController
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TermSheetViewController : UIViewController
+@interface TermSheetViewController : MyBaseController
 
 @end

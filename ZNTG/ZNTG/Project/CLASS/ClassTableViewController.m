@@ -513,4 +513,8 @@
 }
 */
 
+// 关闭屏幕旋转
+- (BOOL)shouldAutorotate {
+    return NO;
+}
 @end

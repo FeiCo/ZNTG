@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MediaPlayerViewController : UIViewController
+@interface MediaPlayerViewController : MyBaseController
 /** 视频URL */
 @property (nonatomic, strong) NSURL *videoURL;
 @end

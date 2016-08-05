@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface TeacherModels : NSObject
-@property (nonatomic, assign) NSInteger identifier;
-@property (nonatomic, assign) NSInteger userId;
-@property (nonatomic, strong) NSMutableArray *roomPhoneList;
+@property (nonatomic, copy) NSString *descriptions;
+@property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, copy) NSString *mobilePhone;
+@property (nonatomic, copy) NSString *photoLocation;
+@property (nonatomic, copy) NSString *roomPrice;
+@property (nonatomic, copy) NSString *teacherId;
+@property (nonatomic, copy) NSString *teacherName;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *userNumber;
 
 + (instancetype)teacherModelsFromDictionary:(NSDictionary *)dictionary;
 @end

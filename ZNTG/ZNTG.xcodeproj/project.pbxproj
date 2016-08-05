@@ -164,6 +164,7 @@
 		DB3735C81D4C8CBE00527DF9 /* xiaoxihuifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3735C51D4C8CBE00527DF9 /* xiaoxihuifu.plist */; };
 		DB3735C91D4C8CBE00527DF9 /* xiaoxiXQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3735C61D4C8CBE00527DF9 /* xiaoxiXQ.plist */; };
 		DB3735CA1D4C8CBE00527DF9 /* GuoMaiFW.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3735C71D4C8CBE00527DF9 /* GuoMaiFW.plist */; };
+		E81090E31D53217500D5384C /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81090E21D53217500D5384C /* CommentView.m */; };
 		E8479A931D509800008AF897 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E8479A6C1D509800008AF897 /* MASCompositeConstraint.m */; };
 		E8479A941D509800008AF897 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E8479A6F1D509800008AF897 /* MASConstraint.m */; };
 		E8479A951D509800008AF897 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E8479A711D509800008AF897 /* MASConstraintMaker.m */; };
@@ -256,7 +257,6 @@
 		E89BF5BE1D502D2A003D124F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89BF5AE1D502D2A003D124F /* HomeViewController.m */; };
 		E89BF5BF1D502D2A003D124F /* TermSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89BF5B01D502D2A003D124F /* TermSheetViewController.m */; };
 		E89BF5C01D502D2A003D124F /* TeacherModels.m in Sources */ = {isa = PBXBuildFile; fileRef = E89BF5B31D502D2A003D124F /* TeacherModels.m */; };
-		E89BF5C11D502D2A003D124F /* Teachers.m in Sources */ = {isa = PBXBuildFile; fileRef = E89BF5B51D502D2A003D124F /* Teachers.m */; };
 		E89BF5C21D502D2A003D124F /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E89BF5B81D502D2A003D124F /* HomeCell.m */; };
 		E89BF5C31D502D2A003D124F /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E89BF5B91D502D2A003D124F /* HomeCell.xib */; };
 		E89BF5C41D502D2A003D124F /* MarketView.m in Sources */ = {isa = PBXBuildFile; fileRef = E89BF5BB1D502D2A003D124F /* MarketView.m */; };
@@ -576,6 +576,8 @@
 		DB3735C51D4C8CBE00527DF9 /* xiaoxihuifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xiaoxihuifu.plist; sourceTree = "<group>"; };
 		DB3735C61D4C8CBE00527DF9 /* xiaoxiXQ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xiaoxiXQ.plist; sourceTree = "<group>"; };
 		DB3735C71D4C8CBE00527DF9 /* GuoMaiFW.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GuoMaiFW.plist; sourceTree = "<group>"; };
+		E81090E11D53217500D5384C /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		E81090E21D53217500D5384C /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
 		E8479A6B1D509800008AF897 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		E8479A6C1D509800008AF897 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		E8479A6D1D509800008AF897 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -758,8 +760,6 @@
 		E89BF5B01D502D2A003D124F /* TermSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermSheetViewController.m; sourceTree = "<group>"; };
 		E89BF5B21D502D2A003D124F /* TeacherModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherModels.h; sourceTree = "<group>"; };
 		E89BF5B31D502D2A003D124F /* TeacherModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherModels.m; sourceTree = "<group>"; };
-		E89BF5B41D502D2A003D124F /* Teachers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teachers.h; sourceTree = "<group>"; };
-		E89BF5B51D502D2A003D124F /* Teachers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teachers.m; sourceTree = "<group>"; };
 		E89BF5B71D502D2A003D124F /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
 		E89BF5B81D502D2A003D124F /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		E89BF5B91D502D2A003D124F /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
@@ -854,6 +854,8 @@
 				E84B46031D51F2DA00DAF34D /* RelatedVideoCell.h */,
 				E84B46041D51F2DA00DAF34D /* RelatedVideoCell.m */,
 				E84B46051D51F2DA00DAF34D /* RelatedVideoCell.xib */,
+				E81090E11D53217500D5384C /* CommentView.h */,
+				E81090E21D53217500D5384C /* CommentView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1840,8 +1842,6 @@
 			children = (
 				E89BF5B21D502D2A003D124F /* TeacherModels.h */,
 				E89BF5B31D502D2A003D124F /* TeacherModels.m */,
-				E89BF5B41D502D2A003D124F /* Teachers.h */,
-				E89BF5B51D502D2A003D124F /* Teachers.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2081,6 +2081,7 @@
 				E890F34F1D49BD7800A59D36 /* AFAutoPurgingImageCache.m in Sources */,
 				E89BF5DC1D502EDE003D124F /* GeRHeader.m in Sources */,
 				E8479A931D509800008AF897 /* MASCompositeConstraint.m in Sources */,
+				E81090E31D53217500D5384C /* CommentView.m in Sources */,
 				D0CA6E601D49E4F6001E203E /* NSObject+YYModel.m in Sources */,
 				D0CA6E5B1D49E4F6001E203E /* YYImageCache.m in Sources */,
 				DB3735BC1D4C8C8E00527DF9 /* MeXiaoXiController.m in Sources */,
@@ -2191,7 +2192,6 @@
 				E890F36B1D49BD7800A59D36 /* UIScrollView+MJRefresh.m in Sources */,
 				E890F3D91D49FFE000A59D36 /* SDCycleScrollView.m in Sources */,
 				D0CA6E491D49E4F6001E203E /* UIImage+YYAdd.m in Sources */,
-				E89BF5C11D502D2A003D124F /* Teachers.m in Sources */,
 				E890F3721D49BD7800A59D36 /* SDWebImageDownloaderOperation.m in Sources */,
 				D0CA6CDA1D49D14D001E203E /* UIImage+PHTintColor.m in Sources */,
 				D0CA6E361D49E4F6001E203E /* NSKeyedUnarchiver+YYAdd.m in Sources */,

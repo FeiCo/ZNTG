@@ -35,7 +35,7 @@
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _rightButton.backgroundColor = [UIColor clearColor];
         _rightButton.frame = CGRectMake(0, 0, kNavigationBarHeight, kNavigationBarHeight);
-        //  [_rightButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+//          [_rightButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         [_rightButton addTarget:self action:@selector(onClickRightBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _rightButton;
@@ -67,6 +67,7 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.hidesBackButton = YES;
+    
     
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
@@ -142,7 +143,7 @@
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 /**
@@ -160,7 +161,7 @@
  *  @return 
  */
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 /**

@@ -13,6 +13,7 @@
 #import "ZFPlayer.h"
 #import "VideoInfoView.h"
 #import "RelatedVideoCell.h"
+#import "CommentView.h"
 
 @interface MediaPlayerViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -22,9 +23,28 @@
 @property (nonatomic, assign) CGFloat cellHeight;
 @property (nonatomic, strong) ZFPlayerView *playerView;
 @property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic, assign) BOOL isStatusBarHidden;
 @end
 
 @implementation MediaPlayerViewController
+
+#define COMMENTVIEW_HEIGHT kScreenHeightScale(100)
+
+#pragma mark -
+
+// 屏幕旋转打开
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (BOOL)prefersStatusBarHidden{
+    return _isStatusBarHidden;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (void)dealloc {
     NSLog(@"%@释放了",self.class);
@@ -58,18 +78,20 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
     [self initializeDatas];
-    [self setupPlayerView];
+    [self initializePlayerView];
     [self initializeTabelView];
     [self initializeHeaderView];
+    [self initializeCommentView];
 }
 
 - (void)initializeDatas {
+    _isStatusBarHidden = NO;
     _cellHeight = (((self.view.width - (10 * 3)) / 2) * 9 / 16 + kScreenHeightScale(60));
     _collectionViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
 }
 
 - (void)initializeTabelView {
-    CGRect tableViewFrame = CGRectMake(0, 20 + _playerView.height, self.view.width, (self.view.height - _playerView.height) - 20);
+    CGRect tableViewFrame = CGRectMake(0, 20 + _playerView.height, self.view.width, (self.view.height - _playerView.height) - 20 - COMMENTVIEW_HEIGHT);
     _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -78,11 +100,16 @@
 
 - (void)initializeHeaderView {
     VideoInfoView *headerView = [[VideoInfoView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, kScreenHeightScale(334))];
-//    headerView.backgroundColor = [UIColor purpleColor];
     _tableView.tableHeaderView = headerView;
 }
 
-- (void)setupPlayerView {
+- (void)initializeCommentView {
+    CommentView *commentView = [[CommentView alloc] initWithFrame:CGRectMake(0, self.view.height - COMMENTVIEW_HEIGHT, self.view.width, COMMENTVIEW_HEIGHT)];
+    commentView.backgroundColor = kCustomColor(238, 238, 244, 1);
+    [self.view addSubview:commentView];
+}
+
+- (void)initializePlayerView {
     
     UIView *topView = [[UIView alloc] init];
     topView.backgroundColor = [UIColor whiteColor];
@@ -115,44 +142,40 @@
     };
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
         self.view.backgroundColor = [UIColor whiteColor];
         [self.playerView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(20);
+            _isStatusBarHidden = NO;
             _tableView.hidden = NO;
         }];
         
     }else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight || toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-        self.view.backgroundColor = [UIColor blackColor];
+        self.view.backgroundColor = [UIColor whiteColor];
         [self.playerView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(0);
+            _isStatusBarHidden = YES;
             _tableView.hidden = YES;
         }];
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == 0 ? 1 : 8;
+    return section == 0 ? 1 : 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     if (indexPath.section == 0) {
+        static NSString *cellIdentifier = @"CollectionView";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         if (!_collectionView) {
             _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, (_cellHeight + kScreenHeightScale(30)) * 3) collectionViewLayout:_collectionViewFlowLayout];
             _collectionView.delegate = self;
@@ -163,11 +186,17 @@
             _collectionView.backgroundColor = kCustomColor(238, 238, 244, 1);
             [cell addSubview:_collectionView];
             [_collectionView registerNib:[UINib nibWithNibName:@"RelatedVideoCell" bundle:nil] forCellWithReuseIdentifier:@"RelatedVideoCell"];
-            return cell;
         }
+        return cell;
+    }else {
+        static NSString *cellIdentifier = @"cellIdentifierUITableViewCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        cell.textLabel.text = @"测试";
+        return cell;
     }
-    cell.textLabel.text = @"测试";
-    return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -215,6 +244,9 @@
 
 #pragma mark - UICollectionViewDelegate
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"collectionView:%ld",indexPath.row);
+}
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
