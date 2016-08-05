@@ -98,21 +98,30 @@
 
 
 
-
-#define  kUserAccount @"UserAccount"//用户账号
-
-#define kUserPassword @"UserPassword"//用户密码
-
-#define kUserID @"UserID"//用户的实际ID用户的唯一标识
-#define kUserHeaderPic @"HeaderPictureLink"//用户的实际ID用户的唯一标识
-
-#define kUserVirtualID @"UserVirtualID"//用于登陆的ID
-
-#define kUserNickName @"UserNickName"//用户昵称
-
-#define kUserType @"UserType"//用户类型
-
-#define kUserState @"UserState"//用户登录的状态
+#define  kUserId @"userid"//用户ID
+#define  kUserBirthday @"birthday"//用户生日
+#define  kUserGender @"gender"//用户性别
+#define  kUserImage @"headimgurl"//用户头像地址
+#define  kUserNickName @"nickname"//用户别名
+#define  kUserName @"username"//用户手机号
+#define  kUserToken @"token"//用户token
+#define  kUserType @"type"//用户类型
+#define  kUserAutoGraph @"autograph"//用户个性签名
+#define  kUserLoginState @"loginstate"//用户登录状态
+#define  kUserLoginPSW @"loginPSW"//用户密码//#define  kUserAccount @"UserAccount"//用户账号
+//
+//#define kUserPassword @"UserPassword"//用户密码
+//
+//#define kUserID @"UserID"//用户的实际ID用户的唯一标识
+//#define kUserHeaderPic @"HeaderPictureLink"//用户的实际ID用户的唯一标识
+//
+//#define kUserVirtualID @"UserVirtualID"//用于登陆的ID
+//
+//#define kUserNickName @"UserNickName"//用户昵称
+//
+//#define kUserType @"UserType"//用户类型
+//
+//#define kUserState @"UserState"//用户登录的状态
 
 #define kUserIntegral @"UserIntegral"//用户积分
 

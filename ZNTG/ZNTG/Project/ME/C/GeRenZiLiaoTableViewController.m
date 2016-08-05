@@ -248,7 +248,8 @@
         case 8:
         {
             UILabel *detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(110, 10, [UIScreen mainScreen].bounds.size.width -120, 60)];
-            if(!_signature||[_signature isEqualToString:@""])
+            NSString *str = [_signature stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            if(!_signature||[str isEqualToString:@""])
             {
                detailLabel.text = @"请设置个性签名";
             }

@@ -146,7 +146,7 @@
     }else{
         NSDictionary *dictionary = @{@"passWordOld":oldpsw,@"passWordNew":againpassWordString};
        
-        [MSNetRequest requestMethodsWithGET:dictionary url:kGetChangePSW successBlock:^(id responseObject) {
+        [MSNetRequest requestMethodsWithGET:dictionary url:kUserLoginPSW successBlock:^(id responseObject) {
             
             NSString *jsonString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
             
@@ -170,7 +170,7 @@
                 //        __weak __typeof(self)weakSelf = self;
                 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
                 NSString *newpassword = againpassWordString;
-                [userDefaults setValue:newpassword forKey:kUserPassword];
+                [userDefaults setValue:newpassword forKey:kUserLoginPSW];
                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                     [weakSelf.navigationController popViewControllerAnimated:YES];
