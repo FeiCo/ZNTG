@@ -75,6 +75,10 @@
     _fansL.text = _fans;
     _purchaseL.text = _purchasecount;
     _sigL.text = _sig;
+    _focusBTN.layer.cornerRadius = 14;
+    _focusBTN.layer.borderWidth = 1;
+    _focusBTN.layer.borderColor = [UIColor whiteColor].CGColor;
+    
 }
 
 

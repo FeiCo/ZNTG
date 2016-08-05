@@ -10,6 +10,9 @@
 
 @interface GeRHeader : UIView
 
+@property (weak, nonatomic) IBOutlet UIButton *backBTN;
+@property (weak, nonatomic) IBOutlet UIButton *focusBTN;
+@property (weak, nonatomic) IBOutlet UIButton *lookBTN;
 +(instancetype)GeRHeader;
 
 -(void)setWithName:(NSString *)name

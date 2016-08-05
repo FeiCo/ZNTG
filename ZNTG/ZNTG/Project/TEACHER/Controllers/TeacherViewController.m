@@ -10,6 +10,8 @@
 #import "TeacherCell.h"
 #import "TeacherList.h"
 
+#import "GeRenZYTableViewController.h"
+
 @interface TeacherViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -44,6 +46,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     [self registerNib];
+    
 }
 
 - (void)registerNib {
@@ -53,18 +56,19 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dataList.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"TeacherCell";
-    TeacherCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    TeacherList *teacherList = [_dataList objectAtIndex:indexPath.row];
-    [cell handleTeacherCellWithIcon:teacherList.photoLocation
-                               name:teacherList.name
-                         levelImage:nil
-                         levelLabel:teacherList.position
-                          introduce:teacherList.descriptions];
+//    static NSString *cellIdentifier = @"TeacherCell";
+//    TeacherCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+//    TeacherList *teacherList = [_dataList objectAtIndex:indexPath.row];
+//    [cell handleTeacherCellWithIcon:teacherList.photoLocation
+//                               name:teacherList.name
+//                         levelImage:nil
+//                         levelLabel:teacherList.position
+//                          introduce:teacherList.descriptions];
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
     return cell;
 }
 
@@ -84,7 +88,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GeRenZYTableViewController *geren = [[GeRenZYTableViewController alloc] init];
+    [self presentViewController:geren animated:YES completion:^{
+        
+    }];
     NSLog(@"111111");
+    
 }
 
 #pragma mark - Network Requests

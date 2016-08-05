@@ -11,10 +11,10 @@
             <rect key="frame" x="0.0" y="0.0" width="396" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_BuyButton" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-eq-XgR">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-eq-XgR">
                     <rect key="frame" x="0.0" y="0.0" width="396" height="216"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20F-cO-vzn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20F-cO-vzn">
                     <rect key="frame" x="13" y="21" width="20" height="26"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="U8r-gI-mKG"/>
@@ -34,12 +34,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-Ja-rMF">
-                    <rect key="frame" x="335" y="24" width="46" height="30"/>
+                    <rect key="frame" x="317" y="24" width="64" height="27"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="U3d-6d-Ba3"/>
-                        <constraint firstAttribute="height" constant="30" id="dnh-dp-5Mo"/>
+                        <constraint firstAttribute="width" constant="64" id="U3d-6d-Ba3"/>
+                        <constraint firstAttribute="height" constant="27" id="dnh-dp-5Mo"/>
                     </constraints>
-                    <state key="normal" title="关注"/>
+                    <state key="normal" title="关注">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" title="已关注"/>
+                    <state key="selected" title="已关注"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个性签名：时间就是金钱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fW-mK-isX">
                     <rect key="frame" x="98" y="124" width="289" height="21"/>
@@ -138,7 +142,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="62" id="ldx-gF-FrY"/>
                             </constraints>
-                            <state key="normal" title="【查看】"/>
+                            <state key="normal" title="【查看】">
+                                <color key="titleColor" red="1" green="0.71244582990000005" blue="0.01762756913" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,10 +187,13 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="backBTN" destination="20F-cO-vzn" id="m6E-sd-R3v"/>
                 <outlet property="corpL" destination="LvF-O8-rZD" id="6Bq-GU-8HT"/>
                 <outlet property="fansL" destination="ydq-vB-mE5" id="AhE-fc-XQL"/>
+                <outlet property="focusBTN" destination="VrG-Ja-rMF" id="iTf-GV-Gpc"/>
                 <outlet property="jianJieL" destination="zti-hE-799" id="g8E-gy-rSU"/>
                 <outlet property="jinPaiTG" destination="Xve-VG-oTr" id="aiw-GX-S8Y"/>
+                <outlet property="lookBTN" destination="41V-ez-LIv" id="zju-go-PaJ"/>
                 <outlet property="purchaseL" destination="HhU-1X-MTZ" id="teI-in-ijO"/>
                 <outlet property="sigL" destination="0fW-mK-isX" id="su8-iY-0xc"/>
                 <outlet property="zzzc" destination="3qa-ca-Es6" id="Ze2-HU-gIl"/>
@@ -193,11 +202,11 @@
         </view>
     </objects>
     <resources>
-        <image name="Home_BuyButton" width="90" height="36"/>
         <image name="fans" width="14" height="11"/>
         <image name="gmjl" width="12" height="12"/>
         <image name="hyh" width="45" height="45"/>
         <image name="left_ico" width="10" height="19"/>
+        <image name="sunrise" width="1024" height="420"/>
         <image name="v" width="12" height="14"/>
     </resources>
 </document>
