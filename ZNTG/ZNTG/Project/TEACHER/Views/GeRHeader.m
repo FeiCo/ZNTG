@@ -67,7 +67,7 @@
 
 
 -(void)layoutSubviews {
-    self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 210);
+    self.frame = CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 210);
       _zzzc.text = _name;
     _jinPaiTG.text = _title;
     _corpL.text = _corp;

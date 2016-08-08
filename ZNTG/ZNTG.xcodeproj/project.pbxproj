@@ -13,6 +13,7 @@
 		D033D3331D49A645006AE6D3 /* tempt.plist in Resources */ = {isa = PBXBuildFile; fileRef = D033D32B1D49A645006AE6D3 /* tempt.plist */; };
 		D033D3371D49A95B006AE6D3 /* ClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3361D49A95B006AE6D3 /* ClassTableViewController.m */; };
 		D033D33A1D49A965006AE6D3 /* ClassCubeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D3391D49A965006AE6D3 /* ClassCubeTableViewCell.m */; };
+		D03430E91D586246008279FD /* JianJieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03430E81D586246008279FD /* JianJieViewController.m */; };
 		D0408B1C1D5480EC00626645 /* GeRenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B1B1D5480EC00626645 /* GeRenTableViewController.m */; };
 		D0408B1F1D5480F900626645 /* GeRenZiLiaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B1E1D5480F900626645 /* GeRenZiLiaoTableViewController.m */; };
 		D0408B261D54810A00626645 /* dengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B211D54810A00626645 /* dengLuViewController.m */; };
@@ -285,6 +286,8 @@
 		D033D3361D49A95B006AE6D3 /* ClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewController.m; sourceTree = "<group>"; };
 		D033D3381D49A965006AE6D3 /* ClassCubeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassCubeTableViewCell.h; sourceTree = "<group>"; };
 		D033D3391D49A965006AE6D3 /* ClassCubeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassCubeTableViewCell.m; sourceTree = "<group>"; };
+		D03430E71D586246008279FD /* JianJieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianJieViewController.h; sourceTree = "<group>"; };
+		D03430E81D586246008279FD /* JianJieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianJieViewController.m; sourceTree = "<group>"; };
 		D0408B1A1D5480EC00626645 /* GeRenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenTableViewController.h; sourceTree = "<group>"; };
 		D0408B1B1D5480EC00626645 /* GeRenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeRenTableViewController.m; sourceTree = "<group>"; };
 		D0408B1D1D5480F900626645 /* GeRenZiLiaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeRenZiLiaoTableViewController.h; sourceTree = "<group>"; };
@@ -1867,6 +1870,8 @@
 				E89BF5C81D502D3C003D124F /* TeacherViewController.m */,
 				E89BF5D41D502EBE003D124F /* GeRenZYTableViewController.h */,
 				E89BF5D51D502EBE003D124F /* GeRenZYTableViewController.m */,
+				D03430E71D586246008279FD /* JianJieViewController.h */,
+				D03430E81D586246008279FD /* JianJieViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2174,6 +2179,7 @@
 				D0CA6E351D49E4F6001E203E /* NSDictionary+YYAdd.m in Sources */,
 				D0CA6D491D49DC61001E203E /* IQUITextFieldView+Additions.m in Sources */,
 				E890F3D71D49FFE000A59D36 /* TAPageControl.m in Sources */,
+				D03430E91D586246008279FD /* JianJieViewController.m in Sources */,
 				E890F3571D49BD7800A59D36 /* UIWebView+AFNetworking.m in Sources */,
 				E890F3D31D49FFE000A59D36 /* NSData+SDDataCache.m in Sources */,
 				D0CA6E681D49E4F6001E203E /* YYTextLine.m in Sources */,

@@ -27,6 +27,7 @@
     [self initializeNavigation];
     [self initializeTableView];
     [self requestsTeacherList];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,7 +90,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GeRenZYTableViewController *geren = [[GeRenZYTableViewController alloc] init];
-    [self presentViewController:geren animated:YES completion:^{
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:geren];
+    [self presentViewController:navi animated:YES completion:^{
         
     }];
     NSLog(@"111111");
