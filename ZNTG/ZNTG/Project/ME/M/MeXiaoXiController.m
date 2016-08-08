@@ -19,6 +19,7 @@
 #import "XiaoXiHuiFudata.h"
 
 #import "WSFSlideTitlesView.h"
+#import "LYHTTPClient.h"
 
 
 #define  screenB [UIScreen mainScreen].bounds
@@ -32,6 +33,11 @@
 
 @property(nonatomic,weak) WSFSlideTitlesView *slideView;
 @property(nonatomic,weak) UITableView *tableView;
+
+
+@property (nonatomic,strong)NSArray *message;
+@property (nonatomic,strong)NSArray *replyMessage;
+
 
 @end
 
@@ -50,6 +56,33 @@
     [self.view addSubview:tableview];
     _tableView = tableview;
     [self settingWSFSlideView];
+}
+
+
+
+-(void)netWorkAsking {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *userId = [userDefault valueForKey:kUserId];
+    NSString *url1 = @"http://192.168.0.135:8080/ws/rest/teacher/getChatRecordList/";
+    NSString *url2 = @"http://192.168.0.135:8080/ws/rest/teacher/getReplyChatList/";
+    NSDictionary *para1 = @{@"sourceUserId":userId};
+    [LYHTTPClient POST:url1 parameters:para1 cachePolicy:LYHTTPClientReloadIgnoringLocalCacheData success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *message = [NSArray new];
+        message = responseObject;
+        _message = message;
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
+    
+    [LYHTTPClient POST:url2 parameters:para1 cachePolicy:LYHTTPClientReloadIgnoringLocalCacheData success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSArray *replyMessage = [NSArray new];
+        replyMessage = responseObject;
+        _replyMessage = replyMessage;
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
+    
 }
 
 
