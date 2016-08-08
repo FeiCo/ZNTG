@@ -50,7 +50,6 @@
     tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableview.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 34, 10)];
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    
     tableview.delegate = self;
     tableview.dataSource = self;
     [self.view addSubview:tableview];
@@ -210,6 +209,21 @@ numberOfRowsInSection:(NSInteger)section {
     {
     return self.dataFrames2.count;
     }
+}
+
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+   return  YES;
+}
+
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 
