@@ -57,19 +57,19 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return _dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *cellIdentifier = @"TeacherCell";
-//    TeacherCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-//    TeacherList *teacherList = [_dataList objectAtIndex:indexPath.row];
-//    [cell handleTeacherCellWithIcon:teacherList.photoLocation
-//                               name:teacherList.name
-//                         levelImage:nil
-//                         levelLabel:teacherList.position
-//                          introduce:teacherList.descriptions];
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    static NSString *cellIdentifier = @"TeacherCell";
+    TeacherCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    TeacherList *teacherList = [_dataList objectAtIndex:indexPath.row];
+    [cell handleTeacherCellWithIcon:teacherList.photoLocation
+                               name:teacherList.name
+                         levelImage:nil
+                         levelLabel:teacherList.position
+                          introduce:teacherList.descriptions];
+
     return cell;
 }
 
@@ -95,13 +95,13 @@
         
     }];
     NSLog(@"111111");
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Network Requests
 
 - (void)requestsTeacherList {
-    NSString *urlString = @"http://192.168.0.135:8080/ws/rest/teacher/getTeacherList/*";
+    NSString *urlString = @"http://192.168.0.135:8080/ws/rest/teacher/getTeacherList/*/*";
     [MSNetRequest requestMethodsWithPOST:nil url:urlString successBlock:^(id responseObject) {
         
         NSDictionary *jsonDictionary = [responseObject jsonValueDecoded];

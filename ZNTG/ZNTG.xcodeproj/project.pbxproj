@@ -189,6 +189,13 @@
 		E84B46021D51BD4F00DAF34D /* UILabel+WidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B46011D51BD4F00DAF34D /* UILabel+WidthAndHeight.m */; };
 		E84B46061D51F2DA00DAF34D /* RelatedVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B46041D51F2DA00DAF34D /* RelatedVideoCell.m */; };
 		E84B46071D51F2DA00DAF34D /* RelatedVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84B46051D51F2DA00DAF34D /* RelatedVideoCell.xib */; };
+		E85C4BB21D589E1C000CFAC5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C4BA41D589E1C000CFAC5 /* HomeViewController.m */; };
+		E85C4BB31D589E1C000CFAC5 /* TermSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C4BA61D589E1C000CFAC5 /* TermSheetViewController.m */; };
+		E85C4BB41D589E1C000CFAC5 /* TeacherModels.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C4BA91D589E1C000CFAC5 /* TeacherModels.m */; };
+		E85C4BB51D589E1C000CFAC5 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C4BAC1D589E1C000CFAC5 /* HomeCell.m */; };
+		E85C4BB61D589E1C000CFAC5 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C4BAD1D589E1C000CFAC5 /* HomeCell.xib */; };
+		E85C4BB71D589E1C000CFAC5 /* MarketView.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C4BAF1D589E1C000CFAC5 /* MarketView.m */; };
+		E85C4BB81D589E1C000CFAC5 /* PlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C4BB11D589E1C000CFAC5 /* PlateView.m */; };
 		E890F3491D49BD7800A59D36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */; };
 		E890F34A1D49BD7800A59D36 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2D91D49BD7800A59D36 /* AFNetworkReachabilityManager.m */; };
 		E890F34B1D49BD7800A59D36 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E890F2DB1D49BD7800A59D36 /* AFSecurityPolicy.m */; };
@@ -622,6 +629,19 @@
 		E84B46031D51F2DA00DAF34D /* RelatedVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedVideoCell.h; sourceTree = "<group>"; };
 		E84B46041D51F2DA00DAF34D /* RelatedVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedVideoCell.m; sourceTree = "<group>"; };
 		E84B46051D51F2DA00DAF34D /* RelatedVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelatedVideoCell.xib; sourceTree = "<group>"; };
+		E85C4BA31D589E1C000CFAC5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E85C4BA41D589E1C000CFAC5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E85C4BA51D589E1C000CFAC5 /* TermSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermSheetViewController.h; sourceTree = "<group>"; };
+		E85C4BA61D589E1C000CFAC5 /* TermSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermSheetViewController.m; sourceTree = "<group>"; };
+		E85C4BA81D589E1C000CFAC5 /* TeacherModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherModels.h; sourceTree = "<group>"; };
+		E85C4BA91D589E1C000CFAC5 /* TeacherModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherModels.m; sourceTree = "<group>"; };
+		E85C4BAB1D589E1C000CFAC5 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		E85C4BAC1D589E1C000CFAC5 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		E85C4BAD1D589E1C000CFAC5 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		E85C4BAE1D589E1C000CFAC5 /* MarketView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketView.h; sourceTree = "<group>"; };
+		E85C4BAF1D589E1C000CFAC5 /* MarketView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketView.m; sourceTree = "<group>"; };
+		E85C4BB01D589E1C000CFAC5 /* PlateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateView.h; sourceTree = "<group>"; };
+		E85C4BB11D589E1C000CFAC5 /* PlateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateView.m; sourceTree = "<group>"; };
 		E890F2D51D49BD7800A59D36 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		E890F2D61D49BD7800A59D36 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E890F2D71D49BD7800A59D36 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -846,6 +866,9 @@
 		D033D3131D49A645006AE6D3 /* HOME */ = {
 			isa = PBXGroup;
 			children = (
+				E85C4BA21D589E1C000CFAC5 /* Controllers */,
+				E85C4BA71D589E1C000CFAC5 /* Models */,
+				E85C4BAA1D589E1C000CFAC5 /* Views */,
 			);
 			path = HOME;
 			sourceTree = "<group>";
@@ -1518,6 +1541,40 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		E85C4BA21D589E1C000CFAC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E85C4BA31D589E1C000CFAC5 /* HomeViewController.h */,
+				E85C4BA41D589E1C000CFAC5 /* HomeViewController.m */,
+				E85C4BA51D589E1C000CFAC5 /* TermSheetViewController.h */,
+				E85C4BA61D589E1C000CFAC5 /* TermSheetViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E85C4BA71D589E1C000CFAC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E85C4BA81D589E1C000CFAC5 /* TeacherModels.h */,
+				E85C4BA91D589E1C000CFAC5 /* TeacherModels.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E85C4BAA1D589E1C000CFAC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E85C4BAB1D589E1C000CFAC5 /* HomeCell.h */,
+				E85C4BAC1D589E1C000CFAC5 /* HomeCell.m */,
+				E85C4BAD1D589E1C000CFAC5 /* HomeCell.xib */,
+				E85C4BAE1D589E1C000CFAC5 /* MarketView.h */,
+				E85C4BAF1D589E1C000CFAC5 /* MarketView.m */,
+				E85C4BB01D589E1C000CFAC5 /* PlateView.h */,
+				E85C4BB11D589E1C000CFAC5 /* PlateView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E890F2D21D49BD7800A59D36 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1906,6 +1963,7 @@
 				D033D3331D49A645006AE6D3 /* tempt.plist in Resources */,
 				E8479A9E1D509800008AF897 /* ZFPlayer.bundle in Resources */,
 				DB3735CA1D4C8CBE00527DF9 /* GuoMaiFW.plist in Resources */,
+				E85C4BB61D589E1C000CFAC5 /* HomeCell.xib in Resources */,
 				E89BF5D31D502D3C003D124F /* TeacherCell.xib in Resources */,
 				DB3735C31D4C8C8E00527DF9 /* GouMaiFWTableViewCell.xib in Resources */,
 				D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */,
@@ -1936,6 +1994,7 @@
 				D0CA6D6D1D49DEDF001E203E /* UIDevice+ScreenType.m in Sources */,
 				DB3735C01D4C8C8E00527DF9 /* TextFieldTableViewController.m in Sources */,
 				D0CA6D481D49DC61001E203E /* IQUIScrollView+Additions.m in Sources */,
+				E85C4BB81D589E1C000CFAC5 /* PlateView.m in Sources */,
 				D0CA6E581D49E4F6001E203E /* YYAnimatedImageView.m in Sources */,
 				D0408B1C1D5480EC00626645 /* GeRenTableViewController.m in Sources */,
 				E890F3561D49BD7800A59D36 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -2016,10 +2075,12 @@
 				E890F3641D49BD7800A59D36 /* MJRefreshGifHeader.m in Sources */,
 				E890F3511D49BD7800A59D36 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D0CA6E641D49E4F6001E203E /* YYTextEffectWindow.m in Sources */,
+				E85C4BB51D589E1C000CFAC5 /* HomeCell.m in Sources */,
 				E8479AA91D509AFD008AF897 /* MediaPlayerViewController.m in Sources */,
 				D0CA6E661D49E4F6001E203E /* YYTextKeyboardManager.m in Sources */,
 				D0CA6E341D49E4F6001E203E /* NSDate+YYAdd.m in Sources */,
 				DB3735C21D4C8C8E00527DF9 /* GouMaiFWTableViewCell.m in Sources */,
+				E85C4BB31D589E1C000CFAC5 /* TermSheetViewController.m in Sources */,
 				E890F34F1D49BD7800A59D36 /* AFAutoPurgingImageCache.m in Sources */,
 				E89BF5DC1D502EDE003D124F /* GeRHeader.m in Sources */,
 				E8479A931D509800008AF897 /* MASCompositeConstraint.m in Sources */,
@@ -2129,17 +2190,20 @@
 				D0CA6E4B1D49E4F6001E203E /* UIScrollView+YYAdd.m in Sources */,
 				E890F36D1D49BD7800A59D36 /* NSData+ImageContentType.m in Sources */,
 				E890F3541D49BD7800A59D36 /* UIImageView+AFNetworking.m in Sources */,
+				E85C4BB71D589E1C000CFAC5 /* MarketView.m in Sources */,
 				D0CA6E771D49E4F6001E203E /* YYDispatchQueuePool.m in Sources */,
 				E890F36B1D49BD7800A59D36 /* UIScrollView+MJRefresh.m in Sources */,
 				E890F3D91D49FFE000A59D36 /* SDCycleScrollView.m in Sources */,
 				D0CA6E491D49E4F6001E203E /* UIImage+YYAdd.m in Sources */,
 				E890F3721D49BD7800A59D36 /* SDWebImageDownloaderOperation.m in Sources */,
+				E85C4BB41D589E1C000CFAC5 /* TeacherModels.m in Sources */,
 				D0CA6CDA1D49D14D001E203E /* UIImage+PHTintColor.m in Sources */,
 				D0CA6E361D49E4F6001E203E /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				E890F35E1D49BD7800A59D36 /* MJRefreshAutoGifFooter.m in Sources */,
 				E890F3711D49BD7800A59D36 /* SDWebImageDownloader.m in Sources */,
 				E890F37A1D49BD7800A59D36 /* UIView+WebCacheOperation.m in Sources */,
 				D0CA6D4F1D49DC61001E203E /* IQTextView.m in Sources */,
+				E85C4BB21D589E1C000CFAC5 /* HomeViewController.m in Sources */,
 				E8479A9C1D509800008AF897 /* ViewController+MASAdditions.m in Sources */,
 				D0408B271D54810A00626645 /* wjmmViewController.m in Sources */,
 				D0CA6E401D49E4F6001E203E /* YYCGUtilities.m in Sources */,
