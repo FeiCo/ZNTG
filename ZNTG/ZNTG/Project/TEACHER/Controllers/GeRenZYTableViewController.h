@@ -10,4 +10,6 @@
 
 @interface GeRenZYTableViewController : UITableViewController
 
+@property(nonatomic,copy) NSString *teacherId;
+
 @end

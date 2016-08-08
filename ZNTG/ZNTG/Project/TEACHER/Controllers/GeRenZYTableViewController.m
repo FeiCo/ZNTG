@@ -14,12 +14,14 @@
 #import "MediaPlayerViewController.h"
 #import "CustomAlertView.h"
 
+#import "LYHTTPClient.h"
+
 #define screenB   [UIScreen mainScreen].bounds
 #define color(r,g,b,a)   [UIColor colorWithRed: ( r / 255.0) green:( g / 255.0) blue:( b / 255.0) alpha:( a / 1.0)]
 
 @interface GeRenZYTableViewController ()<ClassCubeImageClickdelegate>
 @property (nonatomic,strong) NSMutableArray *xxdataarray;
-
+@property (nonatomic,strong) NSArray *dataArray;
 @end
 
 @implementation GeRenZYTableViewController
@@ -28,6 +30,18 @@
     [super viewDidLoad];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:   UITableViewStyleGrouped];
     [self settingTableHeader];
+}
+
+
+-(void)networkAsking {
+    NSString *url = @"http://192.168.0.135:8080/ws/rest/teacher/getTeacherInfo/";
+    NSDictionary *dict = @{@"teacherId":_teacherId};
+    [LYHTTPClient POST:url parameters:dict cachePolicy:LYHTTPClientReloadIgnoringLocalCacheData success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *tempt = [NSArray new];
+        tempt = responseObject;
+        _dataArray = tempt;
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    }];
 }
 
 
