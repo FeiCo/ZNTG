@@ -22,6 +22,7 @@
 @interface GeRenZYTableViewController ()<ClassCubeImageClickdelegate>
 @property (nonatomic,strong) NSMutableArray *xxdataarray;
 @property (nonatomic,strong) NSArray *dataArray;
+@property (nonatomic,strong) UIButton *tiwenB;
 @end
 
 @implementation GeRenZYTableViewController
@@ -30,6 +31,21 @@
     [super viewDidLoad];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:   UITableViewStyleGrouped];
     [self settingTableHeader];
+
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
+    UIButton *tiwen =[UIButton buttonWithType:UIButtonTypeCustom];
+    [tiwen setImage:[UIImage imageNamed:@"tiwen"] forState:UIControlStateNormal];
+    tiwen.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 80, [UIScreen mainScreen].bounds.size.height - 80, 60, 60);
+    [[UIApplication sharedApplication].keyWindow addSubview:tiwen];
+    _tiwenB = tiwen;
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [_tiwenB removeFromSuperview];
 }
 
 
