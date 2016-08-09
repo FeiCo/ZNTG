@@ -11,6 +11,7 @@
 #import "MediaPlayerViewController.h"
 
 #import "CustomAlertView.h"
+#import "LYHTTPClient.h"
 
 #define color(r,g,b,a)   [UIColor colorWithRed: ( r / 255.0) green:( g / 255.0) blue:( b / 255.0) alpha:( a / 1.0)]
 
@@ -39,33 +40,30 @@
 
 //网络请求
 -(void)netWorkAsking {
-    NSString *url1 = @"http://tv1.bdcgw.cn/m/index.php/Home/Getdata/All_video";
-//    [LYHTTPClient GET:url1 parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"NETWORKAKING  1");
-//        NSDictionary *tempt = [NSDictionary new];
-//        tempt = responseObject;
-//        NSArray *netWorkAsking1 = [NSArray new];
-//        @try
-//        {
-//            netWorkAsking1 = [tempt valueForKey:@"retData"];
-//            _hqjdArray = [NSMutableArray new];
-//            _jchgArray = [NSMutableArray new];
-//            _hqjdArray = [self arrayPharseFromDictionary:[self dictWithResponseArray:netWorkAsking1 andType:@"52"] type:@"52"];
-//            
-//            _jchgArray = [self arrayPharseFromDictionary:[self dictWithResponseArray:netWorkAsking1 andType:@"53"] type:@"53"];
-//        }@catch (NSException * e) {
-//            
-//            _hqjdArray = nil;
-//            _jchgArray = nil;
-//        }
-//        // 拿到当前的下拉刷新控件，结束刷新状态
-//        [self.tableView.mj_header endRefreshing];
-//        [self.tableView reloadData];
-//        _pagecount = 0;
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        NSLog(@"FAIL TO LOAD DATA");
-//    }];
+    NSString *url1 = @"http://192.168.0.135:8080/ws/rest/teacher/getTeacherList/*/*";
+    [LYHTTPClient POST:url1 parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"NETWORKAKING  1");
+        NSDictionary *tempt = [NSDictionary new];
+        tempt = responseObject;
+        NSArray *netWorkAsking1 = [NSArray new];
+        _xxdataarray = [NSMutableArray array];
+        @try
+        {
+            netWorkAsking1 = [tempt valueForKey:@"resultData"];
+            for (NSDictionary *dict in netWorkAsking1) {
+                [_xxdataarray addObject:dict];
+            }
+            
+        }@catch (NSException * e) {
+            
+            NSLog(@"xxxx%@",e._IQDescription);
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"FAIL TO LOAD DATA");
+    }];
     
 }
 
@@ -298,15 +296,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-//    if (_isHQJD == YES) {
-//        return (_hqjdArray.count - 1) / 2 + 1;
-//    }
-//    else
-//    {
-//    return (_jchgArray.count - 1) / 2 + 1;
-//    }
- 
-    return 8;
+return (_xxdataarray.count - 1) / 2 + 1;
 }
 
 
@@ -321,35 +311,6 @@
     int row = (int)indexPath.row;
     cell.delegate = self;
   
-//    if (_isHQJD == YES) {
-//        if((2 * row + 1) == _hqjdArray.count)
-//        {
-//            
-//            cell.dataarrayLeft = _hqjdArray[2 * row];
-//            cell.dataarrayRight = nil;
-////            cell.dataarrayRight = zhiweidic;
-//        }
-//        else
-//        {
-//        cell.dataarrayLeft = _hqjdArray[2 * row];
-//        cell.dataarrayRight = _hqjdArray[2 * row + 1];
-//        }
-//    }
-//    else
-//    {
-//        if((2 * row + 1) == _jchgArray.count)
-//        {
-//            cell.dataarrayLeft = _jchgArray[2 * row];
-//            cell.dataarrayRight = nil;
-//        }
-//        else
-//        {
-//            cell.dataarrayLeft = _jchgArray[2 * row];
-//            cell.dataarrayRight = _jchgArray[2 * row + 1];
-//        }
-//    }
-    
-    
     
     if((2 * row + 1) == _xxdataarray.count)
     {

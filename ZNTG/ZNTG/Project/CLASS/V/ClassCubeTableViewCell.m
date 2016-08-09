@@ -196,10 +196,10 @@
 -(void) settingData1 {
 
 
-    NSString *urlstring = [_dataarrayLeft valueForKey:@"image_url"];
+    NSString *urlstring = [_dataarrayLeft valueForKey:@"coverpageLocation"];
 //    [_imageV1 sd_setImageWithURL:[NSURL URLWithString:urlstring] placeholderImage:[UIImage imageNamed:@"pageloading"]];
     _imageV1.image = [UIImage imageNamed:urlstring];
-    _title1.text = [_dataarrayLeft valueForKey:@"title"];
+    _title1.text = [_dataarrayLeft valueForKey:@"description"];
     _title1.font = [UIFont systemFontOfSize:14];
 
 //    _kuang1.layer.borderWidth = 0.5;
@@ -240,10 +240,10 @@
     {
         _kuang2.hidden = NO;
     }
-    NSString *urlstring = [_dataarrayRight valueForKey:@"image_url"];
+    NSString *urlstring = [_dataarrayRight valueForKey:@"coverpageLocation"];
 //    [_imageV2 sd_setImageWithURL:[NSURL URLWithString:urlstring] placeholderImage:[UIImage imageNamed:@"pageloading"]];
     _imageV2.image = [UIImage imageNamed:urlstring];
-    _title2.text = [_dataarrayRight valueForKey:@"title"];
+    _title2.text = [_dataarrayRight valueForKey:@"description"];
     _title2.font = [UIFont systemFontOfSize:14];
     
 //    _kuang2.layer.borderWidth = 0.5;

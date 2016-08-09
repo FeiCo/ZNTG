@@ -55,6 +55,7 @@
     self.tableView.backgroundColor = color(241, 242, 243, 1);
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.tableView.contentInset = UIEdgeInsetsMake(170, 0, 0, 0);
+    self.navigationController.navigationBar.translucent = NO;
     
     [self setHeaderView];
     [self setHeaderButtonView
@@ -310,6 +311,7 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *loginstate = [userDefaults valueForKey:kUserLoginState];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

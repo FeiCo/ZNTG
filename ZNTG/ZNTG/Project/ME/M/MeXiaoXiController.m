@@ -92,7 +92,7 @@
     WSFSlideTitlesViewSetting *titlesSetting = [[WSFSlideTitlesViewSetting alloc] init];
     
     titlesSetting.titlesArr = @[@"已发送",@"已回复"];
-    titlesSetting.frame = CGRectMake(0, 64, screenB.size.width , 40);
+    titlesSetting.frame = CGRectMake(0, 0, screenB.size.width , 40);
     //    titlesSetting.lineWidth = screenB.size.width / titlesSetting.titlesArr.count ;
     titlesSetting.lineHeight = 2;
     titlesSetting.isFullDisplay = NO;
@@ -128,7 +128,7 @@
     }
     
     [self.tableView reloadData];
-    [self.tableView setContentOffset:CGPointMake(0, -60) animated:YES];
+    [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
 //    NSUInteger ii[2] = {0, 0};
 //    NSIndexPath* indexPath = [NSIndexPath indexPathWithIndexes:ii length:2];
 //    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
