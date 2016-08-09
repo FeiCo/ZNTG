@@ -8,6 +8,7 @@
 
 #import "ClassCubeTableViewCell.h"
 #import "UIImage+PHTintColor.h"
+#import "UIImageView+WebCache.h"
 
 
 #define screenB [UIScreen mainScreen].bounds
@@ -21,6 +22,9 @@
 
 @property(nonatomic,weak) UIImageView *imageV1;
 @property(nonatomic,weak) UIImageView *imageV2;
+
+@property(nonatomic,weak) UIImageView *play1;
+@property(nonatomic,weak) UIImageView *play2;
 
 @property(nonatomic,weak) UILabel *title1;
 @property(nonatomic,weak) UILabel *title2;
@@ -78,12 +82,6 @@
         yueDuLiang1.font = [UIFont systemFontOfSize:8];
         yueDuLiang2.font = [UIFont systemFontOfSize:8];
         
-        UIImageView *kanicon1 = [[UIImageView alloc]initWithFrame:CGRectMake((screenB.size.width - 20 - 10) / 2 - 40, 86, 8, 8)];
-        UIImageView *kanicon2 = [[UIImageView alloc]initWithFrame:CGRectMake((screenB.size.width - 20 - 10) / 2 - 40, 86, 8, 8)];
-        UIImage *image1 = [UIImage imageNamed:@"KeJianKan"];
-        
-        kanicon1.image = [image1 imageWithTintColor:[UIColor whiteColor]];
-        kanicon2.image = [image1 imageWithTintColor:[UIColor whiteColor]];
         
         
         UIView *xvXian1 =[[UIView alloc]initWithFrame:CGRectMake(0, 139, (screenB.size.width - 20 - 10) / 2, 1)];
@@ -129,15 +127,18 @@
         [self.kuang2 addSubview:xvXian2];
         [self.kuang1 addSubview:imageV1];
         [self.kuang2 addSubview:imageV2];
-        [self.kuang1 addSubview:kanicon1];
-        [self.kuang2 addSubview:kanicon2];
         [self.kuang1 addSubview:yueDuLiang1];
         [self.kuang2 addSubview:yueDuLiang2];
 
         [self.kuang1 addSubview:title1];
         [self.kuang2 addSubview:title2];
 
-        
+        UIImageView *play1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeJianplay"]];
+        [_imageV1 addSubview:play1];
+        _play1 = play1;
+        UIImageView *play2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeJianplay"]];
+        [_imageV2 addSubview:play2];
+        _play2 = play2;
     }
     return self;
 }
@@ -197,9 +198,8 @@
 
 
     NSString *urlstring = [_dataarrayLeft valueForKey:@"coverpageLocation"];
-//    [_imageV1 sd_setImageWithURL:[NSURL URLWithString:urlstring] placeholderImage:[UIImage imageNamed:@"pageloading"]];
-    _imageV1.image = [UIImage imageNamed:urlstring];
-    _title1.text = [_dataarrayLeft valueForKey:@"description"];
+    [_imageV1 sd_setImageWithURL:[NSURL URLWithString:urlstring] placeholderImage:[UIImage imageNamed:@"default"]];
+       _title1.text = [_dataarrayLeft valueForKey:@"description"];
     _title1.font = [UIFont systemFontOfSize:14];
 
 //    _kuang1.layer.borderWidth = 0.5;
@@ -216,11 +216,9 @@
 
     _imageV1.frame = CGRectMake(0, 0, kuangW, 100);
     
-    UIImageView *play1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeJianplay"]];
 
-    play1.bounds = CGRectMake(0, 0, 30, 30);
-    play1.center = CGPointMake(kuangW / 2, 50);
-    [_imageV1 addSubview:play1];
+    _play1.bounds = CGRectMake(0, 0, 30, 30);
+    _play1.center = CGPointMake(kuangW / 2, 50);
     
     _title1.frame = CGRectMake(10, 95, kuangW - 10 , 50);
     _title1.textAlignment = NSTextAlignmentLeft;
@@ -241,8 +239,7 @@
         _kuang2.hidden = NO;
     }
     NSString *urlstring = [_dataarrayRight valueForKey:@"coverpageLocation"];
-//    [_imageV2 sd_setImageWithURL:[NSURL URLWithString:urlstring] placeholderImage:[UIImage imageNamed:@"pageloading"]];
-    _imageV2.image = [UIImage imageNamed:urlstring];
+    [_imageV2 sd_setImageWithURL:[NSURL URLWithString:urlstring] placeholderImage:[UIImage imageNamed:@"default"]];
     _title2.text = [_dataarrayRight valueForKey:@"description"];
     _title2.font = [UIFont systemFontOfSize:14];
     
@@ -260,10 +257,8 @@
     
     _imageV2.frame = CGRectMake(0, 0, kuangW, 100);
     
-    UIImageView *play2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeJianplay"]];
-    play2.bounds = CGRectMake(0, 0, 30, 30);
-    play2.center = CGPointMake(kuangW / 2, 50);
-    [_imageV2 addSubview:play2];
+    _play2.bounds = CGRectMake(0, 0, 30, 30);
+    _play2.center = CGPointMake(kuangW / 2, 50);
     
     _title2.frame = CGRectMake(10, 95, kuangW - 10 , 50);
     _title2.textAlignment = NSTextAlignmentLeft;

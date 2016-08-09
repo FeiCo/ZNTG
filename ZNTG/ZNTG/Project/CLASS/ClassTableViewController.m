@@ -40,7 +40,14 @@
 
 //网络请求
 -(void)netWorkAsking {
-    NSString *url1 = @"http://192.168.0.135:8080/ws/rest/teacher/getTeacherList/*/*";
+    NSString *url1 = @"http://192.168.0.135:8080/ws/rest/teacher/getCourseList/*/*";
+    
+    [LYHTTPClient POST:url1 parameters:nil cachePolicy:LYHTTPClientReloadIgnoringLocalCacheData success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
+    
     [LYHTTPClient POST:url1 parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSLog(@"NETWORKAKING  1");
@@ -344,7 +351,7 @@ return (_xxdataarray.count - 1) / 2 + 1;
             NSLog(@"试看");
             MediaPlayerViewController *mediaPlayer = [MediaPlayerViewController new];
             mediaPlayer.hidesBottomBarWhenPushed = YES;
-            NSURL *usl = [NSURL URLWithString:@"http://baobab.wdjcdn.com/14564977406580.mp4"];
+            NSURL *usl = [NSURL URLWithString:[array valueForKey:@"previewAddress"]];
             mediaPlayer.videoURL = usl;
             [self.navigationController pushViewController:mediaPlayer animated:YES];
         } rightBlock:^{
