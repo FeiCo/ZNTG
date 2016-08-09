@@ -48,6 +48,7 @@
 -(void)viewDidLoad {
     UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, screenB.size.width, screenB.size.height - 40) style:UITableViewStyleGrouped];
     tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.title = @"我的消息";
     tableview.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 34, 10)];
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     tableview.delegate = self;

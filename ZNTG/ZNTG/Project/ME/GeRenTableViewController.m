@@ -51,7 +51,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"购买服务";
-    
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     self.tableView.backgroundColor = color(241, 242, 243, 1);
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.tableView.contentInset = UIEdgeInsetsMake(170, 0, 0, 0);

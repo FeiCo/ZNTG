@@ -28,6 +28,7 @@
     [super viewDidLoad];
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.title = @"购买服务";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
