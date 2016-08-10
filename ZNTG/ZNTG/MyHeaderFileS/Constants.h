@@ -97,6 +97,14 @@
 #define kMethodMessage [NSString stringWithFormat:@"%s ON %lu LINES.",__func__,(unsigned long)__LINE__]
 
 
+#define  kUserAge @"userage"//用户地址
+#define  kUserAdress @"useradress"//用户地址
+#define  kUserZhiye @"userzhiye"//用户职业
+#define  kUserXueli @"userxueli"//用户学历
+#define  kUserQq @"userqq"//用户QQ
+
+
+
 
 #define  kUserId @"userid"//用户ID
 #define  kUserBirthday @"birthday"//用户生日
@@ -143,8 +151,8 @@
 
 
 
-#define kHostAddress @"http://192.168.0.123:8081/appserver/user/"//登录地址
-#define KUpLoadIconHost  @"http://192.168.0.123:8081/file/upload"
+#define kHostAddress @"http://192.168.0.160:8081/appserver/user/"//登录地址
+#define KUpLoadIconHost  @"http://192.168.0.160:8081/file/upload"
 
 #define kHostAddressURL [NSURL URLWithString:kHostAddress]
 

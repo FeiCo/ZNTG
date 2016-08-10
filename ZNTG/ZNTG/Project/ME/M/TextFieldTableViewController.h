@@ -15,7 +15,9 @@ typedef NS_ENUM(NSInteger, TextTableViewStyle) {
 
 typedef NS_ENUM(NSInteger, TextTableViewKeyBoardType) {
     TextTableViewKeyBoardTypeNumber =1,          // TextField
-    TextTableViewKeyBoardTypeNormal,         // TextView
+    TextTableViewKeyBoardTypeNormal,
+    TextTableViewKeyBoardTypeAdreessPicker,
+    // TextView
 };
 
 
@@ -25,6 +27,7 @@ typedef NS_ENUM(NSInteger, TextTableViewKeyBoardType) {
 +(instancetype)TextFieldControllerWithType:(TextTableViewStyle)style
                                defaultText:(NSString *)str
                               keyBoardType:(TextTableViewKeyBoardType)type
-                              andWordLimit:(NSInteger)count;
+                              andWordLimit:(NSInteger)count
+                              andIdentifier:(NSString *)id;
 
 @end

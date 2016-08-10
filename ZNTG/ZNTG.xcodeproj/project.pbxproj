@@ -19,6 +19,9 @@
 		D0408B261D54810A00626645 /* dengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B211D54810A00626645 /* dengLuViewController.m */; };
 		D0408B271D54810A00626645 /* wjmmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B231D54810A00626645 /* wjmmViewController.m */; };
 		D0408B281D54810A00626645 /* zhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0408B251D54810A00626645 /* zhuceViewController.m */; };
+		D0479FFB1D5B051B00C9B516 /* MJProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = D0479FFA1D5B051B00C9B516 /* MJProvince.m */; };
+		D0479FFD1D5B066500C9B516 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0479FFC1D5B066500C9B516 /* cities.plist */; };
+		D047A0001D5B1BC800C9B516 /* SingleSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0479FFF1D5B1BC800C9B516 /* SingleSelectionController.m */; };
 		D0628AC21D48C4C0006B7853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0628AC11D48C4C0006B7853 /* main.m */; };
 		D0628ACD1D48C4C0006B7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACC1D48C4C0006B7853 /* Assets.xcassets */; };
 		D0628AD01D48C4C0006B7853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0628ACE1D48C4C0006B7853 /* LaunchScreen.storyboard */; };
@@ -298,6 +301,11 @@
 		D0408B231D54810A00626645 /* wjmmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wjmmViewController.m; sourceTree = "<group>"; };
 		D0408B241D54810A00626645 /* zhuceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhuceViewController.h; sourceTree = "<group>"; };
 		D0408B251D54810A00626645 /* zhuceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhuceViewController.m; sourceTree = "<group>"; };
+		D0479FF91D5B051B00C9B516 /* MJProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProvince.h; sourceTree = "<group>"; };
+		D0479FFA1D5B051B00C9B516 /* MJProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProvince.m; sourceTree = "<group>"; };
+		D0479FFC1D5B066500C9B516 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		D0479FFE1D5B1BC800C9B516 /* SingleSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleSelectionController.h; sourceTree = "<group>"; };
+		D0479FFF1D5B1BC800C9B516 /* SingleSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleSelectionController.m; sourceTree = "<group>"; };
 		D0628ABD1D48C4C0006B7853 /* ZNTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNTG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0628AC11D48C4C0006B7853 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0628ACC1D48C4C0006B7853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1006,12 +1014,17 @@
 				DB3735A71D4C8C8E00527DF9 /* GenderTableViewController.m */,
 				DB3735A81D4C8C8E00527DF9 /* TextFieldTableViewController.h */,
 				DB3735A91D4C8C8E00527DF9 /* TextFieldTableViewController.m */,
+				D0479FF91D5B051B00C9B516 /* MJProvince.h */,
+				D0479FFA1D5B051B00C9B516 /* MJProvince.m */,
+				D0479FFC1D5B066500C9B516 /* cities.plist */,
 				DB3735AA1D4C8C8E00527DF9 /* GouMaiFWTableViewController.h */,
 				DB3735AB1D4C8C8E00527DF9 /* GouMaiFWTableViewController.m */,
 				DB3735AF1D4C8C8E00527DF9 /* ZhangHuAnQuanTableViewController.h */,
 				DB3735B01D4C8C8E00527DF9 /* ZhangHuAnQuanTableViewController.m */,
 				D0CA6D191D49DBD1001E203E /* XiuGaiMiMaController.h */,
 				D0CA6D1A1D49DBD1001E203E /* XiuGaiMiMaController.m */,
+				D0479FFE1D5B1BC800C9B516 /* SingleSelectionController.h */,
+				D0479FFF1D5B1BC800C9B516 /* SingleSelectionController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1958,6 +1971,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CA6D541D49DC61001E203E /* IQKeyboardManager.bundle in Resources */,
+				D0479FFD1D5B066500C9B516 /* cities.plist in Resources */,
 				D0CA6D721D49DEDF001E203E /* MSNoNetView.xib in Resources */,
 				DB3735C91D4C8CBE00527DF9 /* xiaoxiXQ.plist in Resources */,
 				D033D3331D49A645006AE6D3 /* tempt.plist in Resources */,
@@ -2059,6 +2073,8 @@
 				DB3735B81D4C8C8E00527DF9 /* xiaoxiXQdata.m in Sources */,
 				D0CA6E3F1D49E4F6001E203E /* CALayer+YYAdd.m in Sources */,
 				D0CA6E471D49E4F6001E203E /* UIFont+YYAdd.m in Sources */,
+				D0479FFB1D5B051B00C9B516 /* MJProvince.m in Sources */,
+				D047A0001D5B1BC800C9B516 /* SingleSelectionController.m in Sources */,
 				E8479A941D509800008AF897 /* MASConstraint.m in Sources */,
 				E84B46061D51F2DA00DAF34D /* RelatedVideoCell.m in Sources */,
 				E890F35F1D49BD7800A59D36 /* MJRefreshAutoNormalFooter.m in Sources */,

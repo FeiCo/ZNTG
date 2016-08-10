@@ -205,7 +205,7 @@
             
             
         } failureBlock:^(NSString *errorDescribe) {
-            [self showHUDWithStr:@"网络不给力！"];
+            [self showHUDWithStr:@"网络不行，请检查网络！"];
             [sender stop];
         }];
         

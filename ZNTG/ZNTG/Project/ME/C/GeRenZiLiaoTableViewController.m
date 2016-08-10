@@ -17,6 +17,8 @@
 #import "MSNetRequest.h"
 #import "JSONKit.h"
 
+#import "SingleSelectionController.h"
+
 @interface GeRenZiLiaoTableViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,copy)NSString *imageurl;
 @property(nonatomic,copy)NSString *nickname;
@@ -48,10 +50,23 @@
     NSString *token = [userDefaults valueForKey:kUserToken];
     NSString *signature = [userDefaults valueForKey:kUserAutoGraph];
     NSString *gender = [userDefaults valueForKey:kUserGender];
+    NSString *age = [userDefaults valueForKey:kUserAge];
+    NSString *adress = [userDefaults valueForKey:kUserAdress];
+    NSString *profession = [userDefaults valueForKey:kUserZhiye];
+    NSString *xueli = [userDefaults valueForKey:kUserXueli];
+    NSString *qq = [userDefaults valueForKey:kUserQq];
+    
     _imageurl = iconString;
     _nickname = nickName;
     _token = token;
     _signature = signature;
+    
+    _gender = gender;
+    _age = age;
+    _adress = adress;
+    _profession = profession;
+    _education = xueli;
+    _qqnum = qq;
 
     //    _link1 = [userDefaults objectForKey:KPersonCenterValue1];
     //    _link2 = [userDefaults objectForKey:KPersonCenterValue2];
@@ -65,6 +80,28 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *signature = [userDefaults valueForKey:kUserAutoGraph];
+    NSString *gender = [userDefaults valueForKey:kUserGender];
+    NSString *age = [userDefaults valueForKey:kUserAge];
+    NSString *adress = [userDefaults valueForKey:kUserAdress];
+    NSString *profession = [userDefaults valueForKey:kUserZhiye];
+    NSString *xueli = [userDefaults valueForKey:kUserXueli];
+    NSString *qq = [userDefaults valueForKey:kUserQq];
+
+    _signature = signature;
+    _gender = gender;
+    _age = age;
+    _adress = adress;
+    _profession = profession;
+    _education = xueli;
+    _qqnum = qq;
+    [self.tableView reloadData];
+}
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -215,36 +252,37 @@
             cell.textLabel.text = @"性别";
             cell.textLabel.textColor = [UIColor grayColor];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            if (!_gender||[_gender isEqualToString:@""]) {
-                cell.detailTextLabel.text = @"请设置";
-            }
             cell.detailTextLabel.text = _gender;
             break;
         case 3:
             cell.textLabel.text = @"年龄";
             cell.textLabel.textColor = [UIColor grayColor];
-            cell.detailTextLabel.text = @"未知";
+            cell.detailTextLabel.text = _age;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 4:
             cell.textLabel.text = @"地址";
             cell.textLabel.textColor = [UIColor grayColor];
-            cell.detailTextLabel.text = @"未知";
+            cell.detailTextLabel.text = _adress;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 5:
             cell.textLabel.text = @"职业";
             cell.textLabel.textColor = [UIColor grayColor];
-            cell.detailTextLabel.text = @"未知";
+            cell.detailTextLabel.text = _profession;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 6:
             cell.textLabel.text = @"学历";
             cell.textLabel.textColor = [UIColor grayColor];
-            cell.detailTextLabel.text = @"未知";
+            cell.detailTextLabel.text = _education;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 7:
             cell.textLabel.text = @"QQ";
             cell.textLabel.textColor = [UIColor grayColor];
-            cell.detailTextLabel.text = @"未知";
+            cell.detailTextLabel.text = _qqnum;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 8:
         {
@@ -320,15 +358,37 @@
             GenderTableViewController *genderCon = [GenderTableViewController GenderControllerWithMale:YES];
             [self.navigationController pushViewController:genderCon animated:YES];
         }
+        else if (indexPath.row == 3)
+        {
+            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleField defaultText:_age keyBoardType:TextTableViewKeyBoardTypeNumber andWordLimit:5 andIdentifier:kUserAge];
+            [self.navigationController pushViewController:jiaoyu animated:YES];
+        }
         else if (indexPath.row == 4)
         {
-            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleField defaultText:@"山西" keyBoardType:TextTableViewKeyBoardTypeNormal andWordLimit:11];
+            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleField defaultText:_adress keyBoardType:TextTableViewKeyBoardTypeAdreessPicker andWordLimit:11 andIdentifier:kUserAdress];
+            
+            [self.navigationController pushViewController:jiaoyu animated:YES];
+        }
+        else if (indexPath.row == 5)
+        {
+            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleField defaultText:_profession keyBoardType:TextTableViewKeyBoardTypeNormal andWordLimit:11 andIdentifier:kUserZhiye];
+            
+            [self.navigationController pushViewController:jiaoyu animated:YES];
+        }
+        else if (indexPath.row == 6)
+        {
+            NSArray *arra = @[@"初中",@"高中",@"专科",@"大学",@"硕士"];
+           SingleSelectionController  *jiaoyu = [SingleSelectionController singleSelectionWithDataArray:arra intialValueIndex:2 andIdentifier:kUserXueli];
+            [self.navigationController pushViewController:jiaoyu animated:YES];
+        }
+        else if (indexPath.row == 7)
+        {
+            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleField defaultText:_qqnum keyBoardType:TextTableViewKeyBoardTypeNumber andWordLimit:11 andIdentifier:kUserQq];
             
             [self.navigationController pushViewController:jiaoyu animated:YES];
         }
         else if (indexPath.row == 8) {
-            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleView defaultText:@"今天心情真的很不错，很不错，很不错，很不错，很不错" keyBoardType:TextTableViewKeyBoardTypeNormal andWordLimit:100];
-            
+            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleView defaultText:_signature keyBoardType:TextTableViewKeyBoardTypeNormal andWordLimit:100 andIdentifier:kUserAutoGraph];
             [self.navigationController pushViewController:jiaoyu animated:YES];
         }
     }

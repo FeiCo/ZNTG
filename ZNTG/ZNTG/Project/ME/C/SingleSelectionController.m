@@ -1,29 +1,40 @@
 //
-//  GenderTableViewController.m
-//  testtest
+//  SingleSelectionController.m
+//  ZNTG
 //
-//  Created by Peter Hu on 16/7/29.
-//  Copyright © 2016年 Peter. All rights reserved.
+//  Created by Peter on 8/10/16.
+//  Copyright © 2016 Peter. All rights reserved.
 //
 
-#import "GenderTableViewController.h"
+#import "SingleSelectionController.h"
 
-@interface GenderTableViewController ()
+@interface SingleSelectionController ()
 
-@property(nonatomic,assign)BOOL isMale;
-@property(nonatomic,weak)UITableViewCell *selectedCell;
-@property(nonatomic,assign)NSInteger index;
+@property (nonatomic,strong) NSArray *dataArra;
+@property (nonatomic,assign) NSInteger selectedIndex;
+@property (nonatomic,copy) NSString * id;
 
 @end
 
-@implementation GenderTableViewController
-
+@implementation SingleSelectionController
 
 
 -(void)viewWillDisappear:(BOOL)animated {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *str = _index == 0 ? @"男" :@"女";
-    [userDefault setValue:str forKey:kUserGender];
+    NSString *str = _dataArra[_selectedIndex];
+    [userDefault setValue:str forKey:_id];
+}
+
+
+
++(instancetype)singleSelectionWithDataArray:(NSArray *)arra
+                           intialValueIndex:(NSInteger)index
+                              andIdentifier:(NSString *)id {
+    SingleSelectionController  *controller = [[SingleSelectionController alloc] init];
+    controller.dataArra = arra;
+    controller.selectedIndex = index;
+    controller.id = id;
+    return controller;
 }
 
 
@@ -32,19 +43,6 @@
     [super viewDidLoad];
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.tableView.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 30, 10)];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-
-
-+(instancetype)GenderControllerWithMale:(BOOL)ismale {
-    GenderTableViewController *genderControlller = [[GenderTableViewController alloc] init];
-    genderControlller.isMale = ismale;
-    return genderControlller;
 }
 
 
@@ -56,42 +54,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return _dataArra.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"男";
-        if (_isMale == YES)
-        {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            _selectedCell = cell;
-        }
+    cell.textLabel.text = _dataArra[indexPath.row];
+    if (indexPath.row == _selectedIndex) {
+                   cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
-    else
-    {
-       cell.textLabel.text = @"女";
-        if (_isMale == NO)
-        {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-         _selectedCell = cell;
-        }
-    }
-    
     return cell;
 }
 
 
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    _selectedCell.accessoryType = UITableViewCellAccessoryNone;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSIndexPath *lastindexpath = [NSIndexPath indexPathForRow:_selectedIndex inSection:0];
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:lastindexpath];
+    
+    selectedCell.accessoryType = UITableViewCellAccessoryNone;
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    _selectedCell = cell;
-    _index = indexPath.row;
+    _selectedIndex = indexPath.row;
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 /*

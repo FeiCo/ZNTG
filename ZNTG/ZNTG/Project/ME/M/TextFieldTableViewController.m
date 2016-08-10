@@ -7,14 +7,20 @@
 //
 
 #import "TextFieldTableViewController.h"
+#import "MJProvince.h"
 
 // View的字体
 #define PHTextViewFont [UIFont systemFontOfSize:18]
 // Field的字体
 #define PHTextFieldFont [UIFont systemFontOfSize:20]
 
-@interface TextFieldTableController()<UITextViewDelegate>
+@interface TextFieldTableController()<UITextViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+{
+    NSMutableArray *_provinces;
+}
 
+
+@property(nonatomic,copy) NSString * id;
 @property(nonatomic,assign) BOOL isField;
 @property(nonatomic,assign) NSInteger countLimit;
 @property(nonatomic,weak)UITextView *textView;
@@ -30,11 +36,16 @@
 @implementation TextFieldTableController
 
 
+-(void)viewWillDisappear:(BOOL)animated {
+    NSUserDefaults *usrDefault = [NSUserDefaults standardUserDefaults];
+    [usrDefault setValue:_textView.text forKey:_id];
+}
+
 
 +(instancetype)TextFieldControllerWithType:(TextTableViewStyle)style
                                defaultText:(NSString *)str
                               keyBoardType:(TextTableViewKeyBoardType)type
-                              andWordLimit:(NSInteger)count {
+                              andWordLimit:(NSInteger)count andIdentifier:(NSString *)id {
     TextFieldTableController *controller = [[TextFieldTableController alloc]init];
    if(style == TextTableViewStyleField)
 {
@@ -48,8 +59,97 @@ else
     controller.defaultString = str;
     controller.countLimit = count;
     controller.keyBoardType = type;
+    controller.id = id;
     return controller;
 }
+
+
+
+-(void)setAdressPicker{
+    
+    // 1.初始化模型数据
+    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cities.plist" ofType:nil]];
+    
+    _provinces = [NSMutableArray array];
+    for (NSDictionary *dict in array) {
+        MJProvince *p = [MJProvince provinceWithDict:dict];
+        [_provinces addObject:p];
+    }
+    
+    UIPickerView *pickerView = [[UIPickerView alloc] init];
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    pickerView.showsSelectionIndicator = YES;
+//    [self pickerView:nil didSelectRow:0 inComponent:0];
+    _textView.inputView = pickerView;
+}
+
+
+#pragma mark - 数据源方法
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 2;
+}
+
+#pragma mark 第component列有多少行数据
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (component == 0) { // 多少个省份
+        return _provinces.count;
+    } else { // 当前选中省份的行数（城市个数）
+        // 1.获得选中了哪一个省
+        int pIndex = [pickerView selectedRowInComponent:0];
+        
+        // 2.取出省份模型
+        MJProvince *p = _provinces[pIndex];
+        
+        // 3.返回当前省份城市的个数
+        return p.cities.count;
+    }
+}
+
+#pragma mark - 代理
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if (component == 0) { //显示哪个省份
+        // 1.取出省份模型
+        MJProvince *p = _provinces[row];
+        
+        // 2.取出省份名称
+        return p.name;
+    } else { // 显示哪个城市
+        // 1.获得选中了哪一个省
+        int pIndex = [pickerView selectedRowInComponent:0];
+        
+        // 2.取出省份模型
+        MJProvince *p = _provinces[pIndex];
+        
+        // 3.返回对应行的城市名称
+        return p.cities[row];
+    }
+}
+
+#pragma mark 监听选中了某一列的某一行
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if (component == 0) { // 改变了省份
+        // 刷新第1列的数据(重新刷新数据，重新调用数据源和代理的相应方法获得数据)
+        [pickerView reloadComponent:1];
+        
+        // 选中第1列的第0行
+        [pickerView selectRow:0 inComponent:1 animated:YES];
+    }
+    
+    // 更改文字
+    // 1.获得选中的省份名称
+    int pIndex =  [pickerView selectedRowInComponent:0];
+    MJProvince *p = _provinces[pIndex];
+    
+    // 2.获得选中的城市位置
+    int cIndex = [pickerView selectedRowInComponent:1];
+    _textView.text = [NSString stringWithFormat:@"%@ %@", p.name, p.cities[cIndex]];
+}
+
 
 
 
@@ -156,12 +256,15 @@ else
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     textView.delegate = self;
     textView.text = _defaultString;
+    textView.returnKeyType = UIReturnKeyDone;
+    _textView = textView;
     if (_keyBoardType == TextTableViewKeyBoardTypeNumber) {
         textView.keyboardType = UIKeyboardTypeNumberPad;
     }
-    
-    textView.returnKeyType = UIReturnKeyDone;
-    _textView = textView;
+    else if (_keyBoardType == TextTableViewKeyBoardTypeAdreessPicker)
+    {
+       [self setAdressPicker];
+    }
     return cell;
 }
 
