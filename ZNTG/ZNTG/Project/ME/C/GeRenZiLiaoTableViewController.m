@@ -190,9 +190,8 @@
     // Now we get the full path to the file
     NSString* fullPathToFile = [documentsDirectory stringByAppendingPathComponent:imageName];
     // and then we write it out
-    [imageData writeToFile:fullPathToFile atomically:NO];
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [imageData writeToFile:fullPathToFile atomically:NO];
     [userDefaults setValue:fullPathToFile forKey:@"meavatar"];
     [userDefaults synchronize];
 }
@@ -253,8 +252,8 @@
             UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 90, 20, 50, 50)];
             imageV.layer.cornerRadius = 25;
             imageV.layer.masksToBounds = YES;
-            _iconV = imageV;
-                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+              _iconV = imageV;
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
                 NSString *iconString = [userDefaults valueForKey:@"meavatar"];
                 if (iconString) {
                      imageV.image = [self getImage:iconString];

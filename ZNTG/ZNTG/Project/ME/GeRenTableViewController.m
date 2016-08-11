@@ -79,7 +79,6 @@
     _islogedin = userState;
     if(_islogedin &&[_islogedin isEqualToString:@"YES"]){
         _nameL.text = userNickName;
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSString *iconString = [userDefaults valueForKey:@"meavatar"];
         if (iconString) {
             _txImageV.image = [self getImage:iconString];
