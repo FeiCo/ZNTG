@@ -151,7 +151,7 @@
 
 
 
-#define kHostAddress @"http://192.168.0.160:8081/appserver/user/"//登录地址
+#define kHostAddress @"http://192.168.0.194:8081/appserver/user/"//登录地址
 #define KUpLoadIconHost  @"http://192.168.0.160:8081/file/upload"
 
 #define kHostAddressURL [NSURL URLWithString:kHostAddress]

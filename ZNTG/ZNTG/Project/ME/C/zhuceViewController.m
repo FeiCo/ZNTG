@@ -92,7 +92,6 @@
     MSTextField *yanzhengmaT = [[MSTextField alloc] initWithFrame:CGRectMake(60, 55, screenB.size.width - 50 - 160, 40)];
     phoneT.keyboardType = UIKeyboardTypeDecimalPad;
     yanzhengmaT.keyboardType = UIKeyboardTypeDecimalPad;
-    phoneT.keyboardAppearance =
     passwordT.secureTextEntry = YES;
     JKCountDownButton *fasong = [JKCountDownButton buttonWithType:UIButtonTypeSystem];
     fasong.frame = CGRectMake(screenB.size.width - 148, 60, 128, 30);

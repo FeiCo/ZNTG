@@ -18,6 +18,7 @@
 #import "JSONKit.h"
 
 #import "SingleSelectionController.h"
+#import "LYHTTPClient.h"
 
 @interface GeRenZiLiaoTableViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,copy)NSString *imageurl;
@@ -36,6 +37,29 @@
 @end
 
 @implementation GeRenZiLiaoTableViewController
+
+
+-(void)dealloc {
+    NSUserDefaults *usrDefault = [NSUserDefaults standardUserDefaults];
+    NSString *token = [usrDefault valueForKey:kUserToken];
+    NSString *usrId = [usrDefault valueForKey:kUserId];
+    NSString *zhiye = [usrDefault valueForKey:kUserZhiye];
+    NSString *xueli = [usrDefault valueForKey:kUserXueli];
+    NSString *age = [usrDefault valueForKey:kUserAge];
+    NSString *qq = [usrDefault valueForKey:kUserQq];
+    NSString *address = [usrDefault valueForKey:kUserAdress];
+    NSString *gender = [usrDefault valueForKey:kUserGender];
+    NSString *autograph = [usrDefault valueForKey:kUserAutoGraph];
+    NSString *nickname = [usrDefault valueForKey:kUserNickName];
+    NSDictionary *para = @{@"nickname":nickname,@"gender":gender,@"autograph":autograph,@"token":token,@"userid":usrId,@"age":age,@"address":address,@"zhiye":zhiye,@"xueli":xueli,@"QQ":qq};
+    [LYHTTPClient POST:kGetUserEdit parameters:para cachePolicy:LYHTTPClientReloadIgnoringLocalCacheData success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    }];
+    
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -91,6 +115,7 @@
     NSString *profession = [userDefaults valueForKey:kUserZhiye];
     NSString *xueli = [userDefaults valueForKey:kUserXueli];
     NSString *qq = [userDefaults valueForKey:kUserQq];
+    NSString *nickname = [userDefaults valueForKey:kUserNickName];
 
     _signature = signature;
     _gender = gender;
@@ -99,6 +124,7 @@
     _profession = profession;
     _education = xueli;
     _qqnum = qq;
+    _nickname = nickname;
     [self.tableView reloadData];
 }
 
@@ -247,6 +273,7 @@
             cell.textLabel.text = @"昵称";
             cell.textLabel.textColor = [UIColor grayColor];
             cell.detailTextLabel.text = _nickname;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 2:
             cell.textLabel.text = @"性别";
@@ -353,9 +380,16 @@
     }];
             
     }
+        else if (indexPath.row == 1)
+        {
+            TextFieldTableController *jiaoyu = [TextFieldTableController TextFieldControllerWithType:TextTableViewStyleField defaultText:_nickname keyBoardType:TextTableViewKeyBoardTypeNormal andWordLimit:11 andIdentifier:kUserNickName];
+            
+            [self.navigationController pushViewController:jiaoyu animated:YES];
+        }
         else if (indexPath.row == 2)
         {
-            GenderTableViewController *genderCon = [GenderTableViewController GenderControllerWithMale:YES];
+            BOOL ismale = [_gender isEqualToString:@"女"] ?  NO: YES;
+            GenderTableViewController *genderCon = [GenderTableViewController GenderControllerWithMale:ismale];
             [self.navigationController pushViewController:genderCon animated:YES];
         }
         else if (indexPath.row == 3)
@@ -378,7 +412,8 @@
         else if (indexPath.row == 6)
         {
             NSArray *arra = @[@"初中",@"高中",@"专科",@"大学",@"硕士"];
-           SingleSelectionController  *jiaoyu = [SingleSelectionController singleSelectionWithDataArray:arra intialValueIndex:2 andIdentifier:kUserXueli];
+            NSInteger index =[self getStringIndex:_education fromArray:arra];
+           SingleSelectionController  *jiaoyu = [SingleSelectionController singleSelectionWithDataArray:arra intialValueIndex:index andIdentifier:kUserXueli];
             [self.navigationController pushViewController:jiaoyu animated:YES];
         }
         else if (indexPath.row == 7)
@@ -441,6 +476,20 @@
     }];
    [userDefaults setValue:@"NO" forKey:kUserLoginState];
 }
+
+
+#pragma mark - utilities
+
+-(NSInteger)getStringIndex:(NSString *)str fromArray:(NSArray *)arra {
+    NSInteger index = 0;
+    for (int i=0; i<arra.count; i++) {
+        if ([arra[i] isEqualToString:str]) {
+            index = i;
+        }
+    }
+    return index;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
